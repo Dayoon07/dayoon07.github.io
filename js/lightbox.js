@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = lightbox.querySelector(".lightbox-close");
 
     document.querySelectorAll(".project-image").forEach(img => {
-        img.addEventListener("click", () => {
+        img.addEventListener("click", function() {
             lightboxImg.src = this.src;
             lightboxImg.alt = this.alt;
             lightbox.classList.add("active");
