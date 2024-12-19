@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    
+
     lightboxClose.addEventListener("click", closeLightbox());
 
     lightbox.addEventListener("click", (e) => {
