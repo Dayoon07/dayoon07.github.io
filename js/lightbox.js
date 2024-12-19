@@ -12,9 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
-
-    lightboxClose.addEventListener("click", closeLightbox());
+    lightboxClose.addEventListener("click", closeLightbox);
 
     lightbox.addEventListener("click", (e) => {
         if (e.target === lightbox) {
