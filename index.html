@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>저에 대해 소개하자면...</title>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
@@ -17,21 +18,21 @@
     <div class="max-w-screen-xl mx-auto p-6">
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div class="bg-white p-6 rounded-lg shadow-xl">
-                <img src="/img/facePicture.jpg" class="rounded-full mx-auto mb-4 w-36 h-36 object-cover">
-                <h2 class="text-2xl font-semibold text-center mb-3">About Me</h2>
-                <p class="text-gray-700 text-center mb-4">
-                    모든 일에 책임감을 일하며 웹 개발에 <br>
-                    집중하고 있습니다. 새로운 기술에 <br>
-                    대해 공부하고 흥미를 잃지 않고 꾸준히 <br>
-                    기술의 원리를 파고 드는 강다윤입니다.
-                </p>
-                <div class="text-center mb-3">
-                    <a href="https://github.com/Dayoon07" class="text-blue-500 hover:underline mx-3">GitHub</a>
-                    <a href="mailto:gangd0642@gmail.com" class="text-blue-500 hover:underline mx-3">메일</a>
+                <img src="https://dayoon07.github.io/img/facePicture.jpg" class="rounded-full mx-auto mb-4 w-36 h-36 object-cover">
+                <div class="text-center mb-6">
+                    <a href="https://github.com/Dayoon07" class="inline-flex items-center text-blue-500 hover:text-blue-700 mx-3">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="mailto:gangd0642@gmail.com" class="inline-flex items-center text-blue-500 hover:text-blue-700 mx-3">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        메일
+                    </a>
                 </div>
+                
                 <div class="text-md">
                     <h2 class="text-left text-2xl font-semibold text-gray-800 mb-4">기술</h2>
-                    <details class="group my-3">
+                    <details class="group my-3" open>
                         <summary class="cursor-pointer text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors">
                             <span class="mr-2">Tools</span>
                         </summary>
@@ -46,51 +47,48 @@
                             </ul>
                         </div>
                     </details>
-                    <details class="group my-3">
+                    <details class="group my-3" open>
+                        <summary class="cursor-pointer text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors">
+                            <span class="mr-2">Lang</span>
+                        </summary>
+                        <div class="pl-6 space-y-3">
+                            <ul class="list-disc list-inside text-gray-700 text-lg">
+                                <li>HTML / CSS / Java Script</li>
+                                <li>Java / JSP</li>
+                                <li>Python</li>
+                                <li>JSON / XML</li>
+                                <li>SQL</li>
+                            </ul>
+                        </div>
+                    </details>
+                    <details class="group my-3" open>
                         <summary class="cursor-pointer text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors">
                             <span class="mr-2">Framework</span>
                         </summary>
                         <div class="pl-6 space-y-3">
                             <ul class="list-disc list-inside text-gray-700 text-lg">
-                                <li>Spring | Spring Boot</li>
-                                <li>MyBatis</li>
-                                <li>React | Express</li>
-                                <li>Tensorflow | Keras</li>
+                                <li>Spring / Spring Boot</li>
+                                <li>MyBaits</li>
+                                <li>Flutter</li>
+                                <li>Express</li>
+                                <li>Tailwindcss / BootStrap</li>
                             </ul>
                         </div>
                     </details>
-                    <details class="group my-3">
+                    <details class="group my-3" open>
                         <summary class="cursor-pointer text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors">
                             <span class="mr-2">Library</span>
                         </summary>
                         <div class="pl-6 space-y-3">
                             <ul class="list-disc list-inside text-gray-700 text-lg">
-                                <li>Tailwindcss</li>
-                                <li>BootStrap</li>
                                 <li>Jquery</li>
                                 <li>Ajax</li>
-                                <li>npm</li>
                                 <li>Lombok</li>
                                 <li>JSTL</li>
-                                <li>pip</li>
                             </ul>
                         </div>
                     </details>
-                    <details class="group my-3">
-                        <summary class="cursor-pointer text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors">
-                            <span class="mr-2">Programming language</span>
-                        </summary>
-                        <div class="pl-6 space-y-3">
-                            <ul class="list-disc list-inside text-gray-700 text-lg">
-                                <li>HTML | CSS | Java Script | JSON</li>
-                                <li>Java</li>
-                                <li>Python</li>
-                                <li>XML</li>
-                                <li>Gradle</li>
-                            </ul>
-                        </div>
-                    </details>
-                    <details class="group my-3">
+                    <details class="group my-3" open>
                         <summary class="cursor-pointer text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors">
                             <span class="mr-2">DB</span>
                         </summary>
@@ -105,39 +103,88 @@
             </div>
 
             <div class="lg:col-span-2 bg-white p-6 rounded-lg shadow-xl">
-                <h2 class="text-3xl font-semibold text-center mb-3">Projects</h2>
-                <p class="text-gray-700 mb-6 text-center">제가 참여한 프로젝트들을 소개합니다:</p>
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold text-left mb-6">About Me</h2>
+                    <div class="prose max-w-none text-gray-700">
+                        <p class="text-lg leading-relaxed">
+                            안녕하세요, 웹 개발자 강다윤입니다. 모든 일에 책임감을 가지고 임하며, 
+                            특히 웹 개발 분야에서 전문성을 키워나가고 있습니다. 
+                        </p>
+                        <p class="text-lg leading-relaxed mt-4">
+                            새로운 기술에 대한 호기심과 탐구심을 바탕으로, 기술의 원리를 깊이 있게 이해하고 
+                            실제 프로젝트에 적용하는 것을 즐깁니다. Spring Boot, JPA, React 등 
+                            현대적인 개발 스택을 활용한 풀스택 개발 경험을 보유하고 있습니다.
+                        </p>
+                    </div>
+                </section>
 
-                <div class="mb-8">
-                    <a href="https://github.com/Dayoon07/slacktest" class="text-2xl font-semibold text-blue-600 hover:underline">채팅 웹 프로젝트</a>
-                    <p class="text-gray-600 my-1">Spring Boot와 JPA로 개발하였으며 실시간 통신을 하기 위해 WebSocket 기술을 사용했습니다.</p>
-                    <img src="/img/" style="width: 200px;">
-                </div>
+                <section>
+                    <h2 class="text-3xl font-semibold text-center mb-8">Projects</h2>
+                    
+                    <div class="space-y-12">
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <a href="https://github.com/Dayoon07/slacktest" class="text-2xl font-semibold text-blue-600 hover:underline">채팅 웹 프로젝트</a>
+                                <div class="flex flex-wrap gap-2 mt-2 md:mt-0">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spring Boot</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">JPA</span>
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">WebSocket</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Spring Boot와 JPA로 개발한 실시간 채팅 애플리케이션입니다. WebSocket을 활용하여 실시간 양방향 통신을 구현했으며, 사용자 경험을 최우선으로 고려했습니다.</p>
+                            <img src="https://dayoon07.github.io/img/chatweb.png" class="project-image w-full md:w-4/5 lg:w-3/5 rounded-lg shadow-md mx-auto" alt="채팅 웹 프로젝트 스크린샷">
+                        </div>
 
-                <div class="mb-8">
-                    <a href="https://github.com/Dayoon07/kmcreativeschool" class="text-2xl font-semibold text-blue-600 hover:underline">경기 콘텐츠 창의학교</a>
-                    <p class="text-gray-600 my-1">Spring, MyBatis 프레임워크로 개발했으며 배포는 컴퓨터 서버에 scp방식으로 배포했습니다.</p>
-                    <img src="/img/" style="width: 200px;">
-                </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <a href="https://github.com/Dayoon07/kmcreativeschool" class="text-2xl font-semibold text-blue-600 hover:underline">경기 콘텐츠 창의학교</a>
+                                <div class="flex flex-wrap gap-2 mt-2 md:mt-0">
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Spring</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">MyBatis</span>
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">SCP</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">Spring과 MyBatis 프레임워크를 활용한 교육 플랫폼입니다. SCP를 통한 안전한 배포 프로세스를 구축했으며, 사용자 친화적인 인터페이스를 제공합니다.</p>
+                            <img src="https://dayoon07.github.io/img/creativeProject.png" class="project-image w-full md:w-4/5 lg:w-3/5 rounded-lg shadow-md mx-auto" alt="경기 콘텐츠 창의학교 스크린샷">
+                        </div>
 
-                <div>
-                    <a href="https://github.com/Dayoon07/fetchAPI_Example" class="text-2xl font-semibold text-blue-600 hover:underline">Fetch API Example</a>
-                    <p class="text-gray-600 my-1">Java Script에서 Fetch API를 활용해 쉽게 get방식의 데이터를 요청을 받는 연습을 했습니다.</p>
-                    <img src="/img/" style="width: 200px;">
-                </div>
+                        <div class="bg-gray-50 rounded-lg p-6">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <a href="https://github.com/Dayoon07/fetchAPI_Example" class="text-2xl font-semibold text-blue-600 hover:underline">Fetch API Example</a>
+                                <div class="flex flex-wrap gap-2 mt-2 md:mt-0">
+                                    <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">JavaScript</span>
+                                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Fetch API</span>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 mb-4">JavaScript Fetch API를 활용한 데이터 요청 실습 프로젝트입니다. RESTful API와의 상호작용을 통해 비동기 통신의 기본 개념을 학습했습니다.</p>
+                            <img src="https://dayoon07.github.io/img/fetch.png" class="project-image w-full md:w-4/5 lg:w-3/5 rounded-lg shadow-md mx-auto" alt="Fetch API Example 스크린샷">
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
 
-    <footer class="bg-gray-200 text-black py-6 mt-7">
+     <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close mb-2 text-xl">&times;</button>
+            <img class="lightbox-image" src="" alt="확대된 이미지">
+        </div>
+    </div>
+
+    <footer class="bg-gray-200 text-black py-6 mt-12">
         <div class="max-w-screen-xl mx-auto text-center">
-            <p>
-                &copy; 2024. Dayoon07 All Rights Reserved. &nbsp; | &nbsp; Gmail : 
-                <a href="https://gmail.com" class="hover:underline">gangd0642@gmail.com</a>
+            <p class="flex items-center justify-center space-x-2">
+                <span>&copy; 2024. Dayoon07 All Rights Reserved.</span>
+                <span class="text-gray-500">|</span>
+                <span>Gmail: 
+                    <a href="mailto:gangd0642@gmail.com" class="text-blue-600 hover:underline">gangd0642@gmail.com</a>
+                </span>
             </p>
         </div>
     </footer>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://dayoon07.github.io//js/lightbox.js"></script>
 </body>
 </html>
