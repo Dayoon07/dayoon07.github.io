@@ -14,10 +14,10 @@
         </div>
     </header>
 
-    <div class="max-w-screen-xl mx-auto py-16 flex">
-        <div class="w-64 fixed top-24 pt-10 space-y-6">
+    <div class="main-container max-w-screen-xl mx-auto py-16 flex">
+        <div class="profile-section w-64 fixed top-24 pt-10 space-y-6">
             <div class="flex justify-center">
-                <img src="https://Dayoon07.github.io/img/증명사진.jpg" alt="Dayoon Ko" class="w-32 h-32 rounded-full object-cover">
+                <img src="https://Dayoon07.github.io/img/증명사진.jpg" alt="증명사진" class="w-32 h-32 rounded-full object-cover">
             </div>
             <h3 class="text-xl font-semibold text-center">강다윤 (Dayoon kang)</h3>
             <div class="text-center">
@@ -33,9 +33,9 @@
                     GitHub
                 </a>
                 <a href="mailto:gangd0642@gmail.com" class="inline-flex items-center text-blue-500 hover:text-blue-700 mx-3">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="cwurrentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 
-                            002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                     메일
                 </a>
@@ -52,7 +52,7 @@
 
         <div class="w-64 top-24 space-y-6"></div>
 
-        <div class="flex-1 pt-10 ml-8">
+        <div class="content-section flex-1 pt-10 ml-8">
             <div class="bg-white p-8 border-r border-l">
                 <div>
                     <h1 class="text-3xl font-bold mb-6">안녕하십니까, 저는</h1>
@@ -60,24 +60,24 @@
                         언젠가는 DB 분야로 진출하고 싶은 강다윤입니다. 저는 프론트와 백엔드를 프로젝트를 진행하면서 <br>
                         다양한 경험을 쌓았고, 그 과정 중 에러가 발생하면 발생 이유와 해결하는 방법또한 경험해 왔으며 <br>
                         이를 통해 저의 실력을 더 키울 수 있었습니다. 앞으로도 제가 모르는 것에 대해 배우며 <br>
-                        발전해가는 개발자가 되겠습니다.
+                        끊임없이 발전해가는 개발자가 되겠습니다.
                     </p>
                 </div>
 
                 <div>
                     <div class="w-full mx-auto grid gap-6 grid-cols-1 md:grid-cols-3">
                         <div class="bg-white border rounded-2xl p-4">
-                            <h2 class="text-xl font-bold mb-2 text-blue-600">Tools</h2>
+                            <h2 class="text-xl font-bold mb-2 text-blue-500">Tools</h2>
                             <ul class="list-disc pl-5 space-y-1 text-gray-700">
                                 <li>Visual Studio Code</li>
                                 <li>Eclipse</li>
-                                <li>Spring Boot Tools</li>
+                                <li>Spring Tool Suite (STS)</li>
                                 <li>IntelliJ</li>
                                 <li>PyCharm</li>
                             </ul>
                         </div>
                         <div class="bg-white border rounded-2xl p-4">
-                            <h2 class="text-xl font-bold mb-2 text-green-600">Languages</h2>
+                            <h2 class="text-xl font-bold mb-2 text-green-500">Languages</h2>
                             <ul class="list-disc pl-5 space-y-1 text-gray-700">
                                 <li>HTML / CSS / JavaScript</li>
                                 <li>Java / JSP</li>
@@ -87,7 +87,7 @@
                             </ul>
                         </div>
                         <div class="bg-white border rounded-2xl p-4">
-                            <h2 class="text-xl font-bold mb-2 text-red-600">Libraries</h2>
+                            <h2 class="text-xl font-bold mb-2 text-red-500">Libraries</h2>
                             <ul class="list-disc pl-5 space-y-1 text-gray-700">
                                 <li>npm</li>
                                 <li>pip</li>
@@ -97,18 +97,25 @@
                             </ul>
                         </div>
                         <div class="bg-white border rounded-2xl p-4">
-                            <h2 class="text-xl font-bold mb-2 text-purple-600">Frameworks</h2>
+                            <h2 class="text-xl font-bold mb-2 text-purple-500">Frameworks</h2>
                             <ul class="list-disc pl-5 space-y-1 text-gray-700">
                                 <li>Spring / Spring Boot</li>
                                 <li>MyBatis</li>
                                 <li>Tailwind CSS / Bootstrap</li>
                             </ul>
                         </div>
-                        <div class="bg-white border rounded-2xl p-4 md:col-span-2">
-                            <h2 class="text-xl font-bold mb-2 text-yellow-600">Databases</h2>
+                        <div class="bg-white border rounded-2xl p-4">
+                            <h2 class="text-xl font-bold mb-2 text-yellow-500">Databases</h2>
                             <ul class="list-disc pl-5 space-y-1 text-gray-700">
                                 <li>Oracle</li>
                                 <li>MariaDB</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white border rounded-2xl p-4">
+                            <h2 class="text-xl font-bold mb-2 text-orange-500">Database Tools</h2>
+                            <ul class="list-disc pl-5 space-y-1 text-gray-700">
+                                <li>Sql Developer</li>
+                                <li>DBeaver</li>
                             </ul>
                         </div>
                     </div>
@@ -117,7 +124,7 @@
                 <div class="pt-4">
                     <h1 class="text-3xl font-bold mb-6">진행한 프로젝트</h1>
                     <div class="space-y-8">
-                        <div class="w-full flex mt-2">
+                        <div class="project-card w-full flex mt-2">
                             <div>
                                 <img src="https://Dayoon07.github.io/img/chatweb.png" alt="실시간 채팅 웹" width="400" class="project-image object-cover rounded-md" title="실시간 채팅 웹">
                             </div>
@@ -133,7 +140,7 @@
                             </div>
                         </div>
 
-                        <div class="w-full flex mt-2">
+                        <div class="project-card w-full flex mt-2">
                             <div>
                                 <img src="https://Dayoon07.github.io/img/creativeProject.png" alt="경기 콘텐츠 창의학교" width="400" class="project-image object-cover rounded-md" title="경기 콘텐츠 창의학교">
                             </div>

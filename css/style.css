@@ -64,3 +64,51 @@
     z-index: 10;
     padding: 1rem;
 }
+
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header, footer, .profile-section, .content-section {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-section {
+        padding-top: 100px;
+        order: 1;
+    }
+
+    .content-section {
+        order: 2;
+    }
+
+    footer {
+        order: 3;
+    }
+
+    .w-64 {
+        position: static !important;
+        width: 100% !important;
+    }
+
+    .flex-1 {
+        margin-left: 0 !important;
+    }
+
+    .project-card {
+        display: block;
+    }
+
+    .project-card > div:nth-child(2) {
+        padding-top: 20px;
+    }
+}
