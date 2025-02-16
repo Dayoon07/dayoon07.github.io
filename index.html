@@ -17,7 +17,7 @@
     <div class="main-container max-w-screen-xl mx-auto md:py-16 flex">
         <div class="w-64 fixed top-24 pt-10 space-y-6">
             <div class="flex justify-center">
-                <img src="https://Dayoon07.github.io/img/증명사진.jpg" alt="증명사진" class="w-32 h-32 rounded-full object-cover">
+                <img src="https://Dayoon07.github.io/img/증명사진.jpg" alt="증명사진" class="w-40 h-40 rounded-full object-cover">
             </div>
             <h3 class="text-xl font-semibold text-center">강다윤 (Dayoon kang)</h3>
             <div class="text-center">
@@ -131,7 +131,7 @@
                             </div>
                             <div class="w-full md:w-96 ml-4">
                                 <h1 class="text-2xl font-semibold hover:text-blue-500 hover:underline mb-2">
-                                    <a href="https://github.com/Dayoon07/SpringBoot_Blog">Spring Boot Blog</a>
+                                    <a href="https://github.com/Dayoon07/springboot-blog">Spring Boot Blog</a>
                                 </h1>
                                 <div>
                                     <span class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">Spring Boot</span>
@@ -143,6 +143,9 @@
                                     블로그 플랫폼으로 주요 기능으로 게시물 작성, 수정, 삭제, 
                                     댓글 기능, 좋아요 기능이 있으며 Spring Boot, JPA를 사용해 만들었습니다.
                                 </p>
+                                <button type="button" class="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-500 mt-5" onclick="openBlog()">
+                                    테스트 영상
+                                </button>
                             </div>
                         </div>
 
@@ -162,7 +165,7 @@
                                 </div>
                                 <p class="text-md mt-2">
                                     Spring과 MyBatis 프레임워크를 활용한 학교 폭력 신고 웹입니다.
-                                    사용자 친화적인 인터페이스를 제공합니다.
+                                    신고 내용은 SMTP를 통해 전송되며 자신의 신고 내역을 조회할 수 있습니다
                                 </p>
                             </div>
                         </div>
@@ -193,7 +196,17 @@
         </div>
     </div>
 
+    <div id="springbootblogVideo">
+        <div id="springbootblog-content" class="springbootblog-content">
+            <button class="mb-2 text-xl text-white" onclick="closeBlog()">&times;</button>
+            <video src="https://Dayoon07.github.io/video/springboot-blog-test.mp4" controls></video>
+        </div>
+    </div>
+
+    <div id="loading" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: white; z-index: 9999;"></div>
+
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://Dayoon07.github.io/js/script.js"></script>
     <script src="https://dayoon07.github.io/js/lightbox.js"></script>
 </body>
 </html>
