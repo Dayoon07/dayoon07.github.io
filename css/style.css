@@ -65,7 +65,7 @@
     padding: 1rem;
 }
 
-#springbootblogVideo {
+#video-modal {
     display: none;
     position: fixed;
     top: 0;
@@ -76,7 +76,7 @@
     z-index: 1000;
 }
 
-.springbootblog-content {
+.modal-content {
     display: none;
     position: absolute;
     top: 50%;

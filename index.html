@@ -127,11 +127,36 @@
 
                         <div class="w-full md:flex mt-2">
                             <div>
-                                <img src="https://Dayoon07.github.io/img/springbootblog.png" alt="Spring Boot Blog" width="400" class="project-image object-cover rounded-md" title="Spring Boot Blog">
+                                <img src="https://Dayoon07.github.io/static-page-test/img/whynot_메인페이지.png" alt="스프링 부트 비디오 플랫폼" width="400" class="project-image object-cover rounded-md" title="스프링 부트 비디오 플랫폼">
                             </div>
                             <div class="w-full md:w-96 ml-4">
                                 <h1 class="text-2xl font-semibold hover:text-blue-500 hover:underline mb-2">
-                                    <a href="https://github.com/Dayoon07/springboot-blog">Spring Boot Blog</a>
+                                    <a href="https://github.com/Dayoon07/springboot-video-platform">SpringBoot Video Platform</a>
+                                </h1>
+                                <div>
+                                    <span class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">Rest API</span>
+                                    <span class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">MyBatis</span>
+                                    <span class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">Spring Boot</span>
+                                    <span class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">JPA</span>
+                                </div>
+                                <p class="text-md mt-2">
+                                    springboot-video-platform은 Spring Boot를 기반으로 한 동영상 플랫폼입니다. 
+                                    주요 기능으로는 업로드 기능, 좋아요 기능, 구독 기능, 
+                                    시청 기록 기능, 태그, 영상 분석 기능이 있습니다.
+                                </p>
+                                <button type="button" class="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-500 mt-3" onclick="openBlog('https://dayoon07.github.io/video/video-platform.mp4')">
+                                    테스트 영상
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="w-full md:flex mt-2">
+                            <div>
+                                <img src="https://Dayoon07.github.io/img/springbootblog.png" alt="스프링 부트 블로그" width="400" class="project-image object-cover rounded-md" title="스프링 부트 블로그">
+                            </div>
+                            <div class="w-full md:w-96 ml-4">
+                                <h1 class="text-2xl font-semibold hover:text-blue-500 hover:underline mb-2">
+                                    <a href="https://github.com/Dayoon07/springboot-blog">SpringBoot Blog</a>
                                 </h1>
                                 <div>
                                     <span class="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm">Spring Boot</span>
@@ -143,7 +168,7 @@
                                     블로그 플랫폼으로 주요 기능으로 게시물 작성, 수정, 삭제, 
                                     댓글 기능, 좋아요 기능이 있으며 Spring Boot, JPA를 사용해 만들었습니다.
                                 </p>
-                                <button type="button" class="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-500 mt-5" onclick="openBlog()">
+                                <button type="button" class="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-500 mt-3" onclick="openBlog('https://Dayoon07.github.io/video/springboot-blog-test.mp4')">
                                     테스트 영상
                                 </button>
                             </div>
@@ -171,7 +196,6 @@
                         </div>
 
                     </div>
-
                 </div>
             </div>
         </div>
@@ -196,10 +220,10 @@
         </div>
     </div>
 
-    <div id="springbootblogVideo">
-        <div id="springbootblog-content" class="springbootblog-content">
+    <div id="video-modal">
+        <div id="modal-content" class="modal-content">
             <button class="mb-2 text-xl text-white" onclick="closeBlog()">&times;</button>
-            <video src="https://Dayoon07.github.io/video/springboot-blog-test.mp4" controls></video>
+            <video src="" controls></video>
         </div>
     </div>
 
