@@ -17,11 +17,29 @@ function closeBlog() {
 }
 
 document.getElementById("video-modal").addEventListener("click", (e) => {
-    if (e.target === document.getElementById("video-modal")) {
-        closeBlog();
-    }
+    if (e.target === document.getElementById("video-modal")) closeBlog();
 });
 
 document.addEventListener("keydown", (e) => {
+    const video = document.querySelector("video");
     if (e.key === "Escape") closeBlog();
+    if (e.key === "f" || e.key === "F") {
+        if (!document.fullscreenElement) {
+            video.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+        }
+    } 
+    if (e.key === "ArrowLeft") {
+        video.currentTime -= 5;
+    } else if (e.key === "ArrowRight") {
+        video.currentTime += 5;
+    }
+    if (e.key === "k" || e.key === "K") {
+        if (video.paused) {
+			video.play();
+		} else {
+			video.pause();
+		}
+    }
 });
