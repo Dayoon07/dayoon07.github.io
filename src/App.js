@@ -3,21 +3,31 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import Test from './pages/Test';
+import Skill from './pages/Skill';
 import Profile from './components/Profile';
+import NotFound from './pages/Wow404Error';
+import Projects from './pages/Projects';
+import Architecture from './pages/Architecture';
+import Contact from './pages/Contact';
+import SiteMap from './pages/SiteMap';
 
 function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
-      <main className="max-w-screen-xl mx-auto px-4 py-8 flex">
-        <div className='w-60'>
+      <main className="max-w-screen-xl mx-auto px-4 py-8 lg:pt-20 lg:flex">
+        <div className="w-60">
           <Profile />
         </div>
-        <div>
+        <div className="lg:max-w-screen-xl max-lg:w-full">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/a" element={<Test />} />
+            <Route path="/skill" element={<Skill />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/architecture" element={<Architecture />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/sitemap" element={<SiteMap />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </main>
