@@ -18,11 +18,14 @@ const projectLinks = [
 
 export default function Profile() {
     return (
-        <div className="w-full">
+        <div className="w-full sticky top-20">
             <div className="space-y-4">
                 <div className="max-md:flex max-md:items-center">
                     <img src="https://dayoon07.github.io/img/증명사진.jpg" alt=" 프로필 사진" className="max-md:w-16 md:w-40 rounded-full" />
-                    <h3 className="text-xl font-semibold max-md:ml-4">강다윤 <br /> (Dayoon Kang)</h3>
+                    <h3 className="text-xl font-semibold max-md:ml-4 lg:mt-4">강다윤 <br /> (Dayoon Kang)</h3>
+                </div>
+                <div className="lg:hidden max-lg:fixed max-lg:right-4 max-lg:top-20">
+                    <button className="px-4 py-1 bg-white border-gray-300 border hover:bg-black hover:text-white cursor-pointer transition duration-300">Follow</button>
                 </div>
 
                 <div className="space-y-2 max-md:hidden">
