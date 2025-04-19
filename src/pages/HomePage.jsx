@@ -23,9 +23,9 @@ export default function HomePage() {
             <div className="max-w-3xl mb-4">
                 <h1 className="text-3xl font-bold my-4">안녕하십니까, 저는</h1>
                 <p className="text-gray-700">
-                    언젠가는 DB 분야로 진출하고 싶은 강다윤입니다. 저는 프론트엔드와 백엔드 프로젝트를 진행하며 <br className="max-lg:hidden" />
-                    다양한 경험을 쌓았습니다. 그 과정에서 발생한 에러의 원인을 분석하고 해결하는 과정도 직접 겪으며, <br className="max-lg:hidden" />
-                    이를 통해 실력을 더욱 키울 수 있었습니다. 앞으로도 모르는 것을 배우며 끊임없이 <br className="max-lg:hidden" />
+                    언젠가는 DB 분야로 진출하고 싶은 강다윤입니다. 저는 프론트엔드와 백엔드 프로젝트를 진행하며 
+                    다양한 경험을 쌓았습니다. 그 과정에서 발생한 에러의 원인을 분석하고 해결하는 과정도 직접 겪으며, 
+                    이를 통해 실력을 더욱 키울 수 있었습니다. 앞으로도 모르는 것을 배우며 끊임없이 
                     성장하는 개발자가 되겠습니다.
                 </p>
             </div>
@@ -35,7 +35,7 @@ export default function HomePage() {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                     {recentInterest.map((c, i) => (
-                        <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                        <div key={i} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                             <div className="flex items-center mb-2">
                                 <h3 className="text-lg font-semibold text-gray-800">{c.title}</h3>
                             </div>

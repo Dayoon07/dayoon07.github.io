@@ -15,11 +15,11 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
-      <main className="max-w-screen-xl mx-auto px-4 py-8 lg:pt-20 lg:flex">
+      <main className="max-w-screen-xl mx-auto px-4 py-8 md:pt-20 md:flex">
         <div className="w-60">
           <Profile />
         </div>
-        <div className="lg:max-w-screen-xl max-lg:w-full">
+        <div className="md:max-w-screen-xl max-md:w-full">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/skill" element={<Skill />} />

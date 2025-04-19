@@ -3,7 +3,7 @@ import React from 'react';
 export default function Skill() {
     const skillSections = [
         {
-            title: "Tools",
+            title: "프로그램",
             color: "bg-blue-600",
             items: [
                 {
@@ -15,17 +15,17 @@ export default function Skill() {
                     badge: "https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=vsc&logoColor=white"
                 },
                 {
-                    name: "Spring Tool Suite (STS)",
-                    badge: "https://dayoon07.github.io/static-page-test/devimg/SpringToolSuite.png"
-                },
-                {
                     name: "PyCharm",
                     badge: "https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=PyCharm&logoColor=white"
+                },
+                {
+                    name: "Spring Tool Suite (STS)",
+                    badge: "https://dayoon07.github.io/static-page-test/devimg/SpringToolSuite.png"
                 }
             ]
         },
         {
-            title: "Languages",
+            title: "언어",
             color: "bg-green-600",
             items: [
                 {
@@ -56,7 +56,7 @@ export default function Skill() {
             ]
         },
         {
-            title: "Web Frameworks",
+            title: "웹 프레임워크",
             color: "bg-red-600",
             items: [
                 {
@@ -86,7 +86,7 @@ export default function Skill() {
             ]
         },
         {
-            title: "DB & DB Tools",
+            title: "DB & DB 프로그램",
             color: "bg-yellow-600",
             items: [
                 {
@@ -108,7 +108,7 @@ export default function Skill() {
             ]
         },
         {
-            title: "Libraries",
+            title: "라이브러리",
             color: "bg-orange-600",
             items: [
                 {
@@ -130,7 +130,7 @@ export default function Skill() {
             ]
         },
         {
-            title: "Server",
+            title: "웹 서버",
             color: "bg-black",
             items: [
                 {
@@ -144,7 +144,7 @@ export default function Skill() {
             ]
         },
         {
-            title: "Analysis & Monitoring",
+            title: "분석 & 모니터링",
             color: "bg-cyan-500",
             items: [
                 {
@@ -158,7 +158,7 @@ export default function Skill() {
             ]
         },
         {
-            title: "DL Frameworks",
+            title: "딥러닝 프레임워크",
             color: "bg-purple-600",
             items: [
                 {

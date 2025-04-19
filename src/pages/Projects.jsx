@@ -75,15 +75,15 @@ export default function Projects() {
             </div>
 
             {projectsData.map((project, index) => (
-                <div key={index} className="w-full lg:flex">
+                <div key={index} className="w-full md:flex">
                     <div>
                         <a href={project.image} target="_blank">
                             <img src={project.image} alt={project.title} title={project.title} 
-                                className="lg:w-96 object-cover rounded-md" />
+                                className="md:w-96 object-cover rounded-md" />
                         </a>
                     </div>
-                    <div className="w-full lg:max-w-md ml-4">
-                        <h1 className="text-2xl font-semibold hover:text-blue-500 hover:underline max-lg:my-2 lg:mb-2">
+                    <div className="w-full md:max-w-md ml-4">
+                        <h1 className="text-2xl font-semibold hover:text-blue-500 hover:underline max-md:my-2 md:mb-2">
                             <a href={project.link} target="_blank">{project.title}</a>
                         </h1>
                         <div className="space-x-2">
@@ -96,15 +96,13 @@ export default function Projects() {
                                 </span>
                             ))}
                         </div>
-                        <p className="text-md mt-2 max-lg:w-full max-lg:pr-8">{project.description}</p>
+                        <p className="text-md mt-2 max-md:w-full max-md:pr-8">{project.description}</p>
                         {project.demoVideo && (
-                            <button 
-                                type="button" 
-                                className="px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-500 mt-3"
-                                onClick={() => window.open(project.demoVideo, '_blank')}
+                            <a href={project.demoVideo} target="_blank"
+                                className="block w-32 text-center px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-500 mt-4 cursor-pointer"
                             >
                                 테스트 영상
-                            </button>
+                            </a>
                         )}
                     </div>
                 </div>
