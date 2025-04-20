@@ -1,4 +1,7 @@
 export default function Projects() {
+
+    document.title = "주요 프로젝트 - 저에 소개하자면...";
+
     const projectsData = [
         {
             title: "mycloud-project",

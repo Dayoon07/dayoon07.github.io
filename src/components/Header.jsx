@@ -15,12 +15,8 @@ const menuItems = [
     label: 'Architecture'
   },
   {
-    to: 'CV',
+    to: '/cv',
     label: 'CV'
-  },
-  {
-    to: '/contact',
-    label: 'Contact'
   }
 ];
 

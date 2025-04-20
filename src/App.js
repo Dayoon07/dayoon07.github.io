@@ -8,8 +8,8 @@ import Profile from './components/Profile';
 import NotFound from './pages/Wow404Error';
 import Projects from './pages/Projects';
 import Architecture from './pages/Architecture';
-import Contact from './pages/Contact';
 import SiteMap from './pages/SiteMap';
+import CV from './pages/Cv';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
             <Route path="/skill" element={<Skill />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/architecture" element={<Architecture />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/cv" element={<CV />} />
             <Route path="/sitemap" element={<SiteMap />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -19,8 +19,8 @@ const what_should_i_do_with_the_variable = [
         t: "Architecture"
     },
     {
-        to: "/contact",
-        t: "Contact"
+        to: "/cv",
+        t: "CV"
     }
 ];
 

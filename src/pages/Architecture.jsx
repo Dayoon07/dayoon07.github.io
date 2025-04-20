@@ -1,4 +1,7 @@
 export default function Architecture() {
+
+    document.title = "DB 아키텍처 - 저에 소개하자면...";
+
     const l = [
         {
             img: "https://dayoon07.github.io/static-page-test/img/mycloud-erd.png",

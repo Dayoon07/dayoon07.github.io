@@ -2,6 +2,8 @@ import React from "react";
 
 export default function HomePage() {
 
+    document.title = "저에 소개하자면...";
+
     const recentInterest = [
         {
             title: "데이터베이스 최적화",
@@ -18,8 +20,21 @@ export default function HomePage() {
         }
     ];
 
+    const projectLinks = [
+        {
+            name: "학교 정보 검색",
+            url: "https://Dayoon07.github.io/school-search",
+            note: "(school-search)",
+        },
+        {
+            name: "모바일 웹 캠 애플리케이션",
+            url: "https://dayoon07.github.io/webcam/",
+            note: "(webcam)",
+        }
+    ];
+
     return (
-        <>
+        <div className="md:mb-40">
             <div className="max-w-3xl mb-4">
                 <h1 className="text-3xl font-bold my-4">안녕하십니까, 저는</h1>
                 <p className="text-gray-700">
@@ -28,6 +43,25 @@ export default function HomePage() {
                     이를 통해 실력을 더욱 키울 수 있었습니다. 앞으로도 모르는 것을 배우며 끊임없이 
                     성장하는 개발자가 되겠습니다.
                 </p>
+            </div>
+
+            <div className="w-full">
+                <h2 className="mt-6 mb-4 text-xl font-bold text-gray-900 dark:text-white border-b pb-2">
+                    간단한 프로젝트
+                </h2>
+                <div className="grid gap-4 sm:grid-cols-2">
+                    {projectLinks.map((project, idx) => (
+                        <a key={idx} href={project.url} target="_blank" rel="noopener noreferrer" 
+                        className="block bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition p-4 border hover:border-blue-400 cursor-pointer"
+                        >
+                            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{project.name}</h3>
+                            {project.note && (
+                                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{project.note}</p>
+                            )}
+                            <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">{project.url}</p>
+                        </a>
+                    ))}
+                </div>
             </div>
 
             <div className="mt-6 max-w-3xl">
@@ -44,6 +78,6 @@ export default function HomePage() {
                     ))}
                 </div>
             </div>
-        </>
+        </div>
     );
 }

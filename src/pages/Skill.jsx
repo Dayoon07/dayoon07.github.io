@@ -1,6 +1,9 @@
 import React from 'react';
 
 export default function Skill() {
+
+    document.title = "기술 스택 - 저의 대해 소개하자면...";
+
     const skillSections = [
         {
             title: "프로그램",
