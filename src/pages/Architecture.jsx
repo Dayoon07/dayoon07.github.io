@@ -28,9 +28,9 @@ export default function Architecture() {
         <>
             <h1 className="text-3xl font-bold my-4">DB 설계 작업물</h1>
 
-            <div className="lg:grid lg:grid-cols-2 lg:gap-4">
+            <div className="md:grid md:grid-cols-2 md:gap-4">
                 {l.map((content, idx) => (
-                    <div className="lg:max-w-md max-lg:w-full max-lg:mb-8">
+                    <div className="md:max-w-md max-md:w-full max-md:mb-8">
                         <a href={content.img} target="_blank">
                             <img src={content.img} className="w-full" />
                         </a>

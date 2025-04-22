@@ -8,18 +8,24 @@ export default function Profile() {
     };
 
     return (
-        <div className="w-60 md:fixed md:top-20">
+        <div className="w-full md:w-60 md:fixed md:top-20">
             <div className="space-y-4">
-                <div className="max-md:flex max-md:items-center">
-                    <img src="https://dayoon07.github.io/img/증명사진.jpg" alt="프로필 사진" className="max-md:w-16 md:w-40 rounded-full" />
-                    <h3 className="text-xl font-semibold max-md:ml-4 md:mt-4">강다윤 <br /> (Dayoon Kang)</h3>
+                <div className="flex items-center md:block">
+                    <img 
+                        src="https://dayoon07.github.io/img/증명사진.jpg" 
+                        alt="프로필 사진" 
+                        className="w-16 sm:w-20 md:w-28 lg:w-40 rounded-full" 
+                    />
+                    <h3 className="text-xl font-semibold ml-4 md:ml-0 md:mt-4">
+                        강다윤 <br className="hidden sm:block" /> (Dayoon Kang)
+                    </h3>
                 </div>
-                <div className="md:hidden max-md:absolute max-md:right-4 max-md:top-20">
-                    <button 
-                        onClick={toggleMobileInfo}
-                        className="px-4 py-1 bg-white border-gray-300 border hover:bg-black hover:text-white cursor-pointer rounded transition duration-300"
+                
+                <div className="md:hidden absolute right-4 top-20">
+                    <button onClick={toggleMobileInfo} 
+                        className="px-4 py-1 bg-white border border-gray-400 hover:bg-gray-800 hover:text-white cursor-pointer rounded transition duration-300"
                     >
-                        Follow
+                        프로필 정보
                     </button>
                     
                     {showMobileInfo && (
@@ -41,7 +47,7 @@ export default function Profile() {
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                                         <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4ZM20 6L12 11L4 6V6.01L12 11.99L20 6.01V6Z"/>
                                     </svg>
-                                    <a href="mailto:gangd0642@gmail.com" className="hover:underline">dayoon071022@gmail.com</a>
+                                    <a href="mailto:dayoon071022@gmail.com" className="hover:underline">dayoon071022@gmail.com</a>
                                 </div>
                                 <div className="flex items-center space-x-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
@@ -54,7 +60,7 @@ export default function Profile() {
                     )}
                 </div>
 
-                <div className="space-y-2 max-md:hidden">
+                <div className="space-y-2 hidden md:block">
                     <div className="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 2C8.13401 2 5 5.13401 5 9C5 13.25 12 22 12 22C12 22 19 13.25 19 9C19 5.13401 15.866 2 12 2ZM12 11.5C10.6193 11.5 9.5 10.3807 9.5 9C9.5 7.61929 10.6193 6.5 12 6.5C13.3807 6.5 14.5 7.61929 14.5 9C14.5 10.3807 13.3807 11.5 12 11.5Z"/>
@@ -71,7 +77,9 @@ export default function Profile() {
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4ZM20 6L12 11L4 6V6.01L12 11.99L20 6.01V6Z"/>
                         </svg>
-                        <a href="mailto:gangd0642@gmail.com" className="hover:underline">dayoon071022@<br className="lg:hidden" />gmail.com</a>
+                        <a href="mailto:dayoon071022@gmail.com" className="hover:underline">
+                            dayoon071022@<br className="lg:hidden" />gmail.com
+                        </a>
                     </div>
                     <div className="flex items-center space-x-2">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">

@@ -10,6 +10,7 @@ import Projects from './pages/Projects';
 import Architecture from './pages/Architecture';
 import SiteMap from './pages/SiteMap';
 import CV from './pages/Cv';
+import Portfolio from './pages/Portfolio';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/architecture" element={<Architecture />} />
             <Route path="/cv" element={<CV />} />
+            <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/sitemap" element={<SiteMap />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

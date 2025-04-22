@@ -186,7 +186,7 @@ export default function Skill() {
                         key={index} 
                         className="md:w-60 bg-white shadow-lg rounded-xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl"
                     >
-                        <div className={`${section.color} text-white px-4 py-3 font-bold text-lg flex items-center`}>
+                        <div className={`${section.color} text-white py-3 px-4 font-bold text-lg flex items-center`}>
                             {section.title}
                         </div>
                         <div className="p-4">

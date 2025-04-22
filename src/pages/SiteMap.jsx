@@ -21,12 +21,24 @@ const what_should_i_do_with_the_variable = [
     {
         to: "/cv",
         t: "CV"
+    },
+    {
+        to: "/portfolio",
+        t: "Portfolio"
+    },
+    {
+        to: "/sitemap",
+        t: "Sitemap"
+    },
+    {
+        to: "/wow404error",
+        t: "Wow404Error"
     }
 ];
 
 export default function SiteMap() {
     return (
-        <div className="mt-4">
+        <div className="mt-4 pb-16">
             {what_should_i_do_with_the_variable.map((v, i) => (
                 <Link className="block mb-8 text-2xl font-semibold hover:underline" 
                     to={v.to} key={i} 

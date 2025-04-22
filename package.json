@@ -12,6 +12,7 @@
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
     "lucide-react": "^0.483.0",
+    "marked-react": "^3.0.0",
     "new-portfolio": "file:",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
