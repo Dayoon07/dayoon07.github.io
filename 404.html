@@ -6,13 +6,13 @@
     <title>저에 소개하자면...</title>
 </head>
 <body>
+        
     <script>
-        var pathSegmentsToKeep = 1; // GitHub Pages에 리포지토리가 포함되면 1
+        var pathSegmentsToKeep = 1;
     
         var l = window.location;
     
-        // 이미 리디렉션된 URL인지 확인
-        if (!l.pathname.startsWith('/?/')) {
+        if (!l.pathname.startsWith('/?/') && !l.search.includes('~and~')) {
             l.replace(
                 l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
                 l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
@@ -22,5 +22,6 @@
             );
         }
     </script>
+
 </body>
 </html>
