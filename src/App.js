@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header />
       <main className="max-w-screen-xl mx-auto px-4 py-8 md:pt-20 md:flex">
-        <div className="w-60">
+        <div className="w-60 max-md:mt-10">
           <Profile />
         </div>
         <div className="md:max-w-screen-xl max-md:w-full">

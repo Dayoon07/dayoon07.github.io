@@ -26,7 +26,7 @@ const menuItems = [
 
 export default function Header() {
   return (
-    <header className="md:fixed w-full bg-white border-b">
+    <header className="fixed w-full bg-white border-b z-50">
       <div className="md:max-w-screen-xl max-md:w-full mx-auto p-2 flex max-md:justify-between max-md:items-center">
         <Link to="/" className="p-2 text-lg font-semibold relative after:content-[''] after:absolute 
           after:left-1/2 after:bottom-0 after:w-0 after:h-[4px] after:bg-black after:transition-all after:duration-300 
