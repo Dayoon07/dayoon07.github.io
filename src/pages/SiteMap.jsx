@@ -37,6 +37,9 @@ const what_should_i_do_with_the_variable = [
 ];
 
 export default function SiteMap() {
+
+    document.title = "사이트맵 | 안녕하세요. 강다윤입니다";
+
     return (
         <div className="mt-4 pb-16">
             {what_should_i_do_with_the_variable.map((v, i) => (

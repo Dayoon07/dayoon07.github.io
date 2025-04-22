@@ -1,4 +1,7 @@
 export default function CV() {
+    
+    document.title = "이력서 | 안녕하세요. 강다윤입니다";
+    
     return (
         <div className="pb-10 text-lg px-2">
             <h1 className="text-3xl font-bold my-4">이력서</h1>

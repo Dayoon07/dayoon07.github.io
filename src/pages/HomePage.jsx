@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HomePage() {
 
-    document.title = "저에 소개하자면...";
+    document.title = "안녕하세요. 강다윤입니다";
 
     const recentInterest = [
         {

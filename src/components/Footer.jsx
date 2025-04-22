@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-screen-xl mx-auto px-4">
         <Link to="/sitemap" className="text-lg text-gray-400 font-semibold hover:underline">Sitemap</Link>
         <p className="text-gray-400 mt-2 text-sm">
-          &copy; {currentYear} dayoon07. All rights reserved.
+          &copy; {currentYear} dayoon07. All rights reserved.&nbsp;
           <br className="md:hidden" />
           Inspired by&nbsp;
           <a

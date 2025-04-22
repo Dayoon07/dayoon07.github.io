@@ -1,6 +1,9 @@
 import { useState } from "react";
 
 export default function Portfolio() {
+
+    document.title = "포트폴리오 | 안녕하세요. 강다윤입니다";
+
     const totalSlides = 12;
     const [currentIndex, setCurrentIndex] = useState(null);
 
@@ -23,7 +26,7 @@ export default function Portfolio() {
     };
 
     return (
-        <div className="pb-96">
+        <div className="pb-24 z-60">
             <h1 className="text-3xl font-bold my-4">포트폴리오</h1>
 
             <div className="md:grid md:grid-cols-2 md:gap-4">
@@ -40,7 +43,7 @@ export default function Portfolio() {
             </div>
 
             {currentIndex !== null && (
-                <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-30" onClick={closeLightbox}>
+                <div className="z-20 fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center" onClick={closeLightbox}>
                     <button onClick={prevSlide} className="absolute left-0 text-white text-4xl font-bold pb-2 px-4 bg-black bg-opacity-50 hover:bg-opacity-80">
                         ←
                     </button>

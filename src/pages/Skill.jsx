@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Skill() {
 
-    document.title = "기술 스택 - 저의 대해 소개하자면...";
+    document.title = "기술 스택 | 안녕하세요. 강다윤입니다";
 
     const skillSections = [
         {
@@ -180,7 +180,7 @@ export default function Skill() {
         <>
             <h1 className="text-3xl font-bold my-4">기술 스택</h1>
 
-            <div className="w-full mt-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className="w-full mt-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-16">
                 {skillSections.map((section, index) => (
                     <div 
                         key={index} 

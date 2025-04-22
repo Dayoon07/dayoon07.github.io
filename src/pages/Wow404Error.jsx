@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function NotFound() {
+
+    document.title = "404 Not Found";
+
     return (
         <div className="pb-60">
             <h1 className="text-3xl font-bold my-4">요청하신 페이지를 <br className="md:hidden" /> 찾을 수 없습니다.</h1>

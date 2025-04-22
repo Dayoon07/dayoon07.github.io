@@ -1,6 +1,6 @@
 {
   "homepage": "https://dayoon07.github.io",
-  "name": "new-portfolio",
+  "name": "dayoon07.github.io",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,13 +11,13 @@
     "@testing-library/user-event": "^13.5.0",
     "autoprefixer": "^10.4.21",
     "class-variance-authority": "^0.7.1",
+    "dayoon07.github.io": "file:",
     "lucide-react": "^0.483.0",
     "marked-react": "^3.0.0",
-    "new-portfolio": "file:",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-popol": "file:",
+    "react-lightbox-component": "^1.2.1",
     "react-router-dom": "^7.4.0",
     "react-scripts": "^5.0.1",
     "tailwind-merge": "^3.0.2",
