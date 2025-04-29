@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const what_should_i_do_with_the_variable = [
+const sitePages = [
     {
         to: "/",
         t: "Homepage"
@@ -42,7 +42,7 @@ export default function SiteMap() {
 
     return (
         <div className="mt-4 pb-16">
-            {what_should_i_do_with_the_variable.map((v, i) => (
+            {sitePages.map((v, i) => (
                 <Link className="block mb-8 text-2xl font-semibold hover:underline" 
                     to={v.to} key={i} 
                     style={{ color: "rgb(82, 173, 200" }}
