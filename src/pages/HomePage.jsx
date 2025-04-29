@@ -36,7 +36,7 @@ export default function HomePage() {
     ];
 
     return (
-        <div className="md:mb-32">
+        <div className="md:mb-28">
             <div className="max-w-3xl mb-4">
                 <h1 className="text-3xl font-bold my-4">안녕하십니까, 저는</h1>
                 <p className="text-gray-700">
@@ -67,11 +67,11 @@ export default function HomePage() {
             </div>
 
             <div className="mt-6 max-w-3xl">
-                <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">요즘 관심사</h2>
+                <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">최근 소식</h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                     {recentInterest.map((c, i) => (
-                        <div key={i} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer">
+                        <div key={i} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
                             <div className="flex items-center mb-2">
                                 <h3 className="text-lg font-semibold text-gray-800">{c.title}</h3>
                             </div>

@@ -14,16 +14,20 @@ export default function Skill() {
                     badge: "https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"
                 },
                 {
-                    name: "Visual Studio Code",
-                    badge: "https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=vsc&logoColor=white"
-                },
-                {
                     name: "PyCharm",
                     badge: "https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=PyCharm&logoColor=white"
                 },
                 {
+                    name: "Visual Studio Code",
+                    badge: "https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=vsc&logoColor=white"
+                },
+                {
                     name: "Spring Tool Suite (STS)",
-                    badge: "https://dayoon07.github.io/static-page-test/devimg/SpringToolSuite.png"
+                    badge: "https://img.shields.io/badge/Spring%20Tool%20Suite%20-6DB33F?style=for-the-badge&logo=eclipse&logoColor=white"
+                },
+                {
+                    name: "IntelliJ",
+                    badge: "https://img.shields.io/badge/Intellij%20Idea-000?style=for-the-badge&logo=intellij-idea"
                 }
             ]
         },
@@ -46,6 +50,10 @@ export default function Skill() {
                 {
                     name: "JSON",
                     badge: "https://img.shields.io/badge/JSON-000?style=for-the-badge&logo=json&logoColor=fff"
+                },
+                {
+                    name: "SQL",
+                    badge: "https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=sqlite&logoColor=white"
                 },
                 {
                     name: "Java",
@@ -98,15 +106,15 @@ export default function Skill() {
                 },
                 {
                     name: "Maria",
-                    badge: "https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white"
-                },
-                {
-                    name: "Sql Developer",
-                    badge: "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png"
+                    badge: "https://img.shields.io/badge/Maria-003545?style=for-the-badge&logo=mariadb&logoColor=white"
                 },
                 {
                     name: "Dbeaver",
                     badge: "https://img.shields.io/badge/dbeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white"
+                },
+                {
+                    name: "Sql Developer",
+                    badge: "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png"
                 }
             ]
         },
@@ -177,20 +185,20 @@ export default function Skill() {
     ];
 
     return (
-        <>
+        <div className="pb-10">
             <h1 className="text-3xl font-bold my-4">기술 스택</h1>
 
             <div className="w-full mt-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-16">
                 {skillSections.map((section, index) => (
                     <div 
                         key={index} 
-                        className="md:w-60 bg-white shadow-lg rounded-xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl"
+                        className="md:w-60 lg:w-64 bg-white shadow-lg rounded-xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl"
                     >
                         <div className={`${section.color} text-white py-3 px-4 font-bold text-lg flex items-center`}>
                             {section.title}
                         </div>
                         <div className="p-4">
-                            <div className="flex flex-wrap gap-2">
+                            <div className="flex flex-wrap gap-1">
                                 {section.items.map((item, itemIndex) => (
                                     <div key={itemIndex} className="flex items-center" title={item.name}>
                                         <img 
@@ -205,6 +213,6 @@ export default function Skill() {
                     </div>
                 ))}
             </div>
-        </>
+        </div>
     );
 }
