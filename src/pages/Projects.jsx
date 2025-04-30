@@ -1,7 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Projects() {
     document.title = "주요 프로젝트 | 안녕하세요. 강다윤입니다";
+
+    const [imagesLoaded, setImagesLoaded] = useState(0);
+    const [showItems, setShowItems] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [currentImage, setCurrentImage] = useState(null);
 
     const projectsData = [
         {
@@ -58,8 +63,30 @@ export default function Projects() {
         }
     ];
 
-    const [isOpen, setIsOpen] = useState(false);
-    const [currentImage, setCurrentImage] = useState(null);
+    // 이미지 로딩 상태 추적
+    useEffect(() => {
+        // 모든 이미지를 프리로드
+        const preloadImages = () => {
+            const imagePromises = projectsData.map((project) => {
+                return new Promise((resolve) => {
+                    const img = new Image();
+                    img.src = project.image;
+                    img.onload = () => {
+                        setImagesLoaded(prev => prev + 1);
+                        resolve();
+                    };
+                    img.onerror = () => resolve(); // 오류가 발생해도 계속 진행
+                });
+            });
+
+            Promise.all(imagePromises).then(() => {
+                // 모든 이미지가 로드되면 애니메이션 시작
+                setShowItems(true);
+            });
+        };
+
+        preloadImages();
+    }, []);
 
     const openLightbox = (image) => {
         setCurrentImage(image);
@@ -73,11 +100,33 @@ export default function Projects() {
 
     return (
         <>
-            <h1 className="text-3xl font-bold my-4">주요 프로젝트</h1>
+            <h1 className="text-3xl font-bold my-4 opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
+                style={{ 
+                    opacity: showItems ? 1 : 0, 
+                    transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)'
+                }}>
+                주요 프로젝트
+            </h1>
+
+            {/* 로딩 인디케이터 */}
+            {!showItems && (
+                <div className="flex flex-col items-center justify-center py-12">
+                    <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+                    <p className="mt-4 text-gray-600">이미지 로딩중... ({imagesLoaded}/{projectsData.length})</p>
+                </div>
+            )}
 
             <div className="space-y-8 mt-5">
                 {projectsData.map((project, index) => (
-                    <div key={index} className="w-full md:flex">
+                    <div 
+                        key={index} 
+                        className="w-full md:flex opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
+                        style={{ 
+                            opacity: showItems ? 1 : 0, 
+                            transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)',
+                            transitionDelay: `${index * 150}ms` // 각 아이템마다 딜레이 추가
+                        }}
+                    >
                         <div>
                             <img 
                                 src={project.image} 

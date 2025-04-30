@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
+import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Skill() {
 
     document.title = "기술 스택 | 안녕하세요. 강다윤입니다";
+
+    const [imagesLoaded, setImagesLoaded] = useState(0);
+    const [showItems, setShowItems] = useState(false);
 
     const skillSections = [
         {
@@ -57,7 +62,7 @@ export default function Skill() {
                 },
                 {
                     name: "Java",
-                    badge: "https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=data:image/svg%2bxml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyB3aWR0aD0iMTUwcHgiIGhlaWdodD0iMTUwcHgiIHZpZXdCb3g9IjAgMCAzMi4wMCAzMi4wMCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBmaWxsPSIjZmZmZmZmIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMC4yNTYiPgoNPGcgaWQ9IlNWR1JlcG9fYmdDYXJyaWVyIiBzdHJva2Utd2lkdGg9IjAiLz4KDTxnIGlkPSJTVkdSZXBvX3RyYWNlckNhcnJpZXIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgoNPGcgaWQ9IlNWR1JlcG9faWNvbkNhcnJpZXIiPiA8cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMTIuNTU3IDIzLjIyYzAgMC0wLjk4MiAwLjU3MSAwLjY5OSAwLjc2NSAyLjAzNyAwLjIzMiAzLjA3OSAwLjE5OSA1LjMyNC0wLjIyNiAwIDAgMC41OSAwLjM3IDEuNDE1IDAuNjkxLTUuMDMzIDIuMTU3LTExLjM5LTAuMTI1LTcuNDM3LTEuMjN6TTExLjk0MiAyMC40MDVjMCAwLTEuMTAyIDAuODE2IDAuNTgxIDAuOTkgMi4xNzYgMC4yMjQgMy44OTUgMC4yNDMgNi44NjktMC4zMyAwIDAgMC40MTEgMC40MTcgMS4wNTggMC42NDUtNi4wODUgMS43NzktMTIuODYzIDAuMTQtOC41MDgtMS4zMDV6TTE3LjEyNyAxNS42M2MxLjI0IDEuNDI4LTAuMzI2IDIuNzEzLTAuMzI2IDIuNzEzczMuMTQ5LTEuNjI1IDEuNzAzLTMuNjYxYy0xLjM1MS0xLjg5OC0yLjM4Ni0yLjg0MSAzLjIyMS02LjA5MyAwIDAtOC44MDEgMi4xOTgtNC41OTggNy4wNDJ6TTIzLjc4MyAyNS4zMDJjMCAwIDAuNzI3IDAuNTk5LTAuODAxIDEuMDYyLTIuOTA1IDAuODgtMTIuMDkxIDEuMTQ2LTE0LjY0MyAwLjAzNS0wLjkxNy0wLjM5OSAwLjgwMy0wLjk1MyAxLjM0NC0xLjA2OSAwLjU2NC0wLjEyMiAwLjg4Ny0wLjEgMC44ODctMC4xLTEuMDIwLTAuNzE5LTYuNTk0IDEuNDExLTIuODMxIDIuMDIxIDEwLjI2MiAxLjY2NCAxOC43MDYtMC43NDkgMTYuMDQ0LTEuOTV6TTEzLjAyOSAxNy40ODljMCAwLTQuNjczIDEuMTEtMS42NTUgMS41MTMgMS4yNzQgMC4xNzEgMy44MTQgMC4xMzIgNi4xODEtMC4wNjYgMS45MzQtMC4xNjMgMy44NzYtMC41MSAzLjg3Ni0wLjUxcy0wLjY4MiAwLjI5Mi0xLjE3NSAwLjYyOWMtNC43NDUgMS4yNDgtMTMuOTExIDAuNjY3LTExLjI3Mi0wLjYwOSAyLjIzMi0xLjA3OSA0LjA0Ni0wLjk1NiA0LjA0Ni0wLjk1NnpNMjEuNDEyIDIyLjE3NGM0LjgyNC0yLjUwNiAyLjU5My00LjkxNSAxLjAzNy00LjU5MS0wLjM4MiAwLjA3OS0wLjU1MiAwLjE0OC0wLjU1MiAwLjE0OHMwLjE0Mi0wLjIyMiAwLjQxMi0wLjMxOGMzLjA3OS0xLjA4MyA1LjQ0OCAzLjE5My0wLjk5NCA0Ljg4Ny0wIDAgMC4wNzUtMC4wNjcgMC4wOTctMC4xMjZ6TTE4LjUwMyAzLjMzN2MwIDAgMi42NzEgMi42NzItMi41MzQgNi43ODEtNC4xNzQgMy4yOTYtMC45NTIgNS4xNzYtMC4wMDIgNy4zMjMtMi40MzYtMi4xOTgtNC4yMjQtNC4xMzMtMy4wMjUtNS45MzQgMS43NjEtMi42NDQgNi42MzgtMy45MjUgNS41Ni04LjE3ek0xMy41MDMgMjguOTY2YzQuNjMgMC4yOTYgMTEuNzQtMC4xNjQgMTEuOTA4LTIuMzU1IDAgMC0wLjMyNCAwLjgzMS0zLjgyNiAxLjQ5LTMuOTUyIDAuNzQ0LTguODI2IDAuNjU3LTExLjcxNiAwLjE4IDAgMCAwLjU5MiAwLjQ5IDMuNjM1IDAuNjg1eiIvPiA8L2c+Cg08L3N2Zz4="
+                    badge: "/img/Java-007396.svg"
                     // java의 simple icon이 oracle 때문에 못 쓰게 됨 그래서 다른 사람이 만든 커스텀 로고로 대체함
                 },
                 {
@@ -184,15 +189,65 @@ export default function Skill() {
         }
     ];
 
+    // 전체 이미지 수 계산
+    const totalImages = skillSections.reduce((acc, section) => acc + section.items.length, 0);
+
+    // 이미지 프리로드 및 애니메이션 트리거
+    useEffect(() => {
+        const preloadImages = () => {
+            const imagePromises = [];
+
+            skillSections.forEach(section => {
+                section.items.forEach(item => {
+                    imagePromises.push(new Promise(resolve => {
+                        const img = new Image();
+                        img.src = item.badge;
+                        img.onload = () => {
+                            setImagesLoaded(prev => prev + 1);
+                            resolve();
+                        };
+                        img.onerror = () => resolve();
+                    }));
+                });
+            });
+
+            Promise.all(imagePromises).then(() => {
+                setShowItems(true);
+            });
+        };
+
+        preloadImages();
+    }, []);
+
     return (
         <div className="pb-10">
-            <h1 className="text-3xl font-bold my-4">기술 스택</h1>
+            <h1 
+                className="text-3xl font-bold my-4 opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
+                style={{ 
+                    opacity: showItems ? 1 : 0, 
+                    transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)' 
+                }}
+            >
+                기술 스택
+            </h1>
+
+            {!showItems && (
+                <div className="flex flex-col items-center justify-center py-12">
+                    <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+                    <p className="mt-4 text-gray-600">이미지 로딩중... ({imagesLoaded}/{totalImages})</p>
+                </div>
+            )}
 
             <div className="w-full mt-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-16">
                 {skillSections.map((section, index) => (
                     <div 
                         key={index} 
-                        className="md:w-60 lg:w-64 bg-white shadow-lg rounded-xl border border-gray-200 overflow-hidden transition-all duration-300 hover:shadow-xl"
+                        className="md:w-60 lg:w-64 bg-white shadow-lg rounded-xl border border-gray-200 overflow-hidden transition-all duration-700 transform opacity-0 -translate-y-10"
+                        style={{ 
+                            opacity: showItems ? 1 : 0, 
+                            transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)',
+                            transitionDelay: `${index * 100}ms`
+                        }}
                     >
                         <div className={`${section.color} text-white py-3 px-4 font-bold text-lg flex items-center`}>
                             {section.title}
