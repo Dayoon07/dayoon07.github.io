@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>강다윤 - GitHub 프로젝트</title>
+    <subtitle>개인 개발 프로젝트 및 학습 기록</subtitle>
+    <id>https://dayoon07.github.io/feed.xml</id>
+    <updated>2025-05-03T12:00:00+09:00</updated>
+
+    <link href="https://dayoon07.github.io/feed.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://dayoon07.github.io/" rel="alternate" type="text/html"/>
+
+    <author>
+        <name>강다윤</name>
+        <email>gangd0642@gmail.com</email>
+    </author>
+
+    <entry>
+        <title>웹캠 프로젝트</title>
+        <link href="https://github.com/Dayoon07/webcam" rel="alternate" type="text/html"/>
+        <id>https://github.com/Dayoon07/webcam</id>
+        <published>2025-01-01T00:00:00+09:00</published>
+        <updated>2025-01-01T00:00:00+09:00</updated>
+        <summary type="html"><![CDATA[GitHub 프로젝트: webcam]]></summary>
+        <content type="html"><![CDATA[<p>p5.js, ml5.js를 사용해 만든 캠 필터 웹 사이트입니다.</p>]]></content>
+        <category term="GitHub"/>
+    </entry>
+
+    <entry>
+        <title>학교 검색 서비스</title>
+        <link href="https://github.com/Dayoon07/school-search" rel="alternate" type="text/html"/>
+        <id>https://github.com/Dayoon07/school-search</id>
+        <published>2025-01-01T00:00:00+09:00</published>
+        <updated>2025-01-01T00:00:00+09:00</updated>
+        <summary type="html"><![CDATA[GitHub 프로젝트: school-search]]></summary>
+        <content type="html">
+            <![CDATA[<p>나이스 대국민서비스에서 발급받은 API키로 만든 학교 정보 검색 웹 사이트입니다.</p>]]>
+        </content>
+        <category term="GitHub"/>
+    </entry>
+
+    <entry>
+        <title>마이클라우드 프로젝트</title>
+        <link href="https://github.com/Dayoon07/mycloud-project" rel="alternate" type="text/html"/>
+        <id>https://github.com/Dayoon07/mycloud-project</id>
+        <published>2025-01-01T00:00:00+09:00</published>
+        <updated>2025-01-01T00:00:00+09:00</updated>
+        <summary type="html"><![CDATA[GitHub 프로젝트: mycloud-project]]></summary>
+        <content type="html">
+            <![CDATA[<p>클라우드를 일부분 구현한 프로젝트입니다. 메일 기능, 엑세스 키 기능을 
+            활용해 다른 사람에게 나의 파일을 공유할 수 있습니다.</p>]]>
+        </content>
+        <category term="GitHub"/>
+    </entry>
+
+    <entry>
+        <title>스프링부트 영상 플랫폼</title>
+        <link href="https://github.com/Dayoon07/springboot-video-platform" rel="alternate" type="text/html"/>
+        <id>https://github.com/Dayoon07/springboot-video-platform</id>
+        <published>2025-01-01T00:00:00+09:00</published>
+        <updated>2025-01-01T00:00:00+09:00</updated>
+        <summary type="html"><![CDATA[GitHub 프로젝트: springboot-video-platform]]></summary>
+        <content type="html">
+            <![CDATA[<p>springboot-video-platform은 Spring Boot를 기반으로 한 동영상 플랫폼입니다. 
+            주요 기능으로는 업로드 기능, 좋아요 기능, 구독 기능, 시청 기록 기능, 태그, 영상 분석 기능이 있습니다.</p>]]>
+        </content>
+        <category term="Spring Boot"/>
+    </entry>
+
+    <entry>
+        <title>스프링부트 블로그</title>
+        <link href="https://github.com/Dayoon07/springboot-blog" rel="alternate" type="text/html"/>
+        <id>https://github.com/Dayoon07/springboot-blog</id>
+        <published>2025-01-01T00:00:00+09:00</published>
+        <updated>2025-01-01T00:00:00+09:00</updated>
+        <summary type="html"><![CDATA[GitHub 프로젝트: springboot-blog]]></summary>
+        <content type="html">
+            <![CDATA[<p>블로그 플랫폼으로 주요 기능으로 게시물 작성, 수정, 삭제, 댓글 기능, 좋아요 기능이 
+            있으며 Spring Boot, JPA를 사용해 만들었습니다.</p>]]>
+        </content>
+        <category term="Spring Boot"/>
+    </entry>
+
+    <entry>
+        <title>KM 크리에이티브스쿨</title>
+        <link href="https://github.com/Dayoon07/kmcreativeschool" rel="alternate" type="text/html"/>
+        <id>https://github.com/Dayoon07/kmcreativeschool</id>
+        <published>2025-01-01T00:00:00+09:00</published>
+        <updated>2025-01-01T00:00:00+09:00</updated>
+        <summary type="html"><![CDATA[GitHub 프로젝트: kmcreativeschool]]></summary>
+        <content type="html">
+            <![CDATA[<p>Spring과 MyBatis 프레임워크를 활용한 학교 폭력 신고 웹입니다. 신고 내용은 SMTP를 통해 전송되며 
+            자신의 신고 내역을 조회할 수 있습니다.</p>]]>
+        </content>
+        <category term="School"/>
+    </entry>
+</feed>

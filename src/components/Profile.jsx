@@ -77,8 +77,8 @@ export default function Profile() {
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4ZM20 6L12 11L4 6V6.01L12 11.99L20 6.01V6Z"/>
                         </svg>
-                        <a href="mailto:dayoon071022@gmail.com" className="hover:underline">
-                            dayoon071022@<br className="lg:hidden" />gmail.com
+                        <a href="mailto:gangd0642@gmail.com" className="hover:underline">
+                            gangd0642@<br className="lg:hidden" />gmail.com
                         </a>
                     </div>
                     <div className="flex items-center space-x-2">
