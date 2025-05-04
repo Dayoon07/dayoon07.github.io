@@ -3,7 +3,7 @@ export default function CV() {
     document.title = "이력서 | 안녕하세요. 강다윤입니다";
     
     return (
-        <div className="pb-10 md::text-lg md:px-2">
+        <div className="md:text-lg md:px-2">
             <h1 className="text-3xl font-bold my-4">이력서</h1>
 
             <a href="https://drive.google.com/drive/folders/1z7YdKhF-hLzcE1aHJFCElmGIDl3Wp8K6?usp=drive_link" 
@@ -29,6 +29,7 @@ export default function CV() {
                 <li>2024.12.11 : 정보처리기능사</li>
                 <li>2024.09.11 : 웹디자인기능사</li>
                 <li>2024.03.08 : 컴퓨터활용능력 2급</li>
+                <li>2023.12.15 : GTQ 포토샵 2급</li>
             </ul>
 
             <h2 className="text-xl font-semibold mt-6 mb-2">수상경력</h2>

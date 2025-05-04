@@ -45,7 +45,7 @@ export default function SiteMap() {
             {sitePages.map((v, i) => (
                 <Link className="block mb-8 text-2xl font-semibold hover:underline" 
                     to={v.to} key={i} 
-                    style={{ color: "rgb(82, 173, 200" }}
+                    style={{ color: "rgb(82, 173, 200)" }}
                 >
                     {v.t}
                 </Link>

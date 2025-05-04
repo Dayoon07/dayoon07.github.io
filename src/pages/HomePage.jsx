@@ -36,7 +36,7 @@ export default function HomePage() {
     ];
 
     return (
-        <div className="md:mb-28">
+        <div className="md:pb-20">
             <div className="max-w-3xl mb-4">
                 <h1 className="text-3xl font-bold my-4">안녕하십니까, 저는</h1>
                 <p className="text-gray-700">

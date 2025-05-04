@@ -173,20 +173,20 @@ export default function Skill() {
                 }
             ]
         },
-        {
-            title: "딥러닝 프레임워크",
-            color: "bg-purple-600",
-            items: [
-                {
-                    name: "TensorFlow",
-                    badge: "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"
-                },
-                {
-                    name: "Keras",
-                    badge: "https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white"
-                }
-            ]
-        }
+        // {
+        //     title: "딥러닝 프레임워크",
+        //     color: "bg-purple-600",
+        //     items: [
+        //         {
+        //             name: "TensorFlow",
+        //             badge: "https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"
+        //         },
+        //         {
+        //             name: "Keras",
+        //             badge: "https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white"
+        //         }
+        //     ]
+        // }
     ];
 
     // 전체 이미지 수 계산
@@ -220,7 +220,7 @@ export default function Skill() {
     }, []);
 
     return (
-        <div className="pb-10">
+        <>
             <h1 
                 className="text-3xl font-bold my-4 opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
                 style={{ 
@@ -268,6 +268,6 @@ export default function Skill() {
                     </div>
                 ))}
             </div>
-        </div>
+        </>
     );
 }

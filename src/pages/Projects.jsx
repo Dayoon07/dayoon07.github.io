@@ -118,9 +118,7 @@ export default function Projects() {
 
             <div className="space-y-8 mt-5">
                 {projectsData.map((project, index) => (
-                    <div 
-                        key={index} 
-                        className="w-full md:flex opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
+                    <div key={index} className="w-full md:flex opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
                         style={{ 
                             opacity: showItems ? 1 : 0, 
                             transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)',
@@ -128,24 +126,15 @@ export default function Projects() {
                         }}
                     >
                         <div>
-                            <img 
-                                src={project.image} 
-                                alt={project.title} 
-                                title={project.title} 
-                                className="md:w-96 object-cover rounded-md cursor-pointer" 
-                                onClick={() => openLightbox(project.image)} 
-                            />
+                            <img src={project.image} alt={project.title} title={project.title} className="md:w-96 object-cover rounded-md cursor-pointer" onClick={() => openLightbox(project.image)} />
                         </div>
                         <div className="w-full md:max-w-md ml-4">
-                            <h1 className="text-2xl font-semibold hover:text-blue-500 hover:underline max-md:my-2 md:mb-2">
+                            <h1 className="text-2xl font-semibold hover:text-[#52ADC8] hover:underline max-md:my-2 md:mb-2">
                                 <a href={project.link} target="_blank">{project.title}</a>
                             </h1>
                             <div className="space-x-2">
                                 {project.technologies.map((tech, techIndex) => (
-                                    <span 
-                                        key={techIndex} 
-                                        className="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm"
-                                    >
+                                    <span key={techIndex} className="px-2 py-1 bg-gray-200 text-gray-700 rounded text-sm cursor-pointer">
                                         {tech}
                                     </span>
                                 ))}
@@ -153,7 +142,7 @@ export default function Projects() {
                             <p className="text-md mt-2 max-md:w-full max-md:pr-8">{project.description}</p>
                             {project.demoVideo && (
                                 <a href={project.demoVideo} target="_blank"
-                                    className="block w-32 text-center px-4 py-2 bg-black text-white font-semibold rounded hover:bg-blue-500 mt-4 cursor-pointer"
+                                    className="block w-32 text-center px-4 py-2 bg-black text-white font-semibold rounded hover:bg-[#52ADC8] mt-4 cursor-pointer"
                                 >
                                     테스트 영상
                                 </a>

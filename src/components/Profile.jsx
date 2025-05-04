@@ -11,11 +11,7 @@ export default function Profile() {
         <div className="w-full md:w-60 md:fixed md:top-20">
             <div className="space-y-4">
                 <div className="flex items-center md:block">
-                    <img 
-                        src="https://dayoon07.github.io/img/증명사진.jpg" 
-                        alt="프로필 사진" 
-                        className="w-16 sm:w-20 md:w-28 lg:w-40 rounded-full" 
-                    />
+                    <img src="https://dayoon07.github.io/img/증명사진.jpg" alt="프로필 사진" className="w-16 sm:w-20 md:w-28 lg:w-40 rounded-full" />
                     <h3 className="text-xl font-semibold ml-4 md:ml-0 md:mt-4">
                         강다윤 <br className="hidden sm:block" /> (Dayoon Kang)
                     </h3>

@@ -52,7 +52,7 @@ export default function Portfolio() {
     };
 
     return (
-        <div className="pb-24 z-60">
+        <div className="z-60">
             <h1 className="text-3xl font-bold my-4 opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
                 style={{ 
                     opacity: showItems ? 1 : 0, 
