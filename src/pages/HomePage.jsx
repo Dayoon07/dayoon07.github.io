@@ -55,7 +55,7 @@ export default function HomePage() {
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                     {projectLinks.map((project, idx) => (
-                        <div key={idx} className="dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition p-4 border hover:border-blue-400">
+                        <div key={idx} className="dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition p-4 border hover:border-[#52ADC8]">
                             <h3 className="text-lg font-semibold text-gray-800 dark:text-white hover:underline">
                                 <a href={project.repo}>{project.name}</a>
                             </h3>

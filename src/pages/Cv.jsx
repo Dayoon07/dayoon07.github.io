@@ -6,22 +6,17 @@ export default function CV() {
         <div className="md:text-lg md:px-2">
             <h1 className="text-3xl font-bold my-4">이력서</h1>
 
-            <a href="https://drive.google.com/drive/folders/1z7YdKhF-hLzcE1aHJFCElmGIDl3Wp8K6?usp=drive_link" 
-                target="_blank" className="hover:underline">
-                이거 누르면 신기한 거 나옴
-            </a>
-
             <h2 className="text-xl font-semibold mt-6 mb-2">학력</h2>
             <ul className="list-disc list-inside">
                 <li>2023.03.04 ~ 2026.01.08 : 근명고등학교 (재학)</li>
-                <li>2020.03.02 ~ 2023.01.04 : 관양중학교 (졸업)</li>
-                <li>2014.03.02 ~ 2020.01.06 : 관양초등학교 (졸업)</li>
+                <li>2023.01.04 : 관양중학교 (졸업)</li>
+                <li>2020.01.06 : 관양초등학교 (졸업)</li>
             </ul>
 
             <h2 className="text-xl font-semibold mt-6 mb-2">동아리 활동</h2>
             <ul className="list-disc list-inside">
+                <li>2025.04 ~ 현재 : 스마트코딩반 활동</li>
                 <li>2023.04 ~ 2024.11 : 디지털 콘텐츠 제작반 활동</li>
-                <li>2025.04 ~ 활동중 : 스마트코딩반 활동</li>
             </ul>
 
             <h2 className="text-xl font-semibold mt-6 mb-2">자격증</h2>
@@ -35,9 +30,8 @@ export default function CV() {
             <h2 className="text-xl font-semibold mt-6 mb-2">수상경력</h2>
             <ul className="list-disc list-inside">
                 <li>2025.01.10 : 교내 알고리즘 경진대회 (우수상)</li>
-                <li>2025.01.10 : 인포그래픽 경진대회 (우수상)</li>
-                <li>2025.01.10 : 스프레드시트 함수 경진대회</li>
-                <li>2025.01.10 : 교과우수상 (정보 처리와 관리)</li>
+                <li>2025.01.10 : 교내 인포그래픽 경진대회 (우수상)</li>
+                <li>2025.01.10 : 교내 스프레드시트 함수 경진대회</li>
                 <li>2025.01.10 : 개근상 (2학년)</li>
                 <li>2024.11.19 : 경기 콘텐츠 창의학교 <br className="md:hidden" /><span className="max-md:ml-5">경진대회 (최우수상)</span></li>
                 <li>2024.01.03 : 개근상 (1학년)</li>

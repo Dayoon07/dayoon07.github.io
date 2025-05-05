@@ -57,6 +57,10 @@ export default function Skill() {
                     badge: "https://img.shields.io/badge/JSON-000?style=for-the-badge&logo=json&logoColor=fff"
                 },
                 {
+                    name: "XML",
+                    badge: "https://img.shields.io/badge/XML-black?style=for-the-badge&logo=xml&logoColor=fff"
+                },
+                {
                     name: "SQL",
                     badge: "https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=sqlite&logoColor=white"
                 },
@@ -80,12 +84,12 @@ export default function Skill() {
                     badge: "https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
                 },
                 {
-                    name: "Spring Boot",
-                    badge: "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=fff"
-                },
-                {
                     name: "Fast API",
                     badge: "https://img.shields.io/badge/FastAPI-009485?style=for-the-badge&logo=fastapi&logoColor=white"
+                },
+                {
+                    name: "Spring Boot",
+                    badge: "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=fff"
                 },
                 {
                     name: "MyBatis",
@@ -97,7 +101,7 @@ export default function Skill() {
                 },
                 {
                     name: "Bootstrap",
-                    badge: "https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=fff"
+                    badge: "https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
                 }
             ]
         },
@@ -238,7 +242,7 @@ export default function Skill() {
                 </div>
             )}
 
-            <div className="w-full mt-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-16">
+            <div className="w-full mt-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-20">
                 {skillSections.map((section, index) => (
                     <div 
                         key={index} 
@@ -256,11 +260,9 @@ export default function Skill() {
                             <div className="flex flex-wrap gap-1">
                                 {section.items.map((item, itemIndex) => (
                                     <div key={itemIndex} className="flex items-center" title={item.name}>
-                                        <img 
-                                            src={item.badge} 
-                                            alt={item.name} 
-                                            className="h-7 max-w-full"
-                                        />
+                                        <a href={item.badge}>
+                                            <img src={item.badge} alt={item.name} className="h-7" />
+                                        </a>
                                     </div>
                                 ))}
                             </div>
