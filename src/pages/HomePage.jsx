@@ -26,11 +26,13 @@ export default function HomePage() {
         {
             name: "학교 정보 검색",
             url: "https://Dayoon07.github.io/school-search",
+            repo: "https://github.com/Dayoon07/school-search",
             note: "(school-search)",
         },
         {
             name: "모바일 웹 캠 애플리케이션",
             url: "https://dayoon07.github.io/webcam",
+            repo: "https://github.com/Dayoon07/webcam",
             note: "(webcam)",
         }
     ];
@@ -53,15 +55,17 @@ export default function HomePage() {
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
                     {projectLinks.map((project, idx) => (
-                        <a key={idx} href={project.url} target="_blank" rel="noopener noreferrer" 
-                        className="block bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition p-4 border hover:border-blue-400 cursor-pointer"
-                        >
-                            <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{project.name}</h3>
+                        <div key={idx} className="dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition p-4 border hover:border-blue-400">
+                            <h3 className="text-lg font-semibold text-gray-800 dark:text-white hover:underline">
+                                <a href={project.repo}>{project.name}</a>
+                            </h3>
                             {project.note && (
                                 <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{project.note}</p>
                             )}
-                            <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm">{project.url}</p>
-                        </a>
+                            <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm hover:underline">
+                                <a href={project.url}>{project.url}</a>
+                            </p>
+                        </div>
                     ))}
                 </div>
             </div>
