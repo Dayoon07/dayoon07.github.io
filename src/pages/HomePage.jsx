@@ -24,16 +24,22 @@ export default function HomePage() {
 
     const projectLinks = [
         {
-            name: "학교 정보 검색",
-            url: "https://Dayoon07.github.io/school-search",
-            repo: "https://github.com/Dayoon07/school-search",
-            note: "(school-search)",
+            name: "날씨 API 키 활용 서비스",
+            url: "https://dayoon07.github.io/weather-service",
+            repo: "https://github.com/Dayoon07/weather-service",
+            note: "(weather-service)",
         },
         {
             name: "모바일 웹 캠 애플리케이션",
             url: "https://dayoon07.github.io/webcam",
             repo: "https://github.com/Dayoon07/webcam",
             note: "(webcam)",
+        },
+        {
+            name: "학교 정보 검색",
+            url: "https://Dayoon07.github.io/school-search",
+            repo: "https://github.com/Dayoon07/school-search",
+            note: "(school-search)",
         }
     ];
 
