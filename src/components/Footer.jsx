@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="md:relative bottom-0 md:bottom-0 py-6 border-gray-300 border-t bg-gray-200">
+    <footer className="py-6 border-t border-gray-300 bg-gray-200">
       <div className="max-w-screen-xl mx-auto px-4">
         <Link to="/sitemap" className="text-lg text-gray-400 font-semibold hover:underline">Sitemap</Link>
         <p className="text-md text-gray-400 my-2 font-semibold flex">

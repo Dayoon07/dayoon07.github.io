@@ -33,6 +33,14 @@ export default function Skill() {
                 {
                     name: "IntelliJ",
                     badge: "https://img.shields.io/badge/Intellij%20Idea-000?style=for-the-badge&logo=intellij-idea"
+                },
+                {
+                    name: "Dbeaver",
+                    badge: "https://img.shields.io/badge/dbeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white"
+                },
+                {
+                    name: "Sql Developer",
+                    badge: "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png"
                 }
             ]
         },
@@ -106,8 +114,8 @@ export default function Skill() {
             ]
         },
         {
-            title: "DB & DB 프로그램",
-            color: "bg-yellow-600",
+            title: "DB",
+            color: "bg-yellow-500",
             items: [
                 {
                     name: "Oracle",
@@ -116,20 +124,12 @@ export default function Skill() {
                 {
                     name: "Maria",
                     badge: "https://img.shields.io/badge/Maria-003545?style=for-the-badge&logo=mariadb&logoColor=white"
-                },
-                {
-                    name: "Dbeaver",
-                    badge: "https://img.shields.io/badge/dbeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white"
-                },
-                {
-                    name: "Sql Developer",
-                    badge: "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png"
                 }
             ]
         },
         {
             title: "라이브러리",
-            color: "bg-orange-600",
+            color: "bg-orange-500",
             items: [
                 {
                     name: "React",
@@ -165,7 +165,7 @@ export default function Skill() {
         },
         {
             title: "분석 & 모니터링",
-            color: "bg-cyan-500",
+            color: "bg-sky-500",
             items: [
                 {
                     name: "Prometheus",
@@ -176,7 +176,7 @@ export default function Skill() {
                     badge: "https://img.shields.io/badge/Grafana-F2F4F9?style=for-the-badge&logo=grafana&logoColor=orange"
                 }
             ]
-        },
+        }
         // {
         //     title: "딥러닝 프레임워크",
         //     color: "bg-purple-600",
@@ -242,16 +242,14 @@ export default function Skill() {
                 </div>
             )}
 
-            <div className="w-full mt-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-20">
+            <div className="w-full mt-4 md:pb-20">
                 {skillSections.map((section, index) => (
-                    <div 
-                        key={index} 
-                        className="md:w-60 lg:w-64 bg-white shadow-lg rounded-xl border border-gray-200 overflow-hidden transition-all duration-700 transform opacity-0 -translate-y-10"
-                        style={{ 
+                    <div key={index} style={{ 
                             opacity: showItems ? 1 : 0, 
                             transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)',
                             transitionDelay: `${index * 100}ms`
                         }}
+                        className="shadow-xl rounded-xl max-md:mb-5 md:mb-10 overflow-hidden transition-all duration-700 transform opacity-0 -translate-y-10"
                     >
                         <div className={`${section.color} text-white py-3 px-4 font-bold text-lg flex items-center`}>
                             {section.title}
