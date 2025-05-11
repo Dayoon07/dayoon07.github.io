@@ -73,10 +73,6 @@
                 "badge": "https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
             },
             {
-                "name": "Fast API",
-                "badge": "https://img.shields.io/badge/FastAPI-009485?style=for-the-badge&logo=fastapi&logoColor=white"
-            },
-            {
                 "name": "Spring Boot",
                 "badge": "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=fff"
             },
