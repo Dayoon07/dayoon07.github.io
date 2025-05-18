@@ -13,13 +13,13 @@ export default function Profile() {
                 <div className="flex items-center md:block">
                     <img src="https://dayoon07.github.io/img/증명사진.jpg" alt="프로필 사진" className="w-16 sm:w-20 md:w-28 lg:w-40 rounded-full" />
                     <h3 className="text-xl font-semibold ml-4 md:ml-0 md:mt-4">
-                        강다윤 <br className="hidden sm:block" /> (Dayoon Kang)
+                        강다윤 <br className="hidden sm:block max-md:block" /> (Dayoon Kang)
                     </h3>
                 </div>
                 
                 <div className="md:hidden absolute right-4 top-20">
                     <button onClick={toggleMobileInfo} 
-                        className="px-4 py-1 bg-white border border-gray-400 hover:bg-gray-800 hover:text-white cursor-pointer rounded transition duration-300"
+                        className="px-4 py-1.5 text-sm bg-white border border-gray-300 hover:bg-black hover:text-white cursor-pointer rounded transition duration-300"
                     >
                         프로필 정보
                     </button>

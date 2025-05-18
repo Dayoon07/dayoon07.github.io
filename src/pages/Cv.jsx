@@ -1,10 +1,14 @@
+import { useEffect } from "react";
+
 export default function CV() {
     
-    document.title = "이력서 | 안녕하세요. 강다윤입니다";
+    useEffect(() => {
+        document.title = "활동이력 | 안녕하세요. 강다윤입니다";
+    }, []);
     
     return (
         <div className="md:text-lg md:px-2">
-            <h1 className="text-3xl font-bold my-4">이력서</h1>
+            <h1 className="text-3xl font-bold my-4">활동이력</h1>
 
             <h2 className="text-xl font-semibold mt-6 mb-2">학력</h2>
             <ul className="list-disc list-inside">
