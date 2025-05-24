@@ -51,8 +51,7 @@ export default function Skill() {
 
     return (
         <>
-            <h1 
-                className="text-3xl font-bold my-4 opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
+            <h1 className="text-3xl font-bold my-4 opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
                 style={{ 
                     opacity: showItems ? 1 : 0, 
                     transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)' 
@@ -68,7 +67,7 @@ export default function Skill() {
                 </div>
             )}
 
-            <div className="w-full mt-4">
+            <div className="max-w-4xl mt-4">
                 {skillSections.map((section, index) => (
                     <div key={index} style={{ 
                             opacity: showItems ? 1 : 0, 

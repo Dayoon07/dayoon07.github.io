@@ -1,5 +1,7 @@
+import { X } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { AlignJustify } from "lucide-react";
 
 const menuItems = [
   {
@@ -44,7 +46,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <Link to="/sitemap" className="md:hidden p-2 text-lg cursor-pointer hover:underline">Sitemap</Link>
+        <Link to="/sitemap" className="md:hidden p-2 text-lg cursor-pointer hover:underline"><AlignJustify /></Link>
       </div>
     </header>
   );
