@@ -4,6 +4,8 @@ const GITHUB_USERNAME = "dayoon07";
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_ASDF_TOKEN;
 const TO_YEAR = new Date().getFullYear();
 
+console.log(GITHUB_TOKEN);
+
 // 유틸리티 함수들을 컴포넌트 외부로 이동 (재생성 방지)
 function getDayIndex(dateStr) {
     const date = new Date(dateStr);
