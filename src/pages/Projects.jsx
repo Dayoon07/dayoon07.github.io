@@ -86,7 +86,7 @@ export default function Projects() {
         };
 
         preloadImages();
-    }, [l]);
+    }, [projectsData]);
 
     const openLightbox = (image) => {
         setCurrentImage(image);
