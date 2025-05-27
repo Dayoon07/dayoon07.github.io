@@ -1,8 +1,6 @@
 import { Link } from 'react-router-dom';
-import React from 'react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="py-6 border-t border-gray-300 bg-gray-200">
@@ -28,7 +26,7 @@ export default function Footer() {
           </a>
         </p>
         <p className="mt-2 text-gray-400 text-sm">
-          &copy; {currentYear} dayoon07. All rights reserved.&nbsp;
+          &copy; 2025 dayoon07. All rights reserved.&nbsp;
           <br className="md:hidden" />
           Inspired by&nbsp;
           <a href="https://github.com/academicpages/academicpages.github.io" target="_blank" 
