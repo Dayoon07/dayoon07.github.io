@@ -117,7 +117,7 @@ export default function HomePage() {
                 if (response.status === 401) {
                     throw new Error('토큰이 유효하지 않습니다. GitHub Personal Access Token을 확인해주세요.');
                 }
-                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`); 
             }
 
             const data = await response.json();
