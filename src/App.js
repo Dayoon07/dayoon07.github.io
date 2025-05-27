@@ -11,6 +11,7 @@ import Architecture from './pages/Architecture';
 import SiteMap from './pages/SiteMap';
 import CV from './pages/Cv';
 import Portfolio from './pages/Portfolio';
+import GithubGarden2025 from './pages/GitHubGarden2025';
 
 export default function App() {
   return (
@@ -20,7 +21,7 @@ export default function App() {
         <div className="w-60 max-md:mt-10">
           <Profile />
         </div>
-        <div className="md:max-w-screen-xl max-md:w-full">
+        <div className="flex-1 w-full min-w-0">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/skill" element={<Skill />} />
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/cv" element={<CV />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/sitemap" element={<SiteMap />} />
+            <Route path="/github" element={<GithubGarden2025 />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
