@@ -70,7 +70,6 @@ export default function HomePage() {
     const [activity, setActivity] = useState(Array(365).fill(0));
     const [isDataLoaded, setIsDataLoaded] = useState(false);
     const [error, setError] = useState(null);
-    const [userInfo, setUserInfo] = useState(null);
 
     // GitHub API 호출을 useCallback으로 메모이제이션
     const fetchContributionData = useCallback(async () => {
@@ -129,13 +128,6 @@ export default function HomePage() {
             if (!user) {
                 throw new Error('사용자를 찾을 수 없습니다.');
             }
-
-            setUserInfo({
-                name: user.name,
-                login: user.login,
-                avatarUrl: user.avatarUrl,
-                totalContributions: user.contributionsCollection.contributionCalendar.totalContributions
-            });
 
             const newActivity = Array(365).fill(0);
             

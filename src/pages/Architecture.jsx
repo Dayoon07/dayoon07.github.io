@@ -52,7 +52,7 @@ export default function Architecture() {
         };
 
         preloadImages();
-    }, []);
+    }, [l]);
 
     return (
         <>
@@ -84,7 +84,7 @@ export default function Architecture() {
                         }}
                     >
                         <a href={content.img} target="_blank">
-                            <img src={content.img} className="w-full" />
+                            <img src={content.img} className="w-full" alt="..." />
                         </a>
                         <div className="px-6 py-4">
                             <div className="font-bold text-xl mb-2">{content.title}</div>

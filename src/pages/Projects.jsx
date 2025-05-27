@@ -86,7 +86,7 @@ export default function Projects() {
         };
 
         preloadImages();
-    }, []);
+    }, [l]);
 
     const openLightbox = (image) => {
         setCurrentImage(image);
@@ -130,7 +130,7 @@ export default function Projects() {
                         </div>
                         <div className="w-full md:max-w-md ml-4">
                             <h1 className="text-2xl font-semibold hover:text-[#52ADC8] hover:underline max-md:my-2 md:mb-2">
-                                <a href={project.link} target="_blank">{project.title}</a>
+                                <a href={project.link} target="_blank" rel="noreferrer">{project.title}</a>
                             </h1>
                             <div className="space-x-2">
                                 {project.technologies.map((tech, techIndex) => (
@@ -141,7 +141,7 @@ export default function Projects() {
                             </div>
                             <p className="text-md mt-2 max-md:w-full max-md:pr-8">{project.description}</p>
                             {project.demoVideo && (
-                                <a href={project.demoVideo} target="_blank"
+                                <a href={project.demoVideo} target="_blank" rel="noreferrer" 
                                     className="block w-32 text-center px-4 py-2 bg-black text-white font-semibold rounded hover:bg-[#52ADC8] mt-4 cursor-pointer"
                                 >
                                     테스트 영상
