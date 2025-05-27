@@ -33,11 +33,11 @@
         "items": [
             {
                 "name": "HTML",
-                "badge": "https://img.shields.io/badge/HTML-%23E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                "badge": "https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white"
             },
             {
                 "name": "CSS",
-                "badge": "https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=fff"
+                "badge": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff"
             },
             {
                 "name": "JavaScript",
