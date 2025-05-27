@@ -29,7 +29,7 @@ export default function Architecture() {
                 text: "창의학교 프로젝트 DB ERD, 기여한 것들은 경찰서, 문의하기 테이블 설계(아마 사진에는 안 찍혔을 거임), CRUD 구현, 구축"
             }
         ]
-    });
+    }, []);
 
     // 이미지 로딩 상태 추적
     useEffect(() => {
