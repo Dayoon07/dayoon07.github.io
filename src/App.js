@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -11,7 +10,6 @@ import Architecture from './pages/Architecture';
 import SiteMap from './pages/SiteMap';
 import CV from './pages/Cv';
 import Portfolio from './pages/Portfolio';
-import GithubGarden2025 from './pages/GitHubGarden2025';
 
 export default function App() {
   return (
@@ -30,7 +28,6 @@ export default function App() {
             <Route path="/cv" element={<CV />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/sitemap" element={<SiteMap />} />
-            <Route path="/github" element={<GithubGarden2025 />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </div>

@@ -1,7 +1,7 @@
 {
   "homepage": "https://dayoon07.github.io",
   "name": "dayoon07.github.io",
-  "version": "0.1.0",
+  "version": "1.0",
   "private": true,
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",

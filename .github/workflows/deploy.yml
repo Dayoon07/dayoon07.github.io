@@ -24,13 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Set environment variables
-        run: echo "REACT_APP_GITHUB_ASDF_TOKEN=${{ secrets.REACT_APP_GITHUB_ASDF_TOKEN }}" >> .env
-
       - name: Build
         run: npm run build
-        env:
-          REACT_APP_GITHUB_ASDF_TOKEN: ${{ secrets.REACT_APP_GITHUB_ASDF_TOKEN }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
