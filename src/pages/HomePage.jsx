@@ -1,29 +1,14 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 
+// Constants
 const GITHUB_USERNAME = "dayoon07";
 const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_ASDF_TOKEN;
 const TO_YEAR = new Date().getFullYear();
 
-console.log(GITHUB_TOKEN);
+const MONTHS = ['01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월'];
+const DAYS = ['', '월요일', '', '수요일', '', '금요일', ''];
 
-// 유틸리티 함수들을 컴포넌트 외부로 이동 (재생성 방지)
-function getDayIndex(dateStr) {
-    const date = new Date(dateStr);
-    const start = new Date(`${TO_YEAR}-01-01`);
-    const diff = Math.floor((date - start) / (1000 * 60 * 60 * 24));
-    return diff >= 0 && diff < 365 ? diff : -1;
-}
-
-function getColor(count) {
-    if (count === 0) return "#ebedf0";
-    if (count < 2) return "#c6e48b";
-    if (count < 4) return "#7bc96f";
-    if (count < 6) return "#239a3b";
-    return "#196127";
-}
-
-// 정적 데이터를 컴포넌트 외부로 이동
-const recentInterest = [
+const RECENT_INTERESTS = [
     {
         title: "SQLD 자격증 공부",
         content: `
@@ -41,7 +26,7 @@ const recentInterest = [
     }
 ];
 
-const projectLinks = [
+const PROJECT_LINKS = [
     {
         name: "날씨 API 키 활용 서비스",
         url: "https://dayoon07.github.io/weather-service",
@@ -62,62 +47,226 @@ const projectLinks = [
     }
 ];
 
-const MONTHS = ['01월', '02월', '03월', '04월', '05월', '06월', 
-               '07월', '08월', '09월', '10월', '11월', '12월'];
-const DAYS = ['', '월요일', '', '수요일', '', '금요일', ''];
+const getDayIndex = (dateStr) => {
+    const date = new Date(dateStr);
+    const start = new Date(`${TO_YEAR}-01-01`);
+    const diff = Math.floor((date - start) / (1000 * 60 * 60 * 24));
+    return diff >= 0 && diff < 365 ? diff : -1;
+};
 
-export default function HomePage() {
-    document.title = "안녕하세요. 강다윤입니다";
+const getColor = (count) => {
+    if (count === 0) return "#ebedf0";
+    if (count < 2) return "#c6e48b";
+    if (count < 4) return "#7bc96f";
+    if (count < 6) return "#239a3b";
+    return "#196127";
+};
 
-    const [activity, setActivity] = useState(Array(365).fill(0));
-    const [isDataLoaded, setIsDataLoaded] = useState(false);
-    const [error, setError] = useState(null);
+const COLOR_SCALE = [
+    { color: '#ebedf0', label: '활동 안 함' },
+    { color: '#c6e48b', label: '' },
+    { color: '#7bc96f', label: '' },
+    { color: '#239a3b', label: '' },
+    { color: '#196127', label: '많이 활동함' }
+];
 
-    // GitHub API 호출을 useCallback으로 메모이제이션
-    const fetchContributionData = useCallback(async () => {
-        try {
-            const query = `
-                query($username: String!, $from: DateTime!, $to: DateTime!) {
-                    user(login: $username) {
-                        name
-                        login
-                        avatarUrl
-                        contributionsCollection(from: $from, to: $to) {
-                            contributionCalendar {
-                                totalContributions
-                                weeks {
-                                    contributionDays {
-                                        date
-                                        contributionCount
-                                        color
-                                    }
-                                }
-                            }
+const ERROR_MESSAGES = {
+    NO_TOKEN: 'GitHub Personal Access Token이 설정되지 않았습니다. .env 파일을 확인해주세요.',
+    INVALID_TOKEN: 'GitHub Personal Access Token이 유효하지 않습니다. 새로운 토큰을 생성해주세요.',
+    GRAPHQL_ACCESS: 'GitHub Personal Access Token이 GraphQL API 접근 권한이 없습니다. 토큰을 새로 생성하고 적절한 권한을 부여해주세요.',
+    USER_NOT_FOUND: '사용자를 찾을 수 없습니다.'
+};
+
+const GITHUB_API_CONFIG = {
+    userEndpoint: 'https://api.github.com/user',
+    rateLimitEndpoint: 'https://api.github.com/rate_limit',
+    graphqlEndpoint: 'https://api.github.com/graphql',
+    headers: {
+        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'GitHub-Profile-App'
+    },
+    graphqlHeaders: {
+        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github.v4+json',
+        'User-Agent': 'GitHub-Contribution-Graph'
+    }
+};
+
+const CONTRIBUTION_QUERY = `
+    query($username: String!, $from: DateTime!, $to: DateTime!) {
+        user(login: $username) {
+            name
+            login
+            avatarUrl
+            contributionsCollection(from: $from, to: $to) {
+                contributionCalendar {
+                    totalContributions
+                    weeks {
+                        contributionDays {
+                            date
+                            contributionCount
+                            color
                         }
                     }
                 }
-            `;
+            }
+        }
+    }
+`;
 
+const LoadingSpinner = () => (
+    <div className="flex items-center space-x-2">
+        <div className="animate-pulse bg-gray-200 h-4 w-32 rounded"></div>
+    </div>
+);
+
+const TokenStatus = ({ status }) => {
+    const statusConfig = {
+        valid: { color: 'text-green-600', message: '토큰 유효 - GraphQL API 준비됨' },
+        invalid: { color: 'text-red-600', message: '토큰 무효' },
+        missing: { color: 'text-orange-600', message: '토큰 없음' },
+        checking: { color: 'text-yellow-600', message: '토큰 확인 중...' }
+    };
+
+    const config = statusConfig[status] || statusConfig.checking;
+
+    return (
+        <div className={`text-sm font-medium ${config.color}`}>
+            {config.message}
+        </div>
+    );
+};
+
+const ErrorDisplay = ({ error }) => (
+    <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+        <p className="text-red-700 font-medium">오류 발생</p>
+        <p className="text-red-600 mt-1">{error}</p>
+        <div className="mt-3 text-sm text-red-600">
+            <p><strong>해결 단계:</strong></p>
+            <ol className="list-decimal list-inside mt-2 space-y-1">
+                <li>GitHub → Settings → Developer settings → Personal access tokens</li>
+                <li>기존 토큰 삭제</li>
+                <li>새 토큰 생성 시 다음 권한 체크:
+                    <ul className="list-disc list-inside ml-4 mt-1">
+                        <li><code>read:user</code></li>
+                        <li><code>user:email</code></li>
+                        <li><code>public_repo</code></li>
+                    </ul>
+                </li>
+                <li>.env 파일의 <code>REACT_APP_GITHUB_ASDF_TOKEN</code>에 새 토큰 설정</li>
+                <li>개발 서버 재시작</li>
+            </ol>
+        </div>
+    </div>
+);
+
+const ProjectCard = ({ project }) => (
+    <div className="dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition p-4 border hover:border-[#52ADC8]">
+        <h3 className="text-lg font-semibold text-gray-800 dark:text-white hover:underline">
+            <a href={project.repo} target="_blank" rel="noopener noreferrer">
+                {project.name}
+            </a>
+        </h3>
+        {project.note && (
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{project.note}</p>
+        )}
+        <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm hover:underline">
+            <a href={project.url} target="_blank" rel="noopener noreferrer">
+                {project.url}
+            </a>
+        </p>
+    </div>
+);
+
+const InterestCard = ({ interest }) => (
+    <div className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+        <div className="flex items-center mb-2">
+            <h3 className="text-lg font-semibold text-gray-800">{interest.title}</h3>
+        </div>
+        <p className="text-gray-600">{interest.content}</p>
+    </div>
+);
+
+const ContributionLegend = () => (
+    <div className="flex items-center space-x-2 text-xs text-gray-500" style={{ marginTop: "16px" }}>
+        <span>{COLOR_SCALE[0].label}</span>
+        <div className="flex space-x-1">
+            {COLOR_SCALE.map((item, index) => (
+                <div 
+                    key={index}
+                    className="w-2 h-2 rounded-sm" 
+                    style={{ backgroundColor: item.color }}
+                />
+            ))}
+        </div>
+        <span>{COLOR_SCALE[COLOR_SCALE.length - 1].label}</span>
+    </div>
+);
+
+export default function HomePage() {
+    useEffect(() => {
+        document.title = "안녕하세요. 강다윤입니다";
+    }, []);
+
+    const [activity, setActivity] = useState(() => Array(365).fill(0));
+    const [isDataLoaded, setIsDataLoaded] = useState(false);
+    const [error, setError] = useState(null);
+    const [tokenStatus, setTokenStatus] = useState('checking');
+
+    const validateToken = useCallback(async () => {
+        if (!GITHUB_TOKEN) {
+            return { isValid: false, error: ERROR_MESSAGES.NO_TOKEN };
+        }
+
+        try {
+            const userResponse = await fetch(GITHUB_API_CONFIG.userEndpoint, {
+                headers: GITHUB_API_CONFIG.headers
+            });
+
+            if (userResponse.ok) {
+                return { isValid: true };
+            } else {
+                return { isValid: false, error: ERROR_MESSAGES.INVALID_TOKEN };
+            }
+        } catch (err) {
+            return { isValid: false, error: `토큰 검증 중 오류: ${err.message}` };
+        }
+    }, []);
+
+    const fetchContributionData = useCallback(async () => {
+        const tokenValidation = await validateToken();
+        if (!tokenValidation.isValid) {
+            setError(tokenValidation.error);
+            setIsDataLoaded(true);
+            setTokenStatus(GITHUB_TOKEN ? 'invalid' : 'missing');
+            return;
+        }
+
+        setTokenStatus('valid');
+
+        try {
             const variables = {
                 username: GITHUB_USERNAME,
                 from: `${TO_YEAR}-01-01T00:00:00Z`,
                 to: `${TO_YEAR}-12-31T23:59:59Z`
             };
 
-            const response = await fetch('https://api.github.com/graphql', {
+            const response = await fetch(GITHUB_API_CONFIG.graphqlEndpoint, {
                 method: 'POST',
-                headers: {
-                    'Authorization': `Bearer ${GITHUB_TOKEN}`,
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ query, variables })
+                headers: GITHUB_API_CONFIG.graphqlHeaders,
+                body: JSON.stringify({ 
+                    query: CONTRIBUTION_QUERY, 
+                    variables 
+                })
             });
 
             if (!response.ok) {
                 if (response.status === 401) {
-                    throw new Error('토큰이 유효하지 않습니다. GitHub Personal Access Token을 확인해주세요.');
+                    throw new Error(ERROR_MESSAGES.GRAPHQL_ACCESS);
                 }
-                throw new Error(`HTTP ${response.status}: ${response.statusText}`); 
+                throw new Error(`HTTP ${response.status}: ${response.statusText}`);
             }
 
             const data = await response.json();
@@ -126,9 +275,9 @@ export default function HomePage() {
                 throw new Error(`GraphQL Error: ${data.errors[0].message}`);
             }
 
-            const user = data.data.user;
+            const user = data.data?.user;
             if (!user) {
-                throw new Error('사용자를 찾을 수 없습니다.');
+                throw new Error(ERROR_MESSAGES.USER_NOT_FOUND);
             }
 
             const newActivity = Array(365).fill(0);
@@ -146,17 +295,15 @@ export default function HomePage() {
             setIsDataLoaded(true);
 
         } catch (err) {
-            console.error('GitHub 데이터 가져오기 실패:', err);
             setError(err.message);
-            setIsDataLoaded(true); // 에러가 발생해도 로딩 상태는 종료
+            setIsDataLoaded(true);
         }
-    }, []);
+    }, [validateToken]);
 
     useEffect(() => {
         fetchContributionData();
     }, [fetchContributionData]);
 
-    // 월 라벨 생성을 useMemo로 최적화
     const monthLabels = useMemo(() => {
         const labels = [];
         const startDayOfWeek = new Date(TO_YEAR, 0, 1).getDay();
@@ -177,7 +324,6 @@ export default function HomePage() {
         return labels;
     }, []);
 
-    // 요일 라벨 생성을 useMemo로 최적화
     const dayLabels = useMemo(() => {
         return DAYS.map((day, i) => (
             <text key={i} x={-32.5} y={i * 12 + 8} fontSize="9" fill="#666">
@@ -186,7 +332,6 @@ export default function HomePage() {
         ));
     }, []);
 
-    // 기여도 그리드 생성을 useMemo로 최적화
     const contributionGrid = useMemo(() => {
         const squares = [];
         const startDate = new Date(TO_YEAR, 0, 1);
@@ -195,10 +340,12 @@ export default function HomePage() {
         
         for (let week = 0; week < totalWeeks; week++) {
             for (let dayOfWeek = 0; dayOfWeek < 7; dayOfWeek++) {
+                const key = `${week}-${dayOfWeek}`;
+                
                 if (week === 0 && dayOfWeek < startDayOfWeek) {
                     squares.push(
                         <rect 
-                            key={`empty-${week}-${dayOfWeek}`}
+                            key={`empty-${key}`}
                             x={week * 12} 
                             y={dayOfWeek * 12} 
                             width="10" 
@@ -221,14 +368,8 @@ export default function HomePage() {
                     const count = activity[daysSinceStart] || 0;
                     
                     squares.push(
-                        <rect 
-                            key={`day-${daysSinceStart}`}
-                            x={week * 12} 
-                            y={dayOfWeek * 12} 
-                            width="10" 
-                            height="10" 
-                            fill={getColor(count)} 
-                            rx="2"
+                        <rect key={`day-${daysSinceStart}`} x={week * 12} y={dayOfWeek * 12} 
+                            width="10" height="10" fill={getColor(count)} rx="2"
                             className="hover:stroke-gray-400 hover:stroke-1 cursor-pointer"
                             title={`${dateStr}: ${count} contributions`}
                         />
@@ -239,7 +380,6 @@ export default function HomePage() {
         return squares;
     }, [activity]);
 
-    // 통계 계산을 useMemo로 최적화
     const stats = useMemo(() => {
         const totalContributions = activity.reduce((sum, count) => sum + count, 0);
         const activeDays = activity.filter(count => count > 0).length;
@@ -254,11 +394,13 @@ export default function HomePage() {
         };
     }, [activity]);
 
-    const svgWidth = Math.ceil((new Date(TO_YEAR, 0, 1).getDay() + 365) / 7) * 12 + 60;
+    const svgWidth = useMemo(() => {
+        return Math.ceil((new Date(TO_YEAR, 0, 1).getDay() + 365) / 7) * 12 + 60;
+    }, []);
 
     return (
         <div className="md:pb-20">
-            <div className="max-w-3xl mb-4">
+            <section className="max-w-3xl mb-4">
                 <h1 className="text-3xl font-bold my-4">안녕하십니까, 저는</h1>
                 <p className="text-gray-700">
                     언젠가는 DB 분야로 진출하고 싶은 강다윤입니다. 저는 프론트엔드와 백엔드 프로젝트를 진행하며 
@@ -266,45 +408,29 @@ export default function HomePage() {
                     이를 통해 실력을 더욱 키울 수 있었습니다. 앞으로도 모르는 것을 배우며 끊임없이 
                     성장하는 개발자가 되겠습니다.
                 </p>
-            </div>
+            </section>
 
-            <div className="max-w-3xl mb-4">
+            <section className="max-w-3xl mb-4">
                 <h2 className="mt-6 mb-4 text-xl font-bold text-gray-900 dark:text-white border-b pb-2">
                     간단한 프로젝트
                 </h2>
                 <div className="grid gap-4 sm:grid-cols-2">
-                    {projectLinks.map((project, idx) => (
-                        <div key={idx} className="dark:bg-gray-800 rounded-xl shadow hover:shadow-md transition p-4 border hover:border-[#52ADC8]">
-                            <h3 className="text-lg font-semibold text-gray-800 dark:text-white hover:underline">
-                                <a href={project.repo}>{project.name}</a>
-                            </h3>
-                            {project.note && (
-                                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{project.note}</p>
-                            )}
-                            <p className="text-gray-500 dark:text-gray-400 mt-2 text-sm hover:underline">
-                                <a href={project.url}>{project.url}</a>
-                            </p>
-                        </div>
+                    {PROJECT_LINKS.map((project, idx) => (
+                        <ProjectCard key={idx} project={project} />
                     ))}
                 </div>
-            </div>
+            </section>
 
-            <div className="mt-6 max-w-3xl">
+            <section className="mt-6 max-w-3xl">
                 <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">최근 소식</h2>
-                
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                    {recentInterest.map((c, i) => (
-                        <div key={i} className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                            <div className="flex items-center mb-2">
-                                <h3 className="text-lg font-semibold text-gray-800">{c.title}</h3>
-                            </div>
-                            <p className="text-gray-600">{c.content}</p>
-                        </div> 
+                    {RECENT_INTERESTS.map((interest, i) => (
+                        <InterestCard key={i} interest={interest} />
                     ))}
                 </div>
-            </div>
+            </section>
 
-            <div className="mt-6 max-w-3xl">
+            <section className="mt-6 max-w-3xl">
                 <h2 className="text-2xl font-bold mb-4 text-gray-800 border-b pb-2">Github 활동 내역</h2>
                 
                 <div>
@@ -313,30 +439,15 @@ export default function HomePage() {
                             {isDataLoaded ? (
                                 `${TO_YEAR}년의 기여도 : ${stats.totalContributions}`
                             ) : (
-                                <div className="flex items-center space-x-2">
-                                    <div className="animate-pulse bg-gray-200 h-4 w-32 rounded"></div>
-                                </div>
+                                <LoadingSpinner />
                             )}
                         </div>
-                        <div className="text-sm text-green-600 font-medium">
-                            {isDataLoaded ? "GraphQL API - 완전한 데이터" : "데이터 로딩 중..."}
-                        </div>
+                        <TokenStatus status={tokenStatus} />
                     </div>
                     
                     <div className="overflow-x-auto">
                         {error ? (
-                            <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                                <p className="text-red-700 font-medium">⚠️ 오류 발생</p>
-                                <p className="text-red-600 mt-1">{error}</p>
-                                <div className="mt-3 text-sm text-red-600">
-                                    <p>해결 방법:</p>
-                                    <ul className="list-disc list-inside mt-1 space-y-1">
-                                        <li>Personal Access Token이 유효한지 확인</li>
-                                        <li>토큰에 필요한 권한(read:user, repo)이 있는지 확인</li>
-                                        <li>GitHub 사용자명이 정확한지 확인</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            <ErrorDisplay error={error} />
                         ) : (
                             <div className={`transition-opacity duration-500 ${isDataLoaded ? 'opacity-100' : 'opacity-50'}`}>
                                 <svg width={svgWidth} height={7 * 12 + 35} className="border rounded p-2">
@@ -350,21 +461,9 @@ export default function HomePage() {
                         )}
                     </div>
 
-                    <div style={{marginTop: "16px"}}>
-                        <div className="flex items-center space-x-2 text-xs text-gray-500">
-                            <span>활동 안 함</span>
-                            <div className="flex space-x-1">
-                                <div className="w-2 h-2 rounded-sm" style={{backgroundColor: '#ebedf0'}}></div>
-                                <div className="w-2 h-2 rounded-sm" style={{backgroundColor: '#c6e48b'}}></div>
-                                <div className="w-2 h-2 rounded-sm" style={{backgroundColor: '#7bc96f'}}></div>
-                                <div className="w-2 h-2 rounded-sm" style={{backgroundColor: '#239a3b'}}></div>
-                                <div className="w-2 h-2 rounded-sm" style={{backgroundColor: '#196127'}}></div>
-                            </div>
-                            <span>많이 활동함</span>
-                        </div>
-                    </div>
+                    <ContributionLegend />
                 </div>
-            </div>
+            </section>
         </div>
     );
 }
