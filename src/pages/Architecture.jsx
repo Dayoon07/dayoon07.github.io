@@ -1,7 +1,7 @@
 import { useMemo , useEffect, useState } from "react";
 
 export default function Architecture() {
-    document.title = "DB 아키텍처 | 안녕하세요. 강다윤입니다";
+    document.title = "DB 아키텍처 | 안녕하세요. 강다윤입니다"; 
 
     const [imagesLoaded, setImagesLoaded] = useState(0);
     const [showItems, setShowItems] = useState(false);
