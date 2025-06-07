@@ -12,28 +12,28 @@ import CV from './pages/Cv';
 import Portfolio from './pages/Portfolio';
 
 export default function App() {
-  return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <Header />
-      <main className="md:max-w-screen-xl max-md:w-full mx-auto px-4 py-8 md:pt-20 md:flex">
-        <div className="w-60 max-md:mt-10">
-          <Profile />
-        </div>
-        <div className="flex-1 w-full min-w-0">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/skill" element={<Skill />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/architecture" element={<Architecture />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/sitemap" element={<SiteMap />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </div>
-      </main>
-      <Footer />
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <Header />
+            <main className="md:max-w-screen-xl max-md:w-full mx-auto px-4 py-8 md:pt-20 md:flex">
+                <div className="w-60 max-md:mt-10">
+                    <Profile />
+                </div>
+                <div className="flex-1 w-full min-w-0">
+                    <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/skill" element={<Skill />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/architecture" element={<Architecture />} />
+                    <Route path="/cv" element={<CV />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="/sitemap" element={<SiteMap />} />
+                    <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </div>
+            </main>
+            <Footer />
+        </BrowserRouter>
+    );
 }
 
