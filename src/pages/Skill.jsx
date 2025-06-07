@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from "react";
 
+// {
+//     "title": "DevOps",
+//     "items": [
+//         {
+//             "name": "Github Action",
+//             "badge": "https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"
+//         },
+//         {
+//             "name": "Docker",
+//             "badge": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=fff"
+//         }
+//     ]
+// }
+
 export default function Skill() {
     const [skillSections, setSkillSections] = useState([]);
     const [imagesLoaded, setImagesLoaded] = useState(0);

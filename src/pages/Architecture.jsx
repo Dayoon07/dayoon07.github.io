@@ -7,6 +7,11 @@ export default function Architecture() {
     const [showItems, setShowItems] = useState(false);
     
     const l = useMemo(() => [
+        // {
+        //     img: "/img/architecture/movie-ticket-erd.png",
+        //     title: "경기 콘텐츠 창의학교 프로젝트 ERD",
+        //     text: "창의학교 프로젝트 DB ERD, 기여한 것들은 경찰서, 문의하기 테이블 설계(아마 사진에는 안 찍혔을 거임), CRUD 구현, 구축"
+        // },
         {
             img: "/img/architecture/mycloud-erd.png",
             title: "마이 클라우드 ERD",
