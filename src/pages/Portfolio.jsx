@@ -5,32 +5,15 @@ export default function Portfolio() {
 
     const totalSlides = 12;
     const [currentIndex, setCurrentIndex] = useState(null);
-    const [imagesLoaded, setImagesLoaded] = useState(0);
     const [showItems, setShowItems] = useState(false);
 
-    // 이미지 로딩 상태 추적
+    // 컴포넌트 마운트 시 바로 애니메이션 시작
     useEffect(() => {
-        // 모든 이미지를 프리로드
-        const preloadImages = () => {
-            const imagePromises = Array.from({ length: totalSlides }, (_, i) => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.src = `/popol/slide_${i + 1}.png`;
-                    img.onload = () => {
-                        setImagesLoaded(prev => prev + 1);
-                        resolve();
-                    };
-                    img.onerror = () => resolve(); // 오류가 발생해도 계속 진행
-                });
-            });
-
-            Promise.all(imagePromises).then(() => {
-                // 모든 이미지가 로드되면 애니메이션 시작
-                setShowItems(true);
-            });
-        };
-
-        preloadImages();
+        const timer = setTimeout(() => {
+            setShowItems(true);
+        }, 100);
+        
+        return () => clearTimeout(timer);
     }, []);
 
     const openLightbox = (index) => {
@@ -42,7 +25,7 @@ export default function Portfolio() {
     };
 
     const prevSlide = (e) => {
-        e.stopPropagation(); // 배경 클릭 close 방지
+        e.stopPropagation();
         setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
     };
 
@@ -61,14 +44,6 @@ export default function Portfolio() {
                 포트폴리오
             </h1>
 
-            {/* 로딩 인디케이터 */}
-            {!showItems && (
-                <div className="flex flex-col items-center justify-center py-12">
-                    <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-                    <p className="mt-4 text-gray-600">이미지 로딩중... ({imagesLoaded}/{totalSlides})</p>
-                </div>
-            )}
-
             <div className="md:grid md:grid-cols-2 md:gap-4">
                 {Array.from({ length: totalSlides }, (_, i) => (
                     <div 
@@ -77,7 +52,7 @@ export default function Portfolio() {
                         style={{ 
                             opacity: showItems ? 1 : 0, 
                             transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)',
-                            transitionDelay: `${i * 100}ms` // 각 아이템마다 딜레이 추가
+                            transitionDelay: `${i * 100}ms`
                         }}
                     >
                         <img

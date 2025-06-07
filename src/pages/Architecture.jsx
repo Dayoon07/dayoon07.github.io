@@ -1,17 +1,11 @@
-import { useMemo , useEffect, useState } from "react";
+import { useMemo, useEffect, useState } from "react";
 
 export default function Architecture() {
     document.title = "DB 아키텍처 | 안녕하세요. 강다윤입니다"; 
 
-    const [imagesLoaded, setImagesLoaded] = useState(0);
     const [showItems, setShowItems] = useState(false);
     
     const l = useMemo(() => [
-        // {
-        //     img: "/img/architecture/movie-ticket-erd.png",
-        //     title: "경기 콘텐츠 창의학교 프로젝트 ERD",
-        //     text: "창의학교 프로젝트 DB ERD, 기여한 것들은 경찰서, 문의하기 테이블 설계(아마 사진에는 안 찍혔을 거임), CRUD 구현, 구축"
-        // },
         {
             img: "/img/architecture/mycloud-erd.png",
             title: "마이 클라우드 ERD",
@@ -34,28 +28,14 @@ export default function Architecture() {
         }
     ], []);
 
-    // 이미지 로딩 상태 추적
+    // 컴포넌트 마운트 시 바로 애니메이션 시작
     useEffect(() => {
-        const preloadImages = () => {
-            const imagePromises = l.map((item) => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.src = item.img;
-                    img.onload = () => {
-                        setImagesLoaded(prev => prev + 1);
-                        resolve();
-                    };
-                    img.onerror = () => resolve();
-                });
-            });
-
-            Promise.all(imagePromises).then(() => {
-                setShowItems(true);
-            });
-        };
-
-        preloadImages();
-    }, [l]);
+        const timer = setTimeout(() => {
+            setShowItems(true);
+        }, 100);
+        
+        return () => clearTimeout(timer);
+    }, []);
 
     return (
         <>
@@ -66,13 +46,6 @@ export default function Architecture() {
                 }}>
                 DB 설계 작업물
             </h1>
-
-            {!showItems && (
-                <div className="flex flex-col items-center justify-center py-12">
-                    <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-                    <p className="mt-4 text-gray-600">이미지 로딩중... ({imagesLoaded}/{l.length})</p>
-                </div>
-            )}
 
             <div className="md:grid md:grid-cols-2 md:gap-4">
                 {l.map((content, idx) => (

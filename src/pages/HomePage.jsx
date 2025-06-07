@@ -2,18 +2,16 @@ import { useEffect } from "react";
 
 const RECENT_INTERESTS = [
     {
-        title: "SQLD 자격증 공부",
+        title: "DevOps 공부",
         content: `
-            SQLD 자격증을 취득하기 위해 DB 심화 부분을 공부하고 있습니다.
-            특히 데이터베이스 모델링과 그룹 함수, 윈도우 함수에 대해 공부하고 있습니다.
-            개인적으로는 데이터베이스 튜닝하는 방법과 트랜잭션 관리, 샤딩 기법, 분산 처리, 
-            쿼리 성능 향상 방법에 대해 공부하고 있습니다.
+            Github Actions를 활용한 CI/CD 파이프라인 구축을 학습 중입니다.
+            추가로 Docker로 가상화를 공부하고 있습니다.
         `
     },
     {
-        title: "Tensorflow 기반 딥러닝",
+        title: "산업기사 자격증 취득 준비",
         content: `
-            Tensorflow & Keras를 활용해 인공 신경망 설계 & 구현과 딥러닝 모델 설계 & 학습 방법에 대해 공부하고 있습니다.
+            정보처리 산업기사 자격증을 취득하기 위해 NCS 과목을 공부하고 있습니다.
         `
     }
 ];
@@ -72,7 +70,7 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div className="md:pb-20">
+        <div className="md:pb-40">
             <section className="max-w-3xl mb-4">
                 <h1 className="text-3xl font-bold my-4">안녕하십니까, 저는</h1>
                 <p className="text-gray-700">

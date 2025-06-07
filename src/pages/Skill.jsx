@@ -1,27 +1,18 @@
 import React, { useState, useEffect } from "react";
 
-// {
-//     "title": "DevOps",
-//     "items": [
-//         {
-//             "name": "Github Action",
-//             "badge": "https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white"
-//         },
-//         {
-//             "name": "Docker",
-//             "badge": "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=fff"
-//         }
-//     ]
-// }
-
 export default function Skill() {
     const [skillSections, setSkillSections] = useState([]);
-    const [imagesLoaded, setImagesLoaded] = useState(0);
-    const [totalImages, setTotalImages] = useState(0);
     const [showItems, setShowItems] = useState(false);
 
     useEffect(() => {
         document.title = "기술 스택 | 안녕하세요. 강다윤입니다";
+        
+        // 컴포넌트 마운트 시 바로 애니메이션 시작
+        const timer = setTimeout(() => {
+            setShowItems(true);
+        }, 100);
+        
+        return () => clearTimeout(timer);
     }, []);
 
     useEffect(() => {
@@ -29,35 +20,9 @@ export default function Skill() {
             .then((res) => res.json())
             .then((data) => {
                 setSkillSections(data);
-                const total = data.reduce((acc, section) => acc + section.items.length, 0);
-                setTotalImages(total);
-                preloadImages(data);
             })
             .catch((error) => console.error("skill.json 로딩 실패:", error));
     }, []);
-
-    const preloadImages = (data) => {
-        const imagePromises = data.flatMap((section) =>
-            section.items.map((item) => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.src = item.badge;
-                    img.onload = () => {
-                        setImagesLoaded((prev) => prev + 1);
-                        resolve();
-                    };
-                    img.onerror = () => {
-                        setImagesLoaded((prev) => prev + 1);
-                        resolve();
-                    };
-                });
-            })
-        );
-
-        Promise.all(imagePromises).then(() => {
-            setShowItems(true);
-        });
-    };
 
     return (
         <div className="max-w-4xl mx-auto px-4">
@@ -68,15 +33,6 @@ export default function Skill() {
             >
                 기술 스택
             </h1>
-
-            {!showItems && (
-                <div className="flex flex-col items-center justify-center py-12 mb-96">
-                    <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin" />
-                    <p className="mt-4 text-gray-600">
-                        이미지 로딩중... ({imagesLoaded}/{totalImages})
-                    </p>
-                </div>
-            )}
 
             {skillSections.map((section, index) => (
                 <div

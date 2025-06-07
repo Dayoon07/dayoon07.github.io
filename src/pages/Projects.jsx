@@ -3,7 +3,6 @@ import { useState, useEffect, useMemo } from 'react';
 export default function Projects() {
     document.title = "주요 프로젝트 | 안녕하세요. 강다윤입니다";
 
-    const [imagesLoaded, setImagesLoaded] = useState(0);
     const [showItems, setShowItems] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState(null);
@@ -63,30 +62,14 @@ export default function Projects() {
         }
     ]), []);
 
-    // 이미지 로딩 상태 추적
+    // 컴포넌트 마운트 시 바로 애니메이션 시작
     useEffect(() => {
-        // 모든 이미지를 프리로드
-        const preloadImages = () => {
-            const imagePromises = projectsData.map((project) => {
-                return new Promise((resolve) => {
-                    const img = new Image();
-                    img.src = project.image;
-                    img.onload = () => {
-                        setImagesLoaded(prev => prev + 1);
-                        resolve();
-                    };
-                    img.onerror = () => resolve(); // 오류가 발생해도 계속 진행
-                });
-            });
-
-            Promise.all(imagePromises).then(() => {
-                // 모든 이미지가 로드되면 애니메이션 시작
-                setShowItems(true);
-            });
-        };
-
-        preloadImages();
-    }, [projectsData]);
+        const timer = setTimeout(() => {
+            setShowItems(true);
+        }, 100);
+        
+        return () => clearTimeout(timer);
+    }, []);
 
     const openLightbox = (image) => {
         setCurrentImage(image);
@@ -108,21 +91,13 @@ export default function Projects() {
                 주요 프로젝트
             </h1>
 
-            {/* 로딩 인디케이터 */}
-            {!showItems && (
-                <div className="flex flex-col items-center justify-center py-12">
-                    <div className="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
-                    <p className="mt-4 text-gray-600">이미지 로딩중... ({imagesLoaded}/{projectsData.length})</p>
-                </div>
-            )}
-
             <div className="space-y-8 mt-5">
                 {projectsData.map((project, index) => (
                     <div key={index} className="w-full md:flex opacity-0 transform -translate-y-10 transition-all duration-700 ease-out"
                         style={{ 
                             opacity: showItems ? 1 : 0, 
                             transform: showItems ? 'translateY(0)' : 'translateY(-2.5rem)',
-                            transitionDelay: `${index * 150}ms` // 각 아이템마다 딜레이 추가
+                            transitionDelay: `${index * 150}ms`
                         }}
                     >
                         <div>
