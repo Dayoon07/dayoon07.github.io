@@ -7,7 +7,6 @@ export default function Skill() {
     useEffect(() => {
         document.title = "기술 스택 | 안녕하세요. 강다윤입니다";
         
-        // 컴포넌트 마운트 시 바로 애니메이션 시작
         const timer = setTimeout(() => {
             setShowItems(true);
         }, 100);
@@ -25,7 +24,7 @@ export default function Skill() {
     }, []);
 
     return (
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
             <h1
                 className={`text-3xl font-bold my-4 transition-all duration-700 ease-out ${
                     showItems ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
@@ -37,23 +36,16 @@ export default function Skill() {
             {skillSections.map((section, index) => (
                 <div
                     key={section.title || index}
-                    className={`transition-all duration-700 ease-out ${
+                    className={`max-w-3xl transition-all duration-700 ease-out ${
                         showItems ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-10"
                     }`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                    <div className="border-b py-2 px-4 font-bold text-lg">{section.title}</div>
-                    <div className="p-4">
+                    <div className="border-b py-2 font-bold text-lg">{section.title}</div>
+                    <div className="py-2">
                         <div className="flex flex-wrap gap-2">
                             {section.items.map((item) => (
-                                <a
-                                    href={item.badge}
-                                    key={item.name}
-                                    title={item.name}
-                                    rel="noopener noreferrer"
-                                    target="_blank"
-                                    className="flex items-center"
-                                >
+                                <a href={item.badge} key={item.name} title={item.name} rel="noopener noreferrer" target="_blank" className="flex items-center">
                                     <img src={item.badge} alt={item.name} className="h-7" />
                                 </a>
                             ))}
