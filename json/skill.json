@@ -37,7 +37,7 @@
             },
             {
                 "name": "CSS",
-                "badge": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=fff"
+                "badge": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=fff"
             },
             {
                 "name": "JavaScript",
@@ -54,6 +54,10 @@
             {
                 "name": "Python",
                 "badge": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=fff"
+            },
+            {
+                "name": "Markdown",
+                "badge": "https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&style=for-the-badge&logoColor=white"
             }
         ]
     },
@@ -115,6 +119,10 @@
                 "badge": "https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB"
             },
             {
+                "name": "React Router",
+                "badge": "https://img.shields.io/badge/React_Router-CA4245?logo=react-router&style=for-the-badge&logoColor=white"
+            },
+            {
                 "name": "jQuery",
                 "badge": "https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=fff"
             },
@@ -125,6 +133,10 @@
             {
                 "name": "JSTL",
                 "badge": "https://dayoon07.github.io/static-page-test/devimg/jstl.png"
+            },
+            {
+                "name": "Chart.js",
+                "badge": "https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=Chart.js&logoColor=white"
             }
         ]
     },
