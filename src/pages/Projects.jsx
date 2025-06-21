@@ -17,17 +17,16 @@ export default function Projects() {
             backendLink: "https://github.com/Dayoon07/springboot-movie-ticket",
             technologies: [
                 'React',
-                'Spring Boot',
+                'Spring AI',
                 'Rest API',
-                'Fetch API'
+                'Ollama'
             ],
             description: `CGV 영화 예매 키오스크를 웹으로 포팅한 프로젝트입니다.
-                프론트엔드는 React 기반의 SPA로 구현되었고, 백엔드는 Spring Boot 기반 
+                프론트엔드는 React 기반의 SPA 프레임워크로 구현되었고, 백엔드는 Spring Boot 기반 
                 REST API 서버로 분리되어 있으며 각각 별도의 GitHub 레포지토리로 관리됩니다.
-                주요 기능은 영화 예매, 좌석 선택, 티켓 출력, 환불 등이 있으며, 
-                API와 프론트 간 Fetch API를 통한 통신 구조를 구현했습니다.
+                주요 기능은 영화 예매, 좌석 선택, 티켓 출력, 환불 등이 있습니다. 
             `,
-            demoVideo: null
+            demoVideo: "https://dayoon07.github.io/video/movie-ticket-test.mp4"
         },
         {
             title: "mycloud-project",
@@ -140,7 +139,7 @@ export default function Projects() {
                         }}
                     >
                         <div>
-                            <img src={project.image} alt={project.title} title={project.title} className="md:w-96 object-cover rounded-md cursor-pointer" onClick={() => openLightbox(project.image)} />
+                            <img src={project.image} alt={project.title} title={project.title} className="md:w-[410px] object-cover rounded-md cursor-pointer" onClick={() => openLightbox(project.image)} />
                         </div>
                         <div className="w-full md:max-w-md ml-4">
                             <h1 className="text-2xl font-semibold hover:text-[#52ADC8] hover:underline max-md:my-2 md:mb-2">
