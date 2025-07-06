@@ -2,18 +2,19 @@ import { useEffect } from "react";
 
 const RECENT_INTERESTS = [
     {
-        title: "DevOps 공부",
+        title: "데스크탑 애플리케이션",
         content: `
-            Github Actions를 활용한 CI/CD 파이프라인 구축을 학습 중입니다.
-            추가로 Docker로 가상화를 공부하고 있습니다.
+            C++ 언어와 Qt 프레임워크로 GUI 프로그래밍과 크로스 
+            플랫폼 개발을 공부 중입니다.
         `
     },
     {
-        title: "산업기사 자격증 취득 준비",
+        title: "DevOps 공부",
         content: `
-            정보처리 산업기사 자격증을 취득하기 위해 NCS 과목을 공부하고 있습니다.
+            Github Actions를 활용한 CI/CD 파이프라인 구축을 학습 중입니다.
+            워크플로를 작성해 지속적으로 빌드, 배포를 연구 중입니다.
         `
-    }
+    },
 ];
 
 const PROJECT_LINKS = [

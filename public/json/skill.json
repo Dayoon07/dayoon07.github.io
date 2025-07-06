@@ -11,10 +11,6 @@
                 "badge": "https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=vsc&logoColor=white"
             },
             {
-                "name": "PyCharm",
-                "badge": "https://img.shields.io/badge/PyCharm-000000?style=for-the-badge&logo=PyCharm&logoColor=white"
-            },
-            {
                 "name": "Dbeaver",
                 "badge": "https://img.shields.io/badge/dbeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white"
             },
@@ -23,8 +19,12 @@
                 "badge": "https://img.shields.io/badge/Spring%20Tool%20Suite%20-6DB33F?style=for-the-badge&logo=eclipse&logoColor=white"
             },
             {
-                "name": "Sql Developer",
+                "name": "SQL Developer",
                 "badge": "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png"
+            },
+            {
+                "name": "Visual Studio",
+                "badge": "https://custom-icon-badges.demolab.com/badge/Visual%20Studio-5C2D91.svg?&logo=visualstudio&logoColor=white&style=for-the-badge"
             }
         ]
     },
@@ -50,10 +50,6 @@
             {
                 "name": "Java",
                 "badge": "/img/Java-007396.svg"
-            },
-            {
-                "name": "Python",
-                "badge": "https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=fff"
             },
             {
                 "name": "Markdown",
@@ -128,7 +124,7 @@
             },
             {
                 "name": "Lombok",
-                "badge": "https://dayoon07.github.io/static-page-test/devimg/lombok.png"
+                "badge": "https://dayoon07.github.io/static-page-test/devimg/lombok-logo.png"
             },
             {
                 "name": "JSTL",
