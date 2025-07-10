@@ -4,8 +4,8 @@ const RECENT_INTERESTS = [
     {
         title: "데스크탑 애플리케이션",
         content: `
-            C++ 언어와 Qt 프레임워크로 GUI 프로그래밍과 크로스 
-            플랫폼 개발을 공부 중입니다.
+            C# 언어와 WPF (Windows Presentation Foundation) 프레임워크로 GUI 프로그래밍을 
+            학습 중입니다.
         `
     },
     {
