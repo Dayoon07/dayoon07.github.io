@@ -25,6 +25,7 @@ export default function CV() {
 
             <h2 className="text-xl font-semibold mt-6 mb-2">자격증</h2>
             <ul className="list-disc list-inside">
+                <li>2025.07.16 : 과정평가형 정보처리산업기사</li>
                 <li>2024.12.11 : 정보처리기능사</li>
                 <li>2024.09.11 : 웹디자인기능사</li>
                 <li>2024.03.08 : 컴퓨터활용능력 2급</li>
