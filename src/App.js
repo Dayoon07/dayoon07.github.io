@@ -17,7 +17,7 @@ export default function App() {
             <div className="min-h-screen flex flex-col">
                 <Header />
                 
-                <main className="flex-grow w-full py-8 md:flex mb-10">
+                <main className="flex-grow w-full py-8 md:flex md:mb-10">
                     <div className="md:w-[1280px] max-md:w-full max-md:p-4 mx-auto md:flex md:justify-between">
                         <aside className="max-md:mt-10">
                             <Profile />

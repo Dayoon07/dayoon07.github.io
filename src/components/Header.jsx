@@ -34,7 +34,7 @@ export default function Header() {
                 >
                     Homepage
                 </Link>
-                <nav className="lg:ml-40 md:ml-24 md:flex hidden space-x-8">
+                <nav className="md:ml-40 md:flex hidden space-x-8">
                     {menuItems.map((k) => (
                         <Link to={k.to} key={k.to} className="py-2 text-lg relative after:content-[''] after:absolute after:left-1/2 
                             after:bottom-0 after:w-0 after:h-[4px] after:bg-gray-200 after:transition-all after:duration-300 

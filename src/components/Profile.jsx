@@ -67,7 +67,7 @@ function ContactInfo() {
                 <EducationIcon />
                 <span>근명고등학교</span>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex md:items-center space-x-2">
                 <EmailIcon />
                 <a 
                     href="mailto:gangd0642@gmail.com" 
