@@ -7,6 +7,15 @@ export default function Architecture() {
     
     const l = useMemo(() => [
         {
+            img: "/img/architecture/shortform-erd.png",
+            title: "숏폼 플랫폼 ERD",
+            text: `
+                3학년 1학기 여름방학에 할 거 없어서 만든 프로젝트의 ERD, 
+                SqlDeveloper에서 지원하는 데이터 모델링 도구로 만듬.
+                방법: 테이블 드래그 → 파일 → Data Modeler → Import → Data Dictionary
+                `
+        },
+        {
             img: "/img/architecture/movie-ticket-erd.png",
             title: "영화 예매 티켓 ERD",
             text: `미래유망분야 고졸인력 양성사업 3학년 프로젝트에서 설계, 
