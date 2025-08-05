@@ -70,7 +70,7 @@ export default function Architecture() {
                 DB 설계 작업물
             </h1>
 
-            <div className="md:grid md:grid-cols-2 md:gap-4">
+            <div className="md:w-[818px] md:grid md:grid-cols-2 md:gap-4">
                 {l.map((content, idx) => (
                     <div 
                         key={idx}
@@ -84,7 +84,7 @@ export default function Architecture() {
                         <a href={content.img} target="_blank" rel="noreferrer">
                             <img src={content.img} className="w-full" alt={content.title} />
                         </a>
-                        <div className="px-6 py-4">
+                        <div className="px-2 py-4">
                             <div className="font-bold text-xl mb-2">{content.title}</div>
                             <p className="text-gray-700 text-base">{content.text}</p>
                         </div>
