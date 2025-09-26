@@ -1,9 +1,16 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 
 export default function Portfolio() {
     const totalSlides = 12;
     const [currentIndex, setCurrentIndex] = useState(null);
     const [showItems, setShowItems] = useState(false);
+    const handleKeyPress = useRef();
+
+    handleKeyPress.current = (e) => {
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowLeft") prevSlide();
+        if (e.key === "ArrowRight") nextSlide();
+    };
 
     useEffect(() => {
         document.title = "포트폴리오 | 안녕하세요. 강다윤입니다";
@@ -17,13 +24,7 @@ export default function Portfolio() {
 
     useEffect(() => {
         if (currentIndex === null) return;
-
-        const handleKeyPress = (e) => {
-            if (e.key === "Escape") closeLightbox();
-            if (e.key === "ArrowLeft") prevSlide();
-            if (e.key === "ArrowRight") nextSlide();
-        };
-
+        const listener = (e) => handlerRef.current?.(e);
         document.addEventListener("keydown", handleKeyPress);
         return () => document.removeEventListener("keydown", handleKeyPress);
     }, [currentIndex]);
