@@ -5,29 +5,6 @@ export default function Portfolio() {
     const [currentIndex, setCurrentIndex] = useState(null);
     const [showItems, setShowItems] = useState(false);
 
-    useEffect(() => {
-        document.title = "포트폴리오 | 안녕하세요. 강다윤입니다";
-        
-        const timer = setTimeout(() => {
-            setShowItems(true);
-        }, 100);
-        
-        return () => clearTimeout(timer);
-    }, []);
-
-    useEffect(() => {
-        if (currentIndex === null) return;
-
-        const handleKeyPress = (e) => {
-            if (e.key === "Escape") closeLightbox();
-            if (e.key === "ArrowLeft") prevSlide();
-            if (e.key === "ArrowRight") nextSlide();
-        };
-
-        document.addEventListener("keydown", handleKeyPress);
-        return () => document.removeEventListener("keydown", handleKeyPress);
-    }, [currentIndex, closeLightbox, prevSlide, nextSlide]);
-
     const openLightbox = useCallback((index) => {
         setCurrentIndex(index);
     }, []);
@@ -53,6 +30,29 @@ export default function Portfolio() {
             alt: `slide_${i + 1}`
         }))
     , [totalSlides]);
+
+    useEffect(() => {
+        document.title = "포트폴리오 | 안녕하세요. 강다윤입니다";
+        
+        const timer = setTimeout(() => {
+            setShowItems(true);
+        }, 100);
+        
+        return () => clearTimeout(timer);
+    }, []);
+
+    useEffect(() => {
+        if (currentIndex === null) return;
+
+        const handleKeyPress = (e) => {
+            if (e.key === "Escape") closeLightbox();
+            if (e.key === "ArrowLeft") prevSlide();
+            if (e.key === "ArrowRight") nextSlide();
+        };
+
+        document.addEventListener("keydown", handleKeyPress);
+        return () => document.removeEventListener("keydown", handleKeyPress);
+    }, [currentIndex, closeLightbox, prevSlide, nextSlide]);
 
     return (
         <div className="z-60">
