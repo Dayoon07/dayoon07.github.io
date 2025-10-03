@@ -21,6 +21,4 @@ function useSide() {
     return {
         isOpen, setIsOpen,location, toggleSidebar,menuItems
     };
-        
-    
 }

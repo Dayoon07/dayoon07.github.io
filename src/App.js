@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage';
 import Skill from './pages/Skill';
 import Profile from './components/Profile';
 import NotFound from './pages/Wow404Error';
-import Projects from './pages/Projects';
+import Project from './pages/Project';
 import Architecture from './pages/Architecture';
 import SiteMap from './pages/SiteMap';
 import CV from './pages/Cv';
@@ -17,9 +17,9 @@ export default function App() {
             <div className="min-h-screen flex flex-col">
                 <Header />
                 
-                <main className="flex-grow w-full py-8 md:flex md:mb-10">
-                    <div className="md:w-[1280px] max-md:w-full max-md:p-4 mx-auto md:flex md:justify-between">
-                        <aside className="max-md:mt-10">
+                <main className="flex-grow w-full py-8 lg:flex lg:mb-10">
+                    <div className="lg:w-[1280px] max-lg:w-full max-lg:p-4 mx-auto lg:flex lg:justify-between">
+                        <aside className="max-lg:mt-10">
                             <Profile />
                         </aside>
                         
@@ -27,7 +27,7 @@ export default function App() {
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
                                 <Route path="/skill" element={<Skill />} />
-                                <Route path="/projects" element={<Projects />} />
+                                <Route path="/project" element={<Project />} />
                                 <Route path="/architecture" element={<Architecture />} />
                                 <Route path="/cv" element={<CV />} />
                                 <Route path="/portfolio" element={<Portfolio />} />
