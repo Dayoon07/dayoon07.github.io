@@ -13,8 +13,6 @@ const NavLink = ({ to, children }) => (
 );
 
 export default function Header() {
-    const mainNavItems = SITEMAP.slice(1, 6);
-
     return (
         <header className="w-full bg-white border-b sticky top-0 z-[11]">
             <div className="lg:max-w-screen-xl max-lg:w-full mx-auto p-2.5 flex max-lg:justify-between max-lg:items-center">
@@ -28,7 +26,7 @@ export default function Header() {
 
                 {/* 데스크톱 네비게이션 */}
                 <nav className="lg:ml-40 lg:flex hidden space-x-8">
-                    {mainNavItems.map((item) => (
+                    {SITEMAP.slice(1, 6).map((item) => (
                         <NavLink key={item.name} to={item.link}>
                             {item.name}
                         </NavLink>

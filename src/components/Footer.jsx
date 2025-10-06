@@ -39,7 +39,7 @@ export default function Footer() {
 
                 {/* 저작권 정보 */}
                 <p className="mt-2 text-gray-400" style={{fontSize: "12px"}}>
-                    &copy; 2025 dayoon07. All rights reserved. Inspired by
+                    &copy; 2025 dayoon07. All rights reserved. Inspired by&nbsp;
                     <a href="https://github.com/academicpages/academicpages.github.io" target="_blank" 
                         rel="noreferrer" className="hover:underline"
                     >
