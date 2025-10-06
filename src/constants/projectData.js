@@ -1,6 +1,18 @@
 // 프로젝트 데이터 상수
 export const PROJECTS_DATA = [
     {
+        title: "shortform",
+        link: "https://github.com/Dayoon07/shortform",
+        image: "https://dayoon07.github.io/img/shortform.png",
+        frontendLink: null,
+        backendLink: null,
+        technologies: ['Thymeleaf', 'PWA', 'Vanilla JS', 'Google OAuth 2.0'],
+        description: `숏폼을 구현한 프로젝트입니다. Thymeleaf 템플릿을 사용해 뷰를 구성했습니다.
+            주요 기능으로는 팔로우, 영상 스와이프, 커뮤니티 (게시글), 댓글 & 답글 기능 등이 있습니다.
+        `,
+        demoVideo: null
+    },
+    {
         title: "movie-ticket",
         link: "https://github.com/Dayoon07/react-movie-ticket-ui",
         image: "https://dayoon07.github.io/img/movie-ticket.png",
