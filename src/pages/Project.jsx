@@ -14,7 +14,7 @@ const ProjectCard = ({ project, index, show, onImageClick }) => (
                 src={project.image} 
                 alt={project.title} 
                 title={project.title}
-                className="max-w-sm border object-cover rounded-md cursor-pointer" 
+                className="lg:max-w-sm max-lg:w-full border object-cover rounded-md cursor-pointer" 
                 onClick={() => onImageClick(project.image)} 
             />
         </div>
