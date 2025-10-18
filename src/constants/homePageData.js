@@ -14,10 +14,10 @@ export const RECENT_INTERESTS = [
 
 export const PROJECT_LINKS = [
     {
-        name: "화상 회의 SW (PWA)",
-        url: "https://web-rtc-meet.onrender.com",
-        repo: "https://github.com/Dayoon07/web-rtc-meet",
-        note: "(web-rtc-meet)"
+        name: "Limeet (PWA)",
+        url: "https://limeet-app.onrender.com",
+        repo: "https://github.com/Dayoon07/limeet-app",
+        note: "(limeet-app)"
     },
     {
         name: "날씨 API 키 활용 서비스",
