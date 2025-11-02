@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-import Skill from './pages/Skill';
 import Profile from './components/Profile';
 import NotFound from './pages/Wow404Error';
 import Project from './pages/Project';
