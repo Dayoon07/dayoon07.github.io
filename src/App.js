@@ -10,6 +10,7 @@ import Architecture from './pages/Architecture';
 import SiteMap from './pages/SiteMap';
 import CV from './pages/Cv';
 import Portfolio from './pages/Portfolio';
+import NewSkill from './pages/NewSkill';
 
 export default function App() {
     return (
@@ -18,15 +19,15 @@ export default function App() {
                 <Header />
                 
                 <main className="flex-grow w-full py-8 lg:flex lg:mb-10">
-                    <div className="lg:w-[1280px] max-lg:w-full max-lg:p-4 mx-auto lg:flex lg:justify-between">
+                    <section className="lg:w-[1280px] max-lg:w-full max-lg:p-4 mx-auto lg:flex lg:justify-between">
                         <aside className="max-lg:mt-10">
                             <Profile />
                         </aside>
                         
-                        <section className="flex-1 min-w-0 px-2">
+                        <article className="flex-1 min-w-0 px-2">
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
-                                <Route path="/skill" element={<Skill />} />
+                                <Route path="/skill" element={<NewSkill />} />
                                 <Route path="/project" element={<Project />} />
                                 <Route path="/architecture" element={<Architecture />} />
                                 <Route path="/cv" element={<CV />} />
@@ -34,8 +35,8 @@ export default function App() {
                                 <Route path="/sitemap" element={<SiteMap />} />
                                 <Route path="*" element={<NotFound />} />
                             </Routes>
-                        </section>
-                    </div>
+                        </article>
+                    </section>
                 </main>
                 
                 <Footer />
