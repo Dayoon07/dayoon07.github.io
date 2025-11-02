@@ -29,6 +29,18 @@
             {
                 "name": "Intellij IDEA",
                 "badge": "https://img.shields.io/badge/Intellij%20Idea-000?logo=intellij-idea&style=for-the-badge"
+            },
+            {
+                "name": "Android Studio",
+                "badge": "https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=AndroidStudio&logoColor=white"
+            },
+            {
+                "name": "Discord",
+                "badge": "https://img.shields.io/badge/Discord-%235865F2.svg?&style=for-the-badge&logo=discord&logoColor=white"
+            },
+            {
+                "name": "Postman",
+                "badge": "https://img.shields.io/badge/Postman-FF6C37?logo=postman&style=for-the-badge&logoColor=white"
             }
         ]
     },
@@ -48,6 +60,10 @@
                 "badge": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"
             },
             {
+                "name": "TypeScript",
+                "badge": "https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&style=for-the-badge&logoColor=fff"
+            },
+            {
                 "name": "SQL",
                 "badge": "https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=sqlite&logoColor=white"
             },
@@ -56,8 +72,24 @@
                 "badge": "/img/Java-007396.svg"
             },
             {
+                "name": "Kotlin",
+                "badge": "https://img.shields.io/badge/Kotlin-%237F52FF.svg?logo=kotlin&style=for-the-badge&logoColor=white"
+            },
+            {
                 "name": "Markdown",
                 "badge": "https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&style=for-the-badge&logoColor=white"
+            },
+            {
+                "name": "XML",
+                "badge": "https://img.shields.io/badge/XML-767C52?logo=xml&style=for-the-badge&logoColor=fff"
+            },
+            {
+                "name": "JSON",
+                "badge": "https://img.shields.io/badge/JSON-000?logo=json&style=for-the-badge&logoColor=fff"
+            },
+            {
+                "name": "YAML",
+                "badge": "https://img.shields.io/badge/YAML-CB171E?logo=yaml&style=for-the-badge&logoColor=fff"
             }
         ]
     },
@@ -81,6 +113,10 @@
                 "badge": "https://img.shields.io/badge/Spring_data_jpa-6DB33F?style=for-the-badge&logo=SpringSecurity&logoColor=white"
             },
             {
+                "name": "React",
+                "badge": "https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+            },
+            {
                 "name": "MyBatis",
                 "badge": "https://dayoon07.github.io/static-page-test/devimg/MyBatis.png"
             },
@@ -89,12 +125,32 @@
                 "badge": "https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=fff"
             },
             {
+                "name": "React Native",
+                "badge": "https://img.shields.io/badge/React_Native-%2320232a.svg?logo=react&style=for-the-badge&logoColor=%2361DAFB"
+            },
+            {
+                "name": "Expo",
+                "badge": "https://img.shields.io/badge/Expo-000020?logo=expo&style=for-the-badge&logoColor=fff"
+            },
+            {
+                "name": "Node.js",
+                "badge": "https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&style=for-the-badge&logoColor=white"
+            },
+            {
                 "name": "Tailwind",
                 "badge": "https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
             },
             {
                 "name": "Bootstrap",
                 "badge": "https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+            },
+            {
+                "name": "Express",
+                "badge": "https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&style=for-the-badge&logoColor=%2361DAFB"
+            },
+            {
+                "name": "Next.js",
+                "badge": "https://img.shields.io/badge/Next.js-black?logo=next.js&style=for-the-badge&logoColor=white"
             }
         ]
     },
@@ -108,16 +164,16 @@
             {
                 "name": "Maria",
                 "badge": "https://img.shields.io/badge/Maria-003545?style=for-the-badge&logo=mariadb&logoColor=white"
+            },
+            {
+                "name": "Redis",
+                "badge": "https://img.shields.io/badge/Redis-%23DD0031.svg?logo=redis&style=for-the-badge&logoColor=white"
             }
         ]
     },
     {
         "title": "라이브러리",
         "items": [
-            {
-                "name": "React",
-                "badge": "https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB"
-            },
             {
                 "name": "React Router",
                 "badge": "https://img.shields.io/badge/React_Router-CA4245?logo=react-router&style=for-the-badge&logoColor=white"
@@ -137,6 +193,10 @@
             {
                 "name": "Chart.js",
                 "badge": "https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=Chart.js&logoColor=white"
+            },
+            {
+                "name": "Socket.IO",
+                "badge": "https://img.shields.io/badge/Socket.IO-C93CD7?logo=socket&style=for-the-badge&logoColor=white"
             }
         ]
     },
@@ -167,6 +227,23 @@
         ]
     },
     {
+        "title": "협업",
+        "items": [
+            {
+                "name": "Git",
+                "badge": "https://img.shields.io/badge/Git-F05032?logo=git&style=for-the-badge&logoColor=fff"
+            },
+            {
+                "name": "GitHub",
+                "badge": "https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&style=for-the-badge&logoColor=white"
+            },
+            {
+                "name": "GitLab",
+                "badge": "https://img.shields.io/badge/GitLab-FC6D26?logo=gitlab&style=for-the-badge&logoColor=fff"
+            }
+        ]
+    },
+    {
         "title": "분석 & 모니터링",
         "items": [
             {
@@ -176,6 +253,23 @@
             {
                 "name": "Grafana",
                 "badge": "https://img.shields.io/badge/Grafana-F2F4F9?style=for-the-badge&logo=grafana&logoColor=orange"
+            }
+        ]
+    },
+    {
+        "title": "인프라",
+        "items": [
+            {
+                "name": "Docker",
+                "badge": "https://img.shields.io/badge/Docker-2496ED?logo=docker&style=for-the-badge&logoColor=fff"
+            },
+            {
+                "name": "Cloudflare",
+                "badge": "https://img.shields.io/badge/Cloudflare-F38020?logo=Cloudflare&style=for-the-badge&logoColor=white"
+            },
+            {
+                "name": "AWS",
+                "badge": "https://custom-icon-badges.demolab.com/badge/AWS-%23FF9900.svg?logo=aws&style=for-the-badge&logoColor=white"
             }
         ]
     }
