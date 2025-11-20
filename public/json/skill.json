@@ -4,43 +4,43 @@
         "items": [
             {
                 "name": "Eclipse",
-                "badge": "https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white"
+                "badge": "Eclipse.svg"
             },
             {
                 "name": "Visual Studio Code",
-                "badge": "https://custom-icon-badges.demolab.com/badge/Visual%20Studio%20Code-0078d7?style=for-the-badge&logo=vsc&logoColor=white"
+                "badge": "visual-studio-code.svg"
             },
             {
                 "name": "Dbeaver",
-                "badge": "https://img.shields.io/badge/dbeaver-382923?style=for-the-badge&logo=dbeaver&logoColor=white"
+                "badge": "dbeaver.svg"
             },
             {
                 "name": "Spring Tool Suite (STS)",
-                "badge": "https://img.shields.io/badge/Spring%20Tool%20Suite%20-6DB33F?style=for-the-badge&logo=eclipse&logoColor=white"
+                "badge": "spring-tool-suite.svg"
             },
             {
                 "name": "SQL Developer",
-                "badge": "https://dayoon07.github.io/static-page-test/devimg/sqldeveloper.png"
+                "badge": "sqldeveloper.svg"
             },
             {
                 "name": "Visual Studio",
-                "badge": "https://custom-icon-badges.demolab.com/badge/Visual%20Studio-5C2D91.svg?&logo=visualstudio&logoColor=white&style=for-the-badge"
+                "badge": "visual-studio.svg"
             },
             {
                 "name": "Intellij IDEA",
-                "badge": "https://img.shields.io/badge/Intellij%20Idea-000?logo=intellij-idea&style=for-the-badge"
+                "badge": "intellij-idea.svg"
             },
             {
                 "name": "Android Studio",
-                "badge": "https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=AndroidStudio&logoColor=white"
+                "badge": "android-studio.svg"
             },
             {
                 "name": "Discord",
-                "badge": "https://img.shields.io/badge/Discord-%235865F2.svg?&style=for-the-badge&logo=discord&logoColor=white"
+                "badge": "discord.svg"
             },
             {
                 "name": "Postman",
-                "badge": "https://img.shields.io/badge/Postman-FF6C37?logo=postman&style=for-the-badge&logoColor=white"
+                "badge": "postman.svg"
             }
         ]
     },
@@ -49,47 +49,47 @@
         "items": [
             {
                 "name": "HTML",
-                "badge": "https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white"
+                "badge": "html5.svg"
             },
             {
                 "name": "CSS",
-                "badge": "https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css&logoColor=fff"
+                "badge": "css3.svg"
             },
             {
                 "name": "JavaScript",
-                "badge": "https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white"
+                "badge": "java-script.svg"
             },
             {
                 "name": "TypeScript",
-                "badge": "https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&style=for-the-badge&logoColor=fff"
+                "badge": "type-script.svg"
             },
             {
                 "name": "SQL",
-                "badge": "https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=sqlite&logoColor=white"
+                "badge": "sql.svg"
             },
             {
                 "name": "Java",
-                "badge": "/img/Java-007396.svg"
+                "badge": "java.svg"
             },
             {
                 "name": "Kotlin",
-                "badge": "https://img.shields.io/badge/Kotlin-%237F52FF.svg?logo=kotlin&style=for-the-badge&logoColor=white"
+                "badge": "kotlin.svg"
             },
             {
                 "name": "Markdown",
-                "badge": "https://img.shields.io/badge/Markdown-%23000000.svg?logo=markdown&style=for-the-badge&logoColor=white"
+                "badge": "markdown.svg"
             },
             {
                 "name": "XML",
-                "badge": "https://img.shields.io/badge/XML-767C52?logo=xml&style=for-the-badge&logoColor=fff"
+                "badge": "xml.svg"
             },
             {
                 "name": "JSON",
-                "badge": "https://img.shields.io/badge/JSON-000?logo=json&style=for-the-badge&logoColor=fff"
+                "badge": "json.svg"
             },
             {
                 "name": "YAML",
-                "badge": "https://img.shields.io/badge/YAML-CB171E?logo=yaml&style=for-the-badge&logoColor=fff"
+                "badge": "yaml.svg"
             }
         ]
     },
@@ -98,59 +98,59 @@
         "items": [
             {
                 "name": "Spring",
-                "badge": "https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
+                "badge": "spring.svg"
             },
             {
                 "name": "Spring Boot",
-                "badge": "https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=fff"
+                "badge": "spring-boot.svg"
             },
             {
                 "name": "Spring Security",
-                "badge": "https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white"
+                "badge": "spring-security.svg"
             },
             {
                 "name": "Spring Data JPA",
-                "badge": "https://img.shields.io/badge/Spring_data_jpa-6DB33F?style=for-the-badge&logo=SpringSecurity&logoColor=white"
+                "badge": "spring-data-jpa.svg"
             },
             {
                 "name": "React",
-                "badge": "https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB"
+                "badge": "react.svg"
             },
             {
                 "name": "MyBatis",
-                "badge": "https://dayoon07.github.io/static-page-test/devimg/MyBatis.png"
+                "badge": "mybatis.svg"
             },
             {
                 "name": "Hibernate",
-                "badge": "https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=fff"
+                "badge": "hibernate.svg"
             },
             {
                 "name": "React Native",
-                "badge": "https://img.shields.io/badge/React_Native-%2320232a.svg?logo=react&style=for-the-badge&logoColor=%2361DAFB"
+                "badge": "react-native.svg"
             },
             {
                 "name": "Expo",
-                "badge": "https://img.shields.io/badge/Expo-000020?logo=expo&style=for-the-badge&logoColor=fff"
+                "badge": "expo.svg"
             },
             {
                 "name": "Node.js",
-                "badge": "https://img.shields.io/badge/Node.js-6DA55F?logo=node.js&style=for-the-badge&logoColor=white"
+                "badge": "node-js.svg"
             },
             {
                 "name": "Tailwind",
-                "badge": "https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white"
+                "badge": "tailwindcss.svg"
             },
             {
                 "name": "Bootstrap",
-                "badge": "https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
+                "badge": "bootstrap.svg"
             },
             {
                 "name": "Express",
-                "badge": "https://img.shields.io/badge/Express.js-%23404d59.svg?logo=express&style=for-the-badge&logoColor=%2361DAFB"
+                "badge": "express-js.svg"
             },
             {
                 "name": "Next.js",
-                "badge": "https://img.shields.io/badge/Next.js-black?logo=next.js&style=for-the-badge&logoColor=white"
+                "badge": "next-js.svg"
             }
         ]
     },
@@ -159,15 +159,15 @@
         "items": [
             {
                 "name": "Oracle",
-                "badge": "https://custom-icon-badges.demolab.com/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=fff"
+                "badge": "oracle.svg"
             },
             {
                 "name": "Maria",
-                "badge": "https://img.shields.io/badge/Maria-003545?style=for-the-badge&logo=mariadb&logoColor=white"
+                "badge": "maria.svg"
             },
             {
                 "name": "Redis",
-                "badge": "https://img.shields.io/badge/Redis-%23DD0031.svg?logo=redis&style=for-the-badge&logoColor=white"
+                "badge": "redis.svg"
             }
         ]
     },
@@ -176,27 +176,27 @@
         "items": [
             {
                 "name": "React Router",
-                "badge": "https://img.shields.io/badge/React_Router-CA4245?logo=react-router&style=for-the-badge&logoColor=white"
+                "badge": "react-router.svg"
             },
             {
                 "name": "jQuery",
-                "badge": "https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=fff"
+                "badge": "jquery.svg"
             },
             {
                 "name": "Lombok",
-                "badge": "https://dayoon07.github.io/static-page-test/devimg/lombok-logo.png"
+                "badge": "lombok.png"
             },
             {
                 "name": "JSTL",
-                "badge": "https://dayoon07.github.io/static-page-test/devimg/jstl.png"
+                "badge": "jstl.png"
             },
             {
                 "name": "Chart.js",
-                "badge": "https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=Chart.js&logoColor=white"
+                "badge": "chart-js.svg"
             },
             {
                 "name": "Socket.IO",
-                "badge": "https://img.shields.io/badge/Socket.IO-C93CD7?logo=socket&style=for-the-badge&logoColor=white"
+                "badge": "socket-io.svg"
             }
         ]
     },
@@ -205,11 +205,11 @@
         "items": [
             {
                 "name": "Apache Tomcat",
-                "badge": "https://img.shields.io/badge/Apache%20Tomcat-F8DC75?style=for-the-badge&logo=apachetomcat&logoColor=black"
+                "badge": "apache-tomcat.svg"
             },
             {
                 "name": "Nginx",
-                "badge": "https://img.shields.io/badge/Nginx-009639?logo=nginx&logoColor=white&style=for-the-badge"
+                "badge": "nginx.svg"
             }
         ]
     },
@@ -218,11 +218,11 @@
         "items": [
             {
                 "name": "Gradle",
-                "badge": "https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=Gradle&logoColor=white"
+                "badge": "gradle.svg"
             },
             {
-                "name": "Apache Maven",
-                "badge": "https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white"
+                "name": "Maven",
+                "badge": "maven.svg"
             }
         ]
     },
@@ -231,15 +231,15 @@
         "items": [
             {
                 "name": "Git",
-                "badge": "https://img.shields.io/badge/Git-F05032?logo=git&style=for-the-badge&logoColor=fff"
+                "badge": "git.svg"
             },
             {
                 "name": "GitHub",
-                "badge": "https://img.shields.io/badge/GitHub-%23121011.svg?logo=github&style=for-the-badge&logoColor=white"
+                "badge": "github.svg"
             },
             {
                 "name": "GitLab",
-                "badge": "https://img.shields.io/badge/GitLab-FC6D26?logo=gitlab&style=for-the-badge&logoColor=fff"
+                "badge": "gitlab.svg"
             }
         ]
     },
@@ -248,11 +248,11 @@
         "items": [
             {
                 "name": "Prometheus",
-                "badge": "https://img.shields.io/badge/Prometheus-black?style=for-the-badge&logo=prometheus"
+                "badge": "prometheus.svg"
             },
             {
                 "name": "Grafana",
-                "badge": "https://img.shields.io/badge/Grafana-F2F4F9?style=for-the-badge&logo=grafana&logoColor=orange"
+                "badge": "grafana.svg"
             }
         ]
     },
@@ -261,15 +261,28 @@
         "items": [
             {
                 "name": "Docker",
-                "badge": "https://img.shields.io/badge/Docker-2496ED?logo=docker&style=for-the-badge&logoColor=fff"
+                "badge": "docker.svg"
             },
             {
                 "name": "Cloudflare",
-                "badge": "https://img.shields.io/badge/Cloudflare-F38020?logo=Cloudflare&style=for-the-badge&logoColor=white"
+                "badge": "cloudflare.svg"
             },
             {
                 "name": "AWS",
-                "badge": "https://custom-icon-badges.demolab.com/badge/AWS-%23FF9900.svg?logo=aws&style=for-the-badge&logoColor=white"
+                "badge": "aws.svg"
+            }
+        ]
+    },
+    {
+        "title": "패키지 명령어",
+        "items": [
+            {
+                "name": "NPM",
+                "badge": "npm.svg"
+            },
+            {
+                "name": "Yarn",
+                "badge": "yarn.svg"
             }
         ]
     }

@@ -11,8 +11,7 @@ const SkillBadge = ({ item, index, show }) => {
     const [imageError, setImageError] = useState(false);
 
     return (
-        <a href={item.badge} key={item.name} title={item.name} rel="noopener noreferrer" 
-            target="_blank" style={{ transitionDelay: `${index * 50}ms` }} 
+        <div key={item.name} title={item.name} style={{ transitionDelay: `${index * 50}ms` }} 
             className={`flex items-center transition-all duration-500 ease-out ${
                 show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
             }`}
@@ -27,7 +26,7 @@ const SkillBadge = ({ item, index, show }) => {
                     </div>
                 ) : (
                     <img 
-                        src={item.badge} 
+                        src={`/skill_badge/${item.badge}`} 
                         alt={item.name} 
                         className={`h-7 transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
                         onLoad={() => setImageLoaded(true)}
@@ -36,7 +35,7 @@ const SkillBadge = ({ item, index, show }) => {
                     />
                 )}
             </div>
-        </a>
+        </div>
     );
 };
 
@@ -136,3 +135,21 @@ export default function Skill() {
         </div>
     );
 }
+
+// {
+//     "title": "운영체제",
+//     "items": [
+//         {
+//             "name": "Android",
+//             "badge": "android.svg"
+//         },
+//         {
+//             "name": "Ubuntu",
+//             "badge": "ubuntu.svg"
+//         },
+//         {
+//             "name": "Windows",
+//             "badge": "windows.svg"
+//         }
+//     ]
+// }

@@ -2,13 +2,19 @@
 export const RECENT_INTERESTS = [
     {
         title: "데스크탑 애플리케이션",
-        content: `C# 언어와 WPF (Windows Presentation Foundation) 프레임워크로 GUI 프로그래밍을 
-            학습 중입니다.`
+        content: `
+            C# 언어와 WPF (Windows Presentation Foundation) 
+            프레임워크로 GUI 프로그래밍을 학습 중입니다.
+        `,
+        creationDate: "2025년 07월 06일"
     },
     {
         title: "DevOps 공부",
-        content: `Github Actions를 활용한 CI/CD 파이프라인 구축을 학습 중입니다.
-            워크플로를 작성해 지속적으로 빌드, 배포를 연구 중입니다.`
+        content: `
+            Github Actions를 활용한 CI/CD 파이프라인 구축을 학습 중입니다.
+            워크플로를 작성해 지속적으로 빌드, 배포를 연구 중입니다.
+        `,
+        creationDate: "2025년 07월 06일"
     }
 ];
 

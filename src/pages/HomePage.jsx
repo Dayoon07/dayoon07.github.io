@@ -27,6 +27,7 @@ const InterestCard = ({ interest }) => (
             <h3 className="text-lg font-semibold text-gray-800">{interest.title}</h3>
         </div>
         <p className="text-gray-600">{interest.content}</p>
+        <p className="text-gray-400 mt-4 text-right">{interest.creationDate}</p>
     </div>
 );
 

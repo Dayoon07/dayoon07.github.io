@@ -44,6 +44,19 @@
         "icon": "gitlab"
     },
     {
+        "name": "Gradle",
+        "icon": "gradle"
+    },
+    {
+        "name": "Maven",
+        "icon": "maven"
+    },
+    {
+        "name": "Nginx",
+        "icon": "nginx"
+    },
+    
+    {
         "name": "HTML",
         "icon": "html"
     },

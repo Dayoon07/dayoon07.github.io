@@ -9,7 +9,7 @@ import Architecture from './pages/Architecture';
 import SiteMap from './pages/SiteMap';
 import CV from './pages/Cv';
 import Portfolio from './pages/Portfolio';
-import NewSkill from './pages/NewSkill';
+import Skill from './pages/Skill';
 
 export default function App() {
     return (
@@ -26,7 +26,7 @@ export default function App() {
                         <article className="flex-1 min-w-0 px-2">
                             <Routes>
                                 <Route path="/" element={<HomePage />} />
-                                <Route path="/skill" element={<NewSkill />} />
+                                <Route path="/skill" element={<Skill />} />
                                 <Route path="/project" element={<Project />} />
                                 <Route path="/architecture" element={<Architecture />} />
                                 <Route path="/cv" element={<CV />} />
