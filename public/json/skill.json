@@ -4,7 +4,7 @@
         "items": [
             {
                 "name": "Eclipse",
-                "badge": "Eclipse.svg"
+                "badge": "eclipse.svg"
             },
             {
                 "name": "Visual Studio Code",
