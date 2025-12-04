@@ -48,14 +48,6 @@
         "title": "언어",
         "items": [
             {
-                "name": "HTML",
-                "badge": "html5.svg"
-            },
-            {
-                "name": "CSS",
-                "badge": "css3.svg"
-            },
-            {
                 "name": "JavaScript",
                 "badge": "java-script.svg"
             },
@@ -129,10 +121,6 @@
                 "badge": "react-native.svg"
             },
             {
-                "name": "Expo",
-                "badge": "expo.svg"
-            },
-            {
                 "name": "Node.js",
                 "badge": "node-js.svg"
             },
@@ -149,8 +137,8 @@
                 "badge": "express-js.svg"
             },
             {
-                "name": "Next.js",
-                "badge": "next-js.svg"
+                "name": "Jetpack Compose",
+                "badge": "jetpack-compose.svg"
             }
         ]
     },
