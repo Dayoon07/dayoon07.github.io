@@ -15,7 +15,7 @@
     "dayoon07.github.io": "file:",
     "lucide-react": "^0.483.0",
     "marked-react": "^3.0.0",
-    "postcss": "^8.5.3",
+    "postcss": "^8.4.38",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-lightbox-component": "^1.2.1",
@@ -28,6 +28,9 @@
   "overrides": {
     "react-scripts": {
       "@svgr/webpack": "8.1.0",
+      "postcss": "8.4.38"
+    },
+    "autoprefixer": {
       "postcss": "8.4.38"
     }
   },
