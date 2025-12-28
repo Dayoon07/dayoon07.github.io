@@ -156,6 +156,10 @@
             {
                 "name": "Redis",
                 "badge": "redis.svg"
+            },
+            {
+                "name": "SQL Server",
+                "badge": "sql-server.svg"
             }
         ]
     },
