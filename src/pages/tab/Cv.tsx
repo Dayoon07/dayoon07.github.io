@@ -13,7 +13,6 @@ export default function CV() {
             <CvSection title="동아리 활동" items={CV_DATA.clubs} />
             <CvSection title="자격증" items={CV_DATA.certifications} />
             <CvSection title="수상경력" items={CV_DATA.awards} />
-            <CvSection title="봉사활동실적" items={CV_DATA.volunteer} />
         </div>
     );
 }
