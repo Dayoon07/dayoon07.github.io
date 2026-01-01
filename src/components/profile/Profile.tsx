@@ -11,7 +11,7 @@ export default function Profile() {
             <div className="space-y-4 py-2 px-4 max-lg:flex max-lg:justify-between">
                 {/* 프로필 이미지 및 이름 */}
                 <div className="flex items-center lg:block max-lg:absolute max-lg:left-2 top-20">
-                    <img src={`${cl}/img/증명사진ver2.1.jpg`} alt="강다윤 프로필 사진" 
+                    <img src={`${cl}/img/증명사진ver2.1.jpg`} alt="프로필 사진" 
                         className="w-16 lg:w-44 border p-1 rounded-full z-[10]" 
                     />
                     <h1 className="text-xl font-semibold ml-4 lg:ml-0 lg:mt-4">

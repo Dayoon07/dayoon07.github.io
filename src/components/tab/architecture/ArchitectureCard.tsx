@@ -6,6 +6,7 @@ interface ArchitectureCardProps {
         img: string;
         title: string;
         text: string;
+        link: string[] | null;
     },
     index: number,
     show: boolean
@@ -21,7 +22,12 @@ export const ArchitectureCard: React.FC<ArchitectureCardProps> = ({
         </a>
         <div className="px-2 py-4">
             <div className="font-bold text-xl mb-2">{content.title}</div>
-            <p className="text-gray-700 text-base">{content.text}</p>
+            <div className="text-gray-700 text-base">
+                {content.text}
+                {content.link != null && (
+                    <a href={content.link[0]} target="_blank" rel="noreferrer">{content.link[1]}</a>
+                )}
+            </div>
         </div>
     </AnimatedContainer>
 );

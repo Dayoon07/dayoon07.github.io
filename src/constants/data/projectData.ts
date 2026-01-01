@@ -5,7 +5,7 @@ export const PROJECTS_DATA: ProjectDataType[] = [
     {
         title: "shortform",
         link: "https://github.com/Dayoon07/shortform",
-        image: "https://dayoon07.github.io/img/shortform.png",
+        image: "https://dayoon07.github.io/img/shortform-v2.png",
         feLink: null,
         beLink: null,
         tech: ['FSD', 'JWT', 'Redis', 'Google OAuth 2.0'],
