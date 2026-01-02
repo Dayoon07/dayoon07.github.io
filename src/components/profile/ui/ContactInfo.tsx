@@ -1,16 +1,16 @@
 import React from "react";
 import { 
-    EducationIcon, 
-    EmailIcon, 
-    GitHubIcon, 
-    LocationIcon
+    UpgradedEducationIcon, 
+    UpgradedEmailIcon, 
+    UpgradedGitHubIcon, 
+    UpgradedLocationIcon
 } from "../../../constants/icon";
 
 const CONTACT_ITEMS = [
-    { icon: <LocationIcon />, content: "경기도 안양시" },
-    { icon: <EducationIcon />, content: "근명고등학교" },
+    { icon: <UpgradedLocationIcon className="text-[rgb(73,78,82)]" />, content: "경기도 안양시" },
+    { icon: <UpgradedEducationIcon className="text-[rgb(73,78,82)]" />, content: "근명고등학교" },
     {
-        icon: <EmailIcon />,
+        icon: <UpgradedEmailIcon className="text-[rgb(73,78,82)]" />,
         content: (
             <a href="mailto:gangd0642@gmail.com" 
                 className="hover:underline" 
@@ -21,7 +21,7 @@ const CONTACT_ITEMS = [
         )
     },
     {
-        icon: <GitHubIcon />,
+        icon: <UpgradedGitHubIcon className="text-[rgb(73,78,82)]" />,
         content: (
             <a href="https://github.com/dayoon07" 
                 target="_blank" 
@@ -41,7 +41,7 @@ export const ContactInfo: React.FC = () => {
             {CONTACT_ITEMS.map((item, index) => (
                 <div key={index} className="flex items-center space-x-2">
                     {item.icon}
-                    <span>{item.content}</span>
+                    <span style={{ fontSize: "14px", color: "rgb(73, 78, 82)" }}>{item.content}</span>
                 </div>
             ))}
         </div>

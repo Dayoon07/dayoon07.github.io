@@ -14,8 +14,8 @@ export default function Profile() {
                     <img src={`${cl}/img/증명사진ver2.1.jpg`} alt="프로필 사진" 
                         className="w-16 lg:w-44 border p-1 rounded-full z-[10]" 
                     />
-                    <h1 className="text-xl font-semibold ml-4 lg:ml-0 lg:mt-4">
-                        강다윤 <br className="hidden sm:block max-lg:block" /> (Dayoon Kang)
+                    <h1 className="text-[18px] text-[rgb(73,78,82)] font-semibold ml-4 lg:ml-0 lg:mt-4">
+                        강다윤 <br className="hidden sm:block max-lg:block" /> <span style={{ fontSize: "16px", color: "rgb(73, 78, 82)" }}>(Dayoon Kang)</span>
                     </h1>
                 </div>
 

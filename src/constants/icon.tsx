@@ -52,3 +52,39 @@ export const GitHubIcon = () => (
         />
     </svg>
 );
+
+interface ClassNameProps {
+    className?: string;
+}
+
+export const UpgradedLocationIcon = ({ className }: ClassNameProps) => (
+    <svg width="18" height="18" className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
+    </svg>
+);
+
+export const UpgradedEducationIcon = ({ className }: ClassNameProps) => (
+    <svg width="18" height="18" className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3 2 8v2h20V8L12 3z"/>
+        <path d="M4 10h2v8H4zm4 0h2v8H8zm4 0h2v8h-2zm4 0h2v8h-2z"/>
+        <path d="M2 20h20v2H2z"/>
+    </svg>
+);
+
+export const UpgradedEmailIcon = ({ className }: ClassNameProps) => (
+    <svg width="18" height="18" className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+);
+
+export const UpgradedGitHubIcon = ({ className }: ClassNameProps) => (
+    <svg width="18" height="18" className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 
+            10.94.58.11.79-.25.79-.56v-2.1c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 
+            1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.95.1-.74.4-1.24.73-1.52-2.55-.29-5.23-1.27-5.23-5.65 0-1.25.45-2.27 
+            1.18-3.07-.12-.29-.51-1.46.11-3.05 0 0 .96-.31 3.15 1.17a10.9 10.9 0 0 1 5.74 0c2.19-1.48 3.15-1.17 3.15-1.17.62 1.59.23 
+            2.76.11 3.05.73.8 1.18 1.82 1.18 3.07 0 4.39-2.69 5.35-5.25 5.63.41.35.78 1.04.78 2.1v3.11c0 .31.21.68.8.56A11.51 11.51 0 
+            0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"
+        />
+    </svg>
+);
