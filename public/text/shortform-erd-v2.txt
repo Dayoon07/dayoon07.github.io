@@ -1,0 +1,234 @@
+Table SHORTFORM_USERS {
+  ID int [pk, increment]
+  USERNAME varchar [not null, unique]
+  MAIL varchar [not null, unique]
+  PASSWORD varchar [not null]
+  PROFILE_IMG varchar [not null]
+  PROFILE_IMG_SRC varchar [not null]
+  BIO text
+  MENTION varchar [not null, unique]
+  IS_SOCIAL boolean [not null, default: false]
+  PROVIDER varchar [not null, default: "LOCAL"]
+  CREATE_AT datetime
+}
+
+Table SHORTFORM_USERS_FOLLOWS {
+  ID int [pk, increment]
+  FOLLOW_USER_ID int [not null]
+  FOLLOWED_USER_ID int [not null]
+  CREATE_AT datetime
+
+  Indexes {
+    (FOLLOW_USER_ID, FOLLOWED_USER_ID) [unique]
+  }
+}
+
+Table SHORTFORM_VIDEOS {
+  ID int [pk, increment]
+  VIDEO_TITLE varchar [not null]
+  VIDEO_DESCRIPTION text
+  VIDEO_NAME varchar [not null]
+  VIDEO_SRC varchar [not null]
+  VIDEO_TAG varchar
+  VIDEO_VIEWS int [default: 0]
+  VIDEO_LOC varchar [not null, unique]
+  UPLOADER_USER_ID int [not null]
+  VIDEO_WATCH_AVAILABILITY varchar [not null]
+  COMMENT_AVAILABILITY varchar [not null]
+  PREVIEW_IMG varchar [not null]
+  UPLOAD_AT datetime
+  DELETE_STATUS boolean [not null, default: false]
+}
+
+Table SHORTFORM_VIDEO_LIKES {
+  ID int [pk, increment]
+  LIKE_VIDEO_ID int [not null]
+  LIKER_USER_ID int [not null]
+  LIKE_AT datetime
+
+  Indexes {
+    (LIKE_VIDEO_ID, LIKER_USER_ID) [unique]
+  }
+}
+
+Table SHORTFORM_COMMENTS {
+  ID int [pk, increment]
+  COMMENT_TEXT text [not null]
+  COMMENT_USER_ID int [not null]
+  COMMENT_VIDEO_ID int [not null]
+  CREATE_AT datetime
+  DELETE_STATUS boolean [not null, default: false]
+}
+
+Table SHORTFORM_COMMENT_LIKES {
+  ID int [pk, increment]
+  COMMENT_ID int [not null]
+  LIKER_USER_ID int [not null]
+  LIKE_AT datetime
+
+  Indexes {
+    (COMMENT_ID, LIKER_USER_ID) [unique]
+  }
+}
+
+Table SHORTFORM_COMMENT_REPLYS {
+  ID int [pk, increment]
+  COMMENT_REPLY_TEXT text [not null]
+  COMMENT_REPLY_USER_ID int [not null]
+  COMMENT_REPLY_ID int [not null]
+  CREATE_AT datetime
+  DELETE_STATUS boolean [not null, default: false]
+}
+
+Table SHORTFORM_REPLY_LIKES {
+  ID int [pk, increment]
+  REPLY_ID int [not null]
+  LIKER_USER_ID int [not null]
+  LIKE_AT datetime
+
+  Indexes {
+    (REPLY_ID, LIKER_USER_ID) [unique]
+  }
+}
+
+Table SHORTFORM_SEARCH_LISTS {
+  ID int [pk, increment]
+  SEARCHED_USER_ID int
+  SEARCHED_WORD varchar [not null]
+  CREATE_AT datetime
+}
+
+Table SHORTFORM_VIEWSTORYS {
+  ID int [pk, increment]
+  WATCHED_VIDEO_ID int [not null]
+  WATCHED_USER_ID int [not null]
+  CREATE_AT datetime
+}
+
+Table SHORTFORM_COMMUNITYS {
+  ID int [pk, increment]
+  COMMUNITY_TEXT text
+  COMMUNITY_WRITER_ID int [not null]
+  COMMUNITY_UUID varchar [not null, unique]
+  COMMUNITY_AVAILABILITY varchar [not null]
+  CREATE_AT datetime
+  DELETE_STATUS boolean [not null, default: false]
+}
+
+Table SHORTFORM_COMMUNITY_ADDITIONS {
+  ID int [pk, increment]
+  FILE_SRC varchar [not null]
+  COMMUNITY_ID int [not null]
+  UPLOAD_AT datetime
+}
+
+Table SHORTFORM_COMMUNITY_LIKES {
+  ID int [pk, increment]
+  COMMUNITY_ID int [not null]
+  LIKER_USER_ID int [not null]
+  LIKE_AT datetime
+
+  Indexes {
+    (COMMUNITY_ID, LIKER_USER_ID) [unique]
+  }
+}
+
+Table SHORTFORM_COMMUNITY_COMMENTS {
+  ID int [pk, increment]
+  COMMENT_TEXT text [not null]
+  COMMENT_USER_ID int [not null]
+  COMMUNITY_ID int [not null]
+  CREATE_AT datetime
+  DELETE_STATUS boolean [not null, default: false]
+}
+
+Table SHORTFORM_COMMUNITY_COMMENT_LIKES {
+  ID int [pk, increment]
+  LIKER_USER_ID int [not null]
+  COMMENT_ID int [not null]
+  LIKE_AT datetime
+
+  Indexes {
+    (COMMENT_ID, LIKER_USER_ID) [unique]
+  }
+}
+
+Table SHORTFORM_COMMUNITY_COMMENT_REPLYS {
+  ID int [pk, increment]
+  REPLY_TEXT text [not null]
+  REPLY_USER_ID int [not null]
+  COMMENT_ID int [not null]
+  CREATE_AT datetime
+  DELETE_STATUS boolean [not null, default: false]
+}
+
+Table SHORTFORM_COMMUNITY_COMMENT_REPLY_LIKES {
+  ID int [pk, increment]
+  REPLY_ID int [not null]
+  LIKER_USER_ID int [not null]
+  LIKE_AT datetime
+
+  Indexes {
+    (REPLY_ID, LIKER_USER_ID) [unique]
+  }
+}
+
+Table SHORTFORM_REPORTS {
+  ID int [pk, increment]
+  TARGET_TYPE varchar [not null]
+  TARGET_ID int [not null]
+  REPORTER_USER_ID int
+  REPORTED_USER_ID int
+  REPORT_TYPE varchar [not null]
+  REPORT_REASON varchar
+  STATUS varchar [not null]
+  ACTION_TAKEN varchar
+  REVIEW_COMMENT text
+  REVIEWED_AT datetime
+  CREATED_AT datetime
+  UPDATED_AT datetime
+}
+
+Ref: SHORTFORM_USERS.ID < SHORTFORM_USERS_FOLLOWS.FOLLOW_USER_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_USERS_FOLLOWS.FOLLOWED_USER_ID
+
+Ref: SHORTFORM_USERS.ID < SHORTFORM_VIDEOS.UPLOADER_USER_ID
+Ref: SHORTFORM_VIDEOS.ID < SHORTFORM_VIDEO_LIKES.LIKE_VIDEO_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_VIDEO_LIKES.LIKER_USER_ID
+
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMENTS.COMMENT_USER_ID
+Ref: SHORTFORM_VIDEOS.ID < SHORTFORM_COMMENTS.COMMENT_VIDEO_ID
+
+Ref: SHORTFORM_COMMENTS.ID < SHORTFORM_COMMENT_LIKES.COMMENT_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMENT_LIKES.LIKER_USER_ID
+
+Ref: SHORTFORM_COMMENTS.ID < SHORTFORM_COMMENT_REPLYS.COMMENT_REPLY_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMENT_REPLYS.COMMENT_REPLY_USER_ID
+
+Ref: SHORTFORM_COMMENT_REPLYS.ID < SHORTFORM_REPLY_LIKES.REPLY_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_REPLY_LIKES.LIKER_USER_ID
+
+Ref: SHORTFORM_USERS.ID < SHORTFORM_SEARCH_LISTS.SEARCHED_USER_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_VIEWSTORYS.WATCHED_USER_ID
+Ref: SHORTFORM_VIDEOS.ID < SHORTFORM_VIEWSTORYS.WATCHED_VIDEO_ID
+
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMUNITYS.COMMUNITY_WRITER_ID
+Ref: SHORTFORM_COMMUNITYS.ID < SHORTFORM_COMMUNITY_ADDITIONS.COMMUNITY_ID
+
+Ref: SHORTFORM_COMMUNITYS.ID < SHORTFORM_COMMUNITY_LIKES.COMMUNITY_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMUNITY_LIKES.LIKER_USER_ID
+
+Ref: SHORTFORM_COMMUNITYS.ID < SHORTFORM_COMMUNITY_COMMENTS.COMMUNITY_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMUNITY_COMMENTS.COMMENT_USER_ID
+
+Ref: SHORTFORM_COMMUNITY_COMMENTS.ID < SHORTFORM_COMMUNITY_COMMENT_LIKES.COMMENT_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMUNITY_COMMENT_LIKES.LIKER_USER_ID
+
+Ref: SHORTFORM_COMMUNITY_COMMENTS.ID < SHORTFORM_COMMUNITY_COMMENT_REPLYS.COMMENT_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMUNITY_COMMENT_REPLYS.REPLY_USER_ID
+
+Ref: SHORTFORM_COMMUNITY_COMMENT_REPLYS.ID < SHORTFORM_COMMUNITY_COMMENT_REPLY_LIKES.REPLY_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_COMMUNITY_COMMENT_REPLY_LIKES.LIKER_USER_ID
+
+Ref: SHORTFORM_USERS.ID < SHORTFORM_REPORTS.REPORTER_USER_ID
+Ref: SHORTFORM_USERS.ID < SHORTFORM_REPORTS.REPORTED_USER_ID

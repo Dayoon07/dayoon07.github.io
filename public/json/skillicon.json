@@ -1,0 +1,159 @@
+[
+    {
+        "name": "Eclipse",
+        "icon": "eclipse"
+    },
+    {
+        "name": "Visual Studio",
+        "icon": "visual_studio"
+    },
+    {
+        "name": "Visual Studio Code",
+        "icon": "visual_studio_code"
+    },
+    {
+        "name": "Android Studio",
+        "icon": "android_studio"
+    },
+    {
+        "name": "Intellij Idea",
+        "icon": "intellij"
+    },
+    {
+        "name": "Discord",
+        "icon": "discord"
+    },
+    {
+        "name": "Postman",
+        "icon": "postman"
+    },
+    {
+        "name": "Docker",
+        "icon": "docker"
+    },
+    {
+        "name": "Git",
+        "icon": "git"
+    },
+    {
+        "name": "GitHub",
+        "icon": "github"
+    },
+    {
+        "name": "GitLab",
+        "icon": "gitlab"
+    },
+    {
+        "name": "Gradle",
+        "icon": "gradle"
+    },
+    {
+        "name": "Maven",
+        "icon": "maven"
+    },
+    {
+        "name": "Nginx",
+        "icon": "nginx"
+    },
+    
+    {
+        "name": "HTML",
+        "icon": "html"
+    },
+    {
+        "name": "CSS",
+        "icon": "css"
+    },
+    {
+        "name": "JavaScript",
+        "icon": "javascript"
+    },
+    {
+        "name": "TypeScript",
+        "icon": "typescript"
+    },
+    {
+        "name": "Markdown",
+        "icon": "markdown"
+    },
+    {
+        "name": "Java",
+        "icon": "java"
+    },
+    {
+        "name": "Kotlin",
+        "icon": "kotlin"
+    },
+    {
+        "name": "Express.js",
+        "icon": "express"
+    },
+    {
+        "name": "Next.js",
+        "icon": "next"
+    },
+    {
+        "name": "React",
+        "icon": "react"
+    },
+    {
+        "name": "Node.js",
+        "icon": "nodejs"
+    },
+    {
+        "name": "Vite",
+        "icon": "vite"
+    },
+    {
+        "name": "Bootstrap CSS",
+        "icon": "bootstrap"
+    },
+    {
+        "name": "Tailwind CSS",
+        "icon": "tailwindcss"
+    },
+    {
+        "name": "Spring",
+        "icon": "spring"
+    },
+    {
+        "name": "Prometheus",
+        "icon": "prometheus"
+    },
+    {
+        "name": "Grafana",
+        "icon": "grafana"
+    },
+    {
+        "name": "Hibernate",
+        "icon": "hibernate"
+    },
+    {
+        "name": "Mysql & Maria",
+        "icon": "mysql"
+    },
+    {
+        "name": "Redis",
+        "icon": "redis"
+    },
+    {
+        "name": "NPM",
+        "icon": "npm"
+    },
+    {
+        "name": "AWS",
+        "icon": "aws"
+    },
+    {
+        "name": "Cloudflare",
+        "icon": "cloudflare"
+    },
+    {
+        "name": "Ubuntu",
+        "icon": "ubuntu"
+    },
+    {
+        "name": "Windows",
+        "icon": "windows"
+    }
+]

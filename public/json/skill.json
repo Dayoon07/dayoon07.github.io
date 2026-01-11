@@ -1,0 +1,326 @@
+[
+    {
+        "title": "프로그램",
+        "items": [
+            {
+                "name": "Eclipse",
+                "badge": "program-tool/eclipse.svg"
+            },
+            {
+                "name": "Visual Studio Code",
+                "badge": "program-tool/visual-studio-code.svg"
+            },
+            {
+                "name": "Dbeaver",
+                "badge": "program-tool/dbeaver.svg"
+            },
+            {
+                "name": "Spring Tool Suite (STS)",
+                "badge": "program-tool/spring-tool-suite.svg"
+            },
+            {
+                "name": "SQL Developer",
+                "badge": "program-tool/sqldeveloper.svg"
+            },
+            {
+                "name": "Visual Studio",
+                "badge": "program-tool/visual-studio.svg"
+            },
+            {
+                "name": "Intellij IDEA",
+                "badge": "program-tool/intellij-idea.svg"
+            },
+            {
+                "name": "Android Studio",
+                "badge": "program-tool/android-studio.svg"
+            },
+            {
+                "name": "Discord",
+                "badge": "program-tool/discord.svg"
+            },
+            {
+                "name": "Postman",
+                "badge": "program-tool/postman.svg"
+            }
+        ]
+    },
+    {
+        "title": "언어",
+        "items": [
+            {
+                "name": "JavaScript",
+                "badge": "lang/java-script.svg"
+            },
+            {
+                "name": "TypeScript",
+                "badge": "lang/type-script.svg"
+            },
+            {
+                "name": "SQL",
+                "badge": "lang/sql.svg"
+            },
+            {
+                "name": "Java",
+                "badge": "lang/java.svg"
+            },
+            {
+                "name": "Kotlin",
+                "badge": "lang/kotlin.svg"
+            },
+            {
+                "name": "Markdown",
+                "badge": "lang/markdown.svg"
+            },
+            {
+                "name": "XML",
+                "badge": "lang/xml.svg"
+            },
+            {
+                "name": "JSON",
+                "badge": "lang/json.svg"
+            },
+            {
+                "name": "YAML",
+                "badge": "lang/yaml.svg"
+            }
+        ]
+    },
+    {
+        "title": "프레임워크",
+        "items": [
+            {
+                "name": "Spring",
+                "badge": "framework/spring.svg"
+            },
+            {
+                "name": "Spring Boot",
+                "badge": "framework/spring-boot.svg"
+            },
+            {
+                "name": "Spring Security",
+                "badge": "framework/spring-security.svg"
+            },
+            {
+                "name": "Spring Data JPA",
+                "badge": "framework/spring-data-jpa.svg"
+            },
+            {
+                "name": "MyBatis",
+                "badge": "framework/mybatis.svg"
+            },
+            {
+                "name": "Hibernate",
+                "badge": "framework/hibernate.svg"
+            },
+            {
+                "name": "React",
+                "badge": "framework/react.svg"
+            },
+            {
+                "name": "Vite",
+                "badge": "framework/vite.svg"
+            },
+            {
+                "name": "React Native",
+                "badge": "framework/react-native.svg"
+            },
+            {
+                "name": "Node.js",
+                "badge": "framework/node-js.svg"
+            },
+            {
+                "name": "Tailwind",
+                "badge": "framework/tailwindcss.svg"
+            },
+            {
+                "name": "Bootstrap",
+                "badge": "framework/bootstrap.svg"
+            },
+            {
+                "name": "Express",
+                "badge": "framework/express-js.svg"
+            },
+            {
+                "name": "Jetpack Compose",
+                "badge": "framework/jetpack-compose.svg"
+            }
+        ]
+    },
+    {
+        "title": "DB",
+        "items": [
+            {
+                "name": "Oracle",
+                "badge": "db/oracle.svg"
+            },
+            {
+                "name": "Maria",
+                "badge": "db/maria.svg"
+            },
+            {
+                "name": "Redis",
+                "badge": "db/redis.svg"
+            },
+            {
+                "name": "SQL Server",
+                "badge": "db/sql-server.svg"
+            },
+            {
+                "name": "SQLite",
+                "badge": "db/sqlite.svg"
+            }
+        ]
+    },
+    {
+        "title": "라이브러리",
+        "items": [
+            {
+                "name": "jQuery",
+                "badge": "lib/jquery.svg"
+            },
+            {
+                "name": "Lombok",
+                "badge": "lib/lombok.png"
+            },
+            {
+                "name": "JSTL",
+                "badge": "lib/jstl.png"
+            },
+            {
+                "name": "Chart.js",
+                "badge": "lib/chart-js.svg"
+            },
+            {
+                "name": "Socket.IO",
+                "badge": "lib/socket-io.svg"
+            }
+        ]
+    },
+    {
+        "title": "서버",
+        "items": [
+            {
+                "name": "Apache Tomcat",
+                "badge": "server/apache-tomcat.svg"
+            },
+            {
+                "name": "Nginx",
+                "badge": "server/nginx.svg"
+            }
+        ]
+    },
+    {
+        "title": "빌드/배포 도구",
+        "items": [
+            {
+                "name": "Gradle",
+                "badge": "build-tool/gradle.svg"
+            },
+            {
+                "name": "Maven",
+                "badge": "build-tool/maven.svg"
+            },
+            {
+                "name": "Github Actions",
+                "badge": "build-tool/github-actions.svg"
+            },
+            {
+                "name": "Jenkins",
+                "badge": "build-tool/jenkins.svg"
+            }
+        ]
+    },
+    {
+        "title": "협업",
+        "items": [
+            {
+                "name": "Git",
+                "badge": "scm/git.svg"
+            },
+            {
+                "name": "GitHub",
+                "badge": "scm/github.svg"
+            },
+            {
+                "name": "GitLab",
+                "badge": "scm/gitlab.svg"
+            }
+        ]
+    },
+    {
+        "title": "분석 & 모니터링",
+        "items": [
+            {
+                "name": "Prometheus",
+                "badge": "monitoring/prometheus.svg"
+            },
+            {
+                "name": "Grafana",
+                "badge": "monitoring/grafana.svg"
+            }
+        ]
+    },
+    {
+        "title": "인프라",
+        "items": [
+            {
+                "name": "Docker",
+                "badge": "infrastructure/docker.svg"
+            },
+            {
+                "name": "Cloudflare",
+                "badge": "infrastructure/cloudflare.svg"
+            },
+            {
+                "name": "AWS",
+                "badge": "infrastructure/aws.svg"
+            },
+            {
+                "name": "AWS S3",
+                "badge": "infrastructure/aws-s3.svg"
+            },
+            {
+                "name": "AWS EC2",
+                "badge": "infrastructure/aws-ec2.svg"
+            }
+        ]
+    },
+    {
+        "title": "패키지 명령어",
+        "items": [
+            {
+                "name": "NPM",
+                "badge": "pkg-command/npm.svg"
+            },
+            {
+                "name": "Yarn",
+                "badge": "pkg-command/yarn.svg"
+            }
+        ]
+    },
+    {
+        "title": "AI 툴",
+        "items": [
+            {
+                "name": "Claude",
+                "badge": "ai/claude.svg"
+            },
+            {
+                "name": "Github Copilot",
+                "badge": "ai/github-copilot.svg"
+            },
+            {
+                "name": "Google Gemini",
+                "badge": "ai/google-gemini.svg"
+            },
+            {
+                "name": "Hugging Face",
+                "badge": "ai/hugging-face.svg"
+            },
+            {
+                "name": "Ollama",
+                "badge": "ai/ollama.svg"
+            }
+        ]
+    }
+]
