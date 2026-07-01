@@ -4,7 +4,7 @@ import { ProjectDataType } from "../../entities/tab/ProjectDataType";
 export const PROJECTS_DATA: ProjectDataType[] = [
     {
         title: "shortform",
-        link: "https://github.com/Dayoon07/shortform",
+        link: "https://github.com/Dayoon07/shortform-monorepo",
         image: "https://dayoon07.github.io/img/shortform-v2.png",
         feLink: null,
         beLink: null,
