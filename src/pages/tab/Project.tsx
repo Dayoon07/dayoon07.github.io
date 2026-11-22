@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useDocTitle } from '../../hooks/useDocTitle';
 import { useAnimation } from '../../hooks/useAnimation';
 import { useLightBox } from '../../hooks/useLightBox';
@@ -7,7 +8,8 @@ import LightBox from '../../components/common/LightBox';
 import { ProjectCard } from '../../components/tab/project/ProjectCard';
 
 export default function Project() {
-    useDocTitle("주요 프로젝트 | 안녕하세요. 강다윤입니다");
+    const { t } = useTranslation();
+    useDocTitle(`${t("project.title")} | ${t("common.siteName")}`);
     const showItems = useAnimation();
     const { 
         isOpen, 
@@ -27,10 +29,10 @@ export default function Project() {
     return (
         <>
             <AnimatedContainer show={showItems}>
-                <h1 className="text-3xl font-bold my-4">주요 프로젝트</h1>
+                <h1 className="text-3xl font-bold my-4">{t("project.title")}</h1>
             </AnimatedContainer>
 
-            <div className="max-w-3xl space-y-8 mt-5">
+            <div className="max-w-3xl md:px-2 mt-2 pb-10">
                 {PROJECTS_DATA.map((project, index) => (
                     <ProjectCard 
                         key={project.title}
@@ -45,7 +47,7 @@ export default function Project() {
             <LightBox
                 isOpen={isOpen}
                 currentIndex={currentIndex}
-                slides={PROJECTS_DATA.map(p => ({ src: p.image, alt: p.title }))} // 데이터 변환
+                slides={PROJECTS_DATA.map(p => ({ src: p.image, alt: p.title }))}
                 onClose={closeLightbox}
                 onPrev={prevSlide}
                 onNext={nextSlide}

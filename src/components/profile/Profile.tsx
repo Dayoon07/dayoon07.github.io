@@ -1,21 +1,23 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ContactInfo } from "./ui/ContactInfo";
 import { cl } from "../../constants/CurrentLocation";
 
 export default function Profile() {
+    const { t } = useTranslation();
     const [showMobileInfo, setShowMobileInfo] = useState<boolean>(false);
     const toggleMobileInfo = () => setShowMobileInfo(!showMobileInfo);
 
     return (
-        <div className="lg:sticky lg:top-[100px] lg:w-[272px]" role="complementary" aria-label="프로필 정보">
+        <div className="lg:sticky lg:top-[100px] lg:w-[272px]" role="complementary" aria-label={t("profile.region")}>
             <div className="space-y-4 py-2 px-4 max-lg:flex max-lg:justify-between">
                 {/* 프로필 이미지 및 이름 */}
                 <div className="flex items-center lg:block max-lg:absolute max-lg:left-2 top-20">
-                    <img src={`${cl}/img/증명사진ver2.1.jpg`} alt="프로필 사진" 
+                    <img src={`${cl}/img/증명사진ver2.1.jpg`} alt={t("profile.photoAlt")} 
                         className="w-16 lg:w-44 border p-1 rounded-full z-[10]" 
                     />
                     <h1 className="text-[18px] text-[rgb(73,78,82)] font-semibold ml-4 lg:ml-0 lg:mt-4">
-                        강다윤 <br className="hidden sm:block max-lg:block" /> <span style={{ fontSize: "16px", color: "rgb(73, 78, 82)" }}>(Dayoon Kang)</span>
+                        {t("profile.name")} <br className="hidden sm:block max-lg:block" /> <span style={{ fontSize: "16px", color: "rgb(73, 78, 82)" }}>{t("profile.nameAlt")}</span>
                     </h1>
                 </div>
 
@@ -24,11 +26,11 @@ export default function Profile() {
                     <button onClick={toggleMobileInfo} 
                         aria-expanded={showMobileInfo}
                         aria-controls="mobile-profile-info"
-                        aria-label="프로필 정보 토글"
+                        aria-label={t("profile.toggleLabel")}
                         className="px-4 py-1.5 text-sm bg-white border border-gray-300 hover:bg-black 
                             hover:text-white cursor-pointer rounded transition duration-300"
                     >
-                        프로필 정보
+                        {t("profile.toggle")}
                     </button>
                     
                     {showMobileInfo && (
@@ -39,7 +41,7 @@ export default function Profile() {
                             aria-labelledby="mobile-profile-title"
                         >
                             <div className="p-4 space-y-3">
-                                <h2 id="mobile-profile-title" className="sr-only">프로필 상세 정보</h2>
+                                <h2 id="mobile-profile-title" className="sr-only">{t("profile.detailTitle")}</h2>
                                 <ContactInfo />
                             </div>
                         </div>

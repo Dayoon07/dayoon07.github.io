@@ -7,7 +7,7 @@ import Architecture from '@/pages/tab/Architecture';
 import CV from '@/pages/tab/Cv';
 import SiteMap from '@/pages/etc/SiteMap';
 import Portfolio from '@/pages/tab/Portfolio';
-import NotFound from '@/pages/etc/Wow404Error';
+import NotFound from '@/pages/etc/404NotFound';
 
 export const routes: RouteObject[] = [
     { path: ROUTE.HOME,         element: <HomePage      /> },

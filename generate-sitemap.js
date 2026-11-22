@@ -7,9 +7,8 @@ const sitePages = [
   { to: "/projects", t: "Projects" },
   { to: "/architecture", t: "Architecture" },
   { to: "/cv", t: "CV" },
-  { to: "/portfolio", t: "Portfolio" },
   { to: "/sitemap", t: "Sitemap" },
-  { to: "/wow404error", t: "Wow404Error" }
+  { to: "/404NotFound", t: "404NotFound" }
 ];
 
 const baseUrl = "https://dayoon07.github.io";

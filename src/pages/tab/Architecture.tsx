@@ -1,29 +1,38 @@
+import { useTranslation } from 'react-i18next';
 import { useDocTitle } from '../../hooks/useDocTitle';
-import { useAnimation } from '../../hooks/useAnimation';
+import { useLightBox } from '../../hooks/useLightBox';
 import { ARCHITECTURE_DATA } from '../../constants/data/architectureData';
-import AnimatedContainer from '../../components/common/AnimatedContainer';
+import LightBox from '../../components/common/LightBox';
 import { ArchitectureCard } from '../../components/tab/architecture/ArchitectureCard';
 
 export default function Architecture() {
-    useDocTitle("DB 아키텍처 | 안녕하세요. 강다윤입니다");
-    const showItems = useAnimation();
+    const { t } = useTranslation();
+    useDocTitle(`${t("architecture.title")} | ${t("common.siteName")}`);
+    const {
+        isOpen, currentIndex, openLightbox, closeLightbox, prevSlide, nextSlide, goToSlide
+    } = useLightBox(ARCHITECTURE_DATA.length);
 
     return (
-        <>
-            <AnimatedContainer show={showItems}>
-                <h1 className="text-3xl font-bold my-4">DB 설계 작업물</h1>
-            </AnimatedContainer>
+        <div className="max-w-3xl md:px-2 pb-10">
+            <h1 className="text-3xl font-bold my-4">{t("architecture.title")}</h1>
 
-            <div className="max-w-3xl md:grid md:grid-cols-2 md:gap-4">
-                {ARCHITECTURE_DATA.map((content, idx) => (
-                    <ArchitectureCard 
-                        key={idx}
-                        content={content}
-                        index={idx}
-                        show={showItems}
-                    />
+            <div className="mt-4">
+                {ARCHITECTURE_DATA.map((item, idx) => (
+                    <ArchitectureCard key={item.id} item={item} onImageClick={() => openLightbox(idx)} />
                 ))}
             </div>
-        </>
+
+            <LightBox
+                isOpen={isOpen}
+                currentIndex={currentIndex}
+                slides={ARCHITECTURE_DATA.map((item) => ({ src: item.img, alt: t("architecture.erdAlt", { name: t(`architecture.items.${item.id}.title`) }) }))}
+                onClose={closeLightbox}
+                onPrev={prevSlide}
+                onNext={nextSlide}
+                showNavigation={true}
+                showIndicators={true}
+                onIndicatorClick={goToSlide}
+            />
+        </div>
     );
 }

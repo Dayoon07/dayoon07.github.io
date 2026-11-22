@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useDocTitle } from '../../hooks/useDocTitle';
 import { useAnimation } from '../../hooks/useAnimation';
 import { useLightBox } from '../../hooks/useLightBox';
@@ -8,7 +9,8 @@ import { cl } from '../../constants/CurrentLocation';
 import { PortfolioImage } from '../../components/tab/portfolio/PortfolioImage';
 
 export default function Portfolio() {
-    useDocTitle("포트폴리오 | 안녕하세요. 강다윤입니다");
+    const { t } = useTranslation();
+    useDocTitle(`${t("portfolio.title")} | ${t("common.siteName")}`);
     const totalSlides = 12;
     const showItems = useAnimation();
     const { 
@@ -32,7 +34,7 @@ export default function Portfolio() {
     return (
         <div className="z-60">
             <AnimatedContainer show={showItems}>
-                <h1 className="text-3xl font-bold my-4">포트폴리오</h1>
+                <h1 className="text-3xl font-bold my-4">{t("portfolio.title")}</h1>
             </AnimatedContainer>
 
             <div className="max-w-3xl md:grid md:grid-cols-2 md:gap-4">

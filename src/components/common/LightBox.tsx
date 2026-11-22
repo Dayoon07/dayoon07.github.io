@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Slide {
     src: string;
@@ -31,11 +32,12 @@ const LightBox: React.FC<LightBoxProps> = ({
     showIndicators = false,
     onIndicatorClick
 }) => {
+    const { t } = useTranslation();
     if (!isOpen) return null;
 
     // 현재 표시할 이미지 소스 결정
     const imageSrc = currentImage || (currentIndex !== null ? slides[currentIndex]?.src : "");
-    const imageAlt = (currentIndex !== null ? slides[currentIndex]?.alt : "") || "라이트박스 이미지";
+    const imageAlt = (currentIndex !== null ? slides[currentIndex]?.alt : "") || t("lightbox.fallbackAlt");
 
     return (
         <div 
@@ -51,7 +53,7 @@ const LightBox: React.FC<LightBoxProps> = ({
                     className="absolute left-4 text-white text-4xl font-bold px-4 py-2 
                              bg-black/50 hover:bg-black/80 rounded-full
                              transition-all duration-200 z-[60]"
-                    aria-label="이전 이미지"
+                    aria-label={t("lightbox.prev")}
                 >
                     &#8592;
                 </button>
@@ -73,7 +75,7 @@ const LightBox: React.FC<LightBoxProps> = ({
                     className="absolute right-4 text-white text-4xl font-bold px-4 py-2 
                              bg-black/50 hover:bg-black/80 rounded-full
                              transition-all duration-200 z-[60]"
-                    aria-label="다음 이미지"
+                    aria-label={t("lightbox.next")}
                 >
                     &#8594;
                 </button>
@@ -85,7 +87,7 @@ const LightBox: React.FC<LightBoxProps> = ({
                 className="absolute top-4 right-4 text-white text-3xl font-bold 
                            bg-black/50 hover:bg-black/80 rounded-full 
                            w-12 h-12 flex items-center justify-center transition-all duration-200 z-[60]"
-                aria-label="라이트박스 닫기"
+                aria-label={t("lightbox.close")}
             >
                 &times;
             </button>
@@ -102,7 +104,7 @@ const LightBox: React.FC<LightBoxProps> = ({
                                 ? 'bg-white scale-125' 
                                 : 'bg-white/40 hover:bg-white/70'
                             }`}
-                            aria-label={`${i + 1}번째 이미지로 이동`}
+                            aria-label={t("lightbox.goTo", { n: i + 1 })}
                         />
                     ))}
                 </div>
